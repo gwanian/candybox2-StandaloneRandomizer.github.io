@@ -19,7 +19,7 @@ with open(finalFileName, mode='w', encoding="utf-8") as outfile:
     # We copy the content of each file in a big "genText.ts" file
     for tup in tupleList:
         # Open the input file
-        with open(tup[0], 'r', encoding="utf-8") as infile:
+        with open(tup[0], 'r', encoding="utf-8-sig") as infile:
             # Write the Database.addText() function calls
             for index, line in enumerate(infile.readlines()):
                 if(index % 2 == 0):

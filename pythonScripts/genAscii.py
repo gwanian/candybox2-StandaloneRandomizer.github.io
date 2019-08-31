@@ -17,7 +17,7 @@ with open(finalFileName, mode='w', encoding="utf-8") as outfile:
     # We copy the content of each file in a big "genAscii.ts" file
     for tup in tupleList:
         # Open, read and close the input file
-        with open(tup[0], 'r', encoding="utf-8") as infile:
+        with open(tup[0], 'r', encoding="utf-8-sig") as infile:
             infileLines = infile.readlines()
         # Check if there's an @author instruction or not
         hasauthor = infileLines[0].startswith("@author")
