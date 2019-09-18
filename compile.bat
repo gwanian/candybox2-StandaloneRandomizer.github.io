@@ -6,7 +6,7 @@
 
 call yuicompressor >nul 2>&1 && (echo Yuicompressor ok) || (echo Yuicompressor is not installed ! && goto end)
 
-call tsc >nul 2>&1 && (echo Typescript compiler ok) || (echo The typescript compiler is not installed ! && goto end)
+call tsc -v >nul 2>&1 && (echo Typescript compiler ok) || (echo The typescript compiler is not installed ! && goto end)
 
 call 7z >nul 2>&1 && (echo 7zip ok) || (echo 7zip is not installed ! && goto end)
 
