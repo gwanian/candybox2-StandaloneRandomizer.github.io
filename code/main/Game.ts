@@ -304,6 +304,7 @@ class Game{
         this.candiesUsedToRequestFeatures.load();
         this.candiesInCauldron.load();
         this.lollipopsInCauldron.load();
+        this.speedrunTimer = Saving.loadNumber("gameSpeedrunTimer")
         
         // Handle inverted colors (we have to change the css now depending on the gameInvertedColors bool from the Saving module)
         this.applyInvertedColorsToCss();
