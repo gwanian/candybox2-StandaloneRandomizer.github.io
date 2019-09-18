@@ -63,6 +63,7 @@ Saving.registerNumber("gameGiftMagic", 0);
 // The gamemode
 Saving.registerString("gameGameMode", "normal");
 Saving.registerNumber("gameSpeedrunTimer", NaN); //Default for backward compatibility.
+Saving.registerNumber("gameCompletedTime", NaN);
 
 class Game{
     // Render locations
@@ -856,5 +857,10 @@ class Game{
             this.setPlace(this.savedPlace); // We set the saved place as the current place
             this.savedPlace = null; // There's no saved place anymore
         }
+    }
+    
+    public endSpeedrun(): void{
+        if(this.speedrunTimer && isNaN(Saving.loadNumber("gameCompletedTime")))
+            Saving.saveNumber("gameCompletedTime", this.speedrunTimer);
     }
 }

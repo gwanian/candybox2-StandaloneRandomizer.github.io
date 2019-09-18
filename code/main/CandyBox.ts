@@ -184,6 +184,9 @@ class CandyBox extends Place{
         // The box is now opened
         Saving.saveBool("candyBoxBoxOpened", true);
         
+        // Save the time the run ended.
+        this.getGame().endSpeedrun();
+        
         // The tabs are unlocked
         Saving.saveBool("statusBarUnlockedInsideYourBox", true);
         Saving.saveBool("statusBarUnlockedTheComputer", true);
