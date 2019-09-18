@@ -34,29 +34,31 @@ module Main{
     }
     
     export function setUrlData(urlData: string): void{
-        // Create some variables
-        var beforeEqual: string;
-        var afterEqual: string;
-        
+        //TODO: Switch to `URL.searchParams` if possible.
         // If there's something in the url and we can find an equal sign and this equal sign isn't the last character of the string
-        if(urlData != "" && urlData.indexOf("=") != -1 && urlData.indexOf("=") < urlData.length-1){
+        if(urlData) {
             // Strip the question mark
             urlData = urlData.substr(1);
-            // Separate the data in two parts : before and after the equal sign
-            beforeEqual = urlData.substr(0, urlData.indexOf("="));
-            afterEqual = urlData.substr(urlData.indexOf("=") + 1);
-            // Do different things depending on the value of beforeEqual
-            switch(beforeEqual){
-                // If we're trying to load a local slot
-                case "slot":
-                    loadingType = MainLoadingType.LOCAL;
-                    loadingString = "slot" + afterEqual;
-                break;
-                // If we're trying to launch a new game with a special mode
-                case "gamemode":
-                    gameMode = afterEqual;
-                break;
-            }
+            urlData.split("&").forEach(function(s: string): void{
+                if(!s) return;
+                // Separate the data in two parts : before and after the equal sign
+                var i: number = urlData.indexOf("=");
+                if(i < 0) return;
+                // Do different things depending on the value of beforeEqual
+                var key = urlData.substring(0, i);
+                var value = urlData.substring(i+1);
+                switch(key.toLowerCase()) {
+                    // If we're trying to load a local slot
+                    case "slot":
+                        loadingType = MainLoadingType.LOCAL;
+                        loadingString = "slot" + value;
+                    break;
+                    // If we're trying to launch a new game with a special mode
+                    case "gamemode":
+                        gameMode = value;
+                    break;
+                }
+            });
         }
     }
     
