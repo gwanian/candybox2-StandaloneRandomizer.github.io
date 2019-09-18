@@ -36,7 +36,10 @@ module Main{
     }
     
     export function setUrlData(urlData: string): void{
-        //TODO: Switch to `URL.searchParams` if possible.
+        //TODO: Switch to `URL.searchParams` or `URLSearchParams` if possible.
+        // May not be possible depending on what browsers should be supported.
+        // See https://caniuse.com/#feat=urlsearchparams
+
         // If there's something in the url and we can find an equal sign and this equal sign isn't the last character of the string
         if(urlData) {
             // Strip the question mark
@@ -44,11 +47,11 @@ module Main{
             urlData.split("&").forEach(function(s: string): void{
                 if(!s) return;
                 // Separate the data in two parts : before and after the equal sign
-                var i: number = urlData.indexOf("=");
+                var i: number = s.indexOf("=");
                 if(i < 0) return;
                 // Do different things depending on the value of beforeEqual
-                var key = urlData.substring(0, i);
-                var value = urlData.substring(i+1);
+                var key = s.substring(0, i);
+                var value = s.substring(i+1);
                 switch(key.toLowerCase()) {
                     // If we're trying to load a local slot
                     case "slot":
