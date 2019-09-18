@@ -11,7 +11,8 @@ module Main{
     
     // Information about the game mode
     var gameMode: string = null;
-
+    var startTime: number = NaN;
+    
     // Public functions    
     export function documentIsReady(): void{
         Keyboard.execute(); // Execute the Kayboard jquery stuff
@@ -27,6 +28,7 @@ module Main{
         loadingString = fileContent;
         // Set the gamemode (null so that it is set from loading)
         gameMode = null;
+        startTime = NaN;
         // We can't register anymore
         Saving.canRegister = false;
         // Finally start (this will erase the current game)
@@ -57,6 +59,9 @@ module Main{
                     case "gamemode":
                         gameMode = value;
                     break;
+                    case "time":
+                        startTime = parseInt(value, 10);
+                    break;
                 }
             });
         }
@@ -66,6 +71,10 @@ module Main{
         game = new Game(gameMode);
         Keyboard.setGame(game);
         Saving.load(game, loadingType, loadingString);
+        if (loadingType === MainLoadingType.NONE) {
+            //Start the player off with some extra time.
+            game.setInitialTime(startTime || 0);
+        }
         game.postLoad();
     }
 }

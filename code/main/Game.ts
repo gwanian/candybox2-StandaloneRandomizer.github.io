@@ -62,8 +62,9 @@ Saving.registerNumber("gameGiftMagic", 0);
 
 // The gamemode
 Saving.registerString("gameGameMode", "normal");
+Saving.registerNumber("gameSpeedrunTimer", NaN); //Default for backward compatibility.
 
-class Game{    
+class Game{
     // Render locations
     private statusBarLocation: RenderLocation = new RenderLocation("#statusBar");
     private mainContentLocation: RenderLocation = new RenderLocation("#mainContent");
@@ -135,6 +136,9 @@ class Game{
     // Is the status bar allowed to use the n key to go to the next tab? (this is set to false when using the computer...)
     private isStatusBarAllowedToUseTheNKey: boolean = true;
     
+    // Speedrun timer.
+    private speedrunTimer : number = NaN;
+
     // Constructor
     constructor(gameMode: string){
         // We save the game mode given in parameter
@@ -320,7 +324,17 @@ class Game{
         // And we set the saved place (the village)
         this.savedPlace = new Village(this);
     }
-    
+
+    public setInitialTime(time0: number) :void{
+        if (this.candies.getAccumulated() === 0) {
+            this.candies.add(time0);
+            this.speedrunTimer = time0;
+        } else {
+            //Trying to set initial time for a non-new save.
+            //Throw an error?
+        }
+    }    
+
     public resetPlayer(): void{
         // Save some important things
         var hp: number = this.player.getHp();
@@ -349,6 +363,7 @@ class Game{
         this.candiesUsedToRequestFeatures.save();
         this.candiesInCauldron.save();
         this.lollipopsInCauldron.save();
+        Saving.saveNumber("gameSpeedrunTimer", this.speedrunTimer);
     }
     
     public setPlace(place: Place): void{
@@ -767,6 +782,10 @@ class Game{
         }
     }
     
+    private updateSpeedrunTimer(): void {
+        this.speedrunTimer++;
+    }
+    
     private localAutosave(): void{
         // If local autosave is enabled and there's a local auto save slot and there's a local autosave time
         if(this.localAutosaveEnabled == true && this.localAutosaveSlot != null && this.localAutosaveTime != null){
@@ -798,6 +817,7 @@ class Game{
         this.handleCandiesProduction();
         this.handleLollipopProduction();
         this.handlePondConversion();
+        this.updateSpeedrunTimer();
         this.localAutosave();
         
         // Special place callbacks
