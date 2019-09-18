@@ -1,4 +1,6 @@
 __pycache__/
+*.pyc
+*.pyo
 *.kate-swp
 /.vscode/
 /node_modules/
