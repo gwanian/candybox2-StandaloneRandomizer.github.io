@@ -61,5 +61,22 @@ class InsideYourBox extends Place{
         
         // Draw the text
         this.renderArea.drawArray(Database.getAscii("general/insideYourBox/text"), 0, 5, new RenderTransparency(" ", "%"));
+        
+        // Write the time to completion.
+        var completedTime = Saving.loadNumber("gameCompletedTime");
+        var formattedTime: string;
+        if(completedTime) {
+            //TODO: Put this in some util library.
+            formattedTime = (function(time: number): string{
+                var seconds = time;
+                var minutes = Math.floor(seconds/60);
+                var hours = Math.floor(minutes/60);
+                var s = ("0" + (seconds % 60)).slice(-2);
+                var m = ("0" + (minutes % 60)).slice(-2);
+                var h = "" + hours;
+                return [h,m,s].join(":");
+            })(completedTime);
+            this.renderArea.drawString("Finish time: " + formattedTime + " (" + completedTime + " s)");
+        }
     }
 }

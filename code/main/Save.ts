@@ -333,9 +333,9 @@ class Save extends Place{
     private resize(): void{
         // The size depends on if there's a translation or not
         if(Database.isTranslated())
-            this.renderArea.resize(100, 84);
+            this.renderArea.resize(100, 85);
         else
-            this.renderArea.resize(100, 74);
+            this.renderArea.resize(100, 75);
     }
     
     private selectRightSlot(): void{
@@ -357,6 +357,24 @@ class Save extends Place{
         
         // Erase everything
         this.renderArea.resetAllButSize();
+        
+        // Add time elapsed.
+        var elapsedTime: number = this.getGame().getSpeedrunTimer();
+        var formattedTime: string;
+        if(elapsedTime) {
+            //TODO: Put this in some util library.
+            formattedTime = (function(time: number): string{
+                var seconds = time;
+                var minutes = Math.floor(seconds/60);
+                var hours = Math.floor(minutes/60);
+                var s = ("0" + (seconds % 60)).slice(-2);
+                var m = ("0" + (minutes % 60)).slice(-2);
+                var h = "" + hours;
+                return [h,m,s].join(":");
+            })(elapsedTime);
+            this.renderArea.drawString("Time elapsed (revisit tab to update): " + formattedTime + " (" + elapsedTime + " s)");
+            yPosition += 1;
+        }
         
         // Saving
         this.renderArea.drawArray(Database.getAscii("text/Saving"), 50 - Math.floor((Database.getAsciiWidth("text/Saving")/2)), yPosition);

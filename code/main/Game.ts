@@ -624,6 +624,10 @@ class Game{
         return this.weAreQuesting;
     }
     
+    public getSpeedrunTimer(): number{
+        return this.speedrunTimer;
+    }
+    
     // Public setters
     public setIsStatusBarAllowedToUseTheNKey(isStatusBarAllowedToUseTheNKey: boolean): void{
         this.isStatusBarAllowedToUseTheNKey = isStatusBarAllowedToUseTheNKey;
