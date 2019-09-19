@@ -3,6 +3,10 @@ import re
 import sys
 from jsFormat import *
 
+# Python 2 needs codecs.open to open with encoding.
+if sys.version_info < (3,0):
+    from codecs import open
+
 tupleList = []
 rootdir = "./../text/"
 finalFileName = "./../code/gen/genText.ts"
