@@ -50,7 +50,7 @@ module Saving{
 
         //location check for completing the Desert quest
         //location name: Desert Completion
-        "mainMapDoneDesert" : "eqItemWeaponWoodenSword", //x
+        "mainMapDoneDesert" : "mainMapDoneDesert", //x
 
         //location check for completing the Bridge quest
         //location name: Bridge Completion
@@ -170,7 +170,7 @@ module Saving{
 
         "eqItemWeaponTrollBludgeon" : "eqItemWeaponTrollBludgeon",
 
-        "eqItemWeaponWoodenSword" : "mainMapDoneDesert" //x
+        "eqItemWeaponWoodenSword" : "eqItemWeaponWoodenSword"
 
     };
     
