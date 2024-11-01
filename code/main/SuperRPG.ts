@@ -210,28 +210,43 @@ class SuperRPG extends ThirdHouseGame{
         var reward: number = 0;
         
         // Test the first reward
-        if(Saving.loadBool("SuperRPGReward1") == false && this.floor > 5){
-            reward += 100;
+        /* Randomizer modification: you can now infinitely get rewards for reaching the required floors,
+            but only after you set the reward bool to true (ie a reverse of what it previously was, where you
+            could only get the item when the bool was false and the bool would set to true after getting the reward)*/
+        if(this.floor > 5){
             Saving.saveBool("SuperRPGReward1", true);
+
+            if(Saving.loadBool("SuperRPGReward1") == true){
+                reward += 100;
+            }
         }
         
         // Test the second reward
-        if(Saving.loadBool("SuperRPGReward2") == false && this.floor > 10){
-            reward += 1000;
+        if(this.floor > 10){
             Saving.saveBool("SuperRPGReward2", true);
+
+            if(Saving.loadBool("SuperRPGReward2") == false){
+                reward += 1000;
+            }
         }
         
         // Test the third reward
-        if(Saving.loadBool("SuperRPGReward3") == false && this.floor > 13){
-            reward += 10000;
+        if(this.floor > 13){
             Saving.saveBool("SuperRPGReward3", true);
+
+            if(Saving.loadBool("SuperRPGReward3") == false){
+                reward += 10000;
+            }
         }
         
         // Test the fourth reward
-        if(Saving.loadBool("SuperRPGReward4") == false && this.floor > 20){
-            reward += 30000;
+        if(this.floor > 20){
             Saving.saveBool("SuperRPGReward4", true);
             Saving.saveBool("SuperRPGUnlockedHardmode", true);
+            
+            if(Saving.loadBool("SuperRPGReward4") == false){
+                reward += 30000;
+            }
         }
         
         // We return the reward

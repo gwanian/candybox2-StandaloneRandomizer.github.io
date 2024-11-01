@@ -25,32 +25,19 @@ module Saving{
     //For randomizer, list of locations and their corresponding items
     var boolItemLocations: {[s: string]: string} =
     {
-        // //location check of the chocolate bar obtained by throwing candies
-        // //location name: Candies Thrown Chocolate Bar
-        // "candiesThrowGotChocolateBar"
-
-        
-
-        // //location check for unlocking the puzzle at the lighthouse
-        // //location name: Ask Dragon for Candies
-        // "dragonUnlockedCyclops"
-
-        // //location check for the lollipop in the forge
-        // //location name: Forge Lollipop
-        // "forgeFoundLollipop"
-
-        // //location check for the lollipop on top of the cupboard in the fourth house
-        // //location name: Lollipop on Fourth House Cupboard
-        // "fourthHouseFoundLollipopOnCupboard"
-        
-        //AREA COMPLETION CHECKS
+         
+        /*
+        ---------------------------
+        MAP/QUEST COMPLETION CHECKS
+        ---------------------------
+        */
         //location check for completing the Nougat Monster quest and unlocking access to the castle tower
         //location name: Killed Nougat Monster
         "castleKilledNougatMonster" : "castleKilledNougatMonster",
 
         //location check for completing the Desert quest
         //location name: Desert Completion
-        "mainMapDoneDesert" : "mainMapDoneDesert", //x
+        "mainMapDoneDesert" : "mainMapDoneDesert",
 
         //location check for completing the Bridge quest
         //location name: Bridge Completion
@@ -72,7 +59,19 @@ module Saving{
         //location name: Castle's Entrance Completion
         "mainMapDoneCastleEntrance" : "mainMapDoneCastleEntrance",
 
-        //GRID ITEM CHECKS
+        //location check for finding the treasure map in the cave (normally unlocks the dig spot above the village for a chocolate bar)
+        //location name: Find Cave Treasure Map
+        "TheCavePattern_TreasureMapSawMap" : "TheCavePattern_TreasureMapSawMap",
+
+        //location check for unlocking the puzzle at the lighthouse
+        //location name: Ask Dragon for Candies
+        "dragonUnlockedCyclops" : "dragonUnlockedCyclops",
+
+        /*
+        ----------------
+        GRID ITEM CHECKS
+        ----------------
+        */
         "gridItemPossessedA" : "gridItemPossessedA",
 
         "gridItemPossessedAdvancedGrimoire" : "gridItemPossessedAdvancedGrimoire",
@@ -121,7 +120,11 @@ module Saving{
 
         "gridItemPossessedY" : "gridItemPossessedY",    
 
-        //EQUIPABLE ITEM CHECKS
+        /*
+        ---------------------
+        EQUIPABLE ITEM CHECKS
+        ---------------------
+        */
         "eqItemBodyArmoursEnchantedKnightBodyArmour" : "eqItemBodyArmoursEnchantedKnightBodyArmour",
 
         "eqItemBodyArmoursKnightBodyArmour" : "eqItemBodyArmoursKnightBodyArmour",
@@ -170,7 +173,47 @@ module Saving{
 
         "eqItemWeaponTrollBludgeon" : "eqItemWeaponTrollBludgeon",
 
-        "eqItemWeaponWoodenSword" : "eqItemWeaponWoodenSword"
+        "eqItemWeaponWoodenSword" : "eqItemWeaponWoodenSword",
+
+        /*
+        -----------------
+        STATUS BAR CHECKS
+        -----------------
+        */
+        "statusBarUnlockedCauldron" : "statusBarUnlockedCauldron",
+
+        "statusBarUnlockedCfg" : "statusBarUnlockedCfg",
+
+        "statusBarUnlockedHealthBar" : "statusBarUnlockedHealthBar", //whether or not the health bar is displayed (you still have health you just can't see it)
+
+        "statusBarUnlockedInsideYourBox" : "statusBarUnlockedInsideYourBox",
+
+        "statusBarUnlockedInventory" : "statusBarUnlockedInventory",
+
+        "statusBarUnlockedLollipopFarm" : "statusBarUnlockedLollipopFarm", //only contols if the lollipop farm appears on the status bar.  You can still access it from the map (and exit by selecting another button on the status bar)
+
+        "statusBarUnlockedMap" : "statusBarUnlockedMap",
+
+        "statusBarUnlockedSave" : "statusBarUnlockedSave",
+
+        "statusBarUnlockedTheArena" : "statusBarUnlockedTheArena",
+
+        "statusBarUnlockedTheComputer" : "statusBarUnlockedTheComputer",
+
+        /*
+        ---------------
+        SUPERRPG CHECKS
+        ---------------
+        */
+        "SuperRPGReward1" : "SuperRPGReward1", //requires clearing floor 5
+    
+        "SuperRPGReward2" : "SuperRPGReward2", //requires clearing floor 10
+
+        "SuperRPGReward3" : "SuperRPGReward3", //requires clearing floor 13
+
+        //both of these checks are unlocked if a completed run clears floor 20
+        "SuperRPGReward4" : "SuperRPGReward4",
+        "SuperRPGUnlockedHardmode" : "SuperRPGUnlockedHardmode"
 
     };
     
@@ -185,86 +228,86 @@ module Saving{
             case MainLoadingType.NONE:
                 // You can uncomment the lines below to start your game with everything unlocked (useful for testing purposes)
                 
-                // Saving.saveNumber("aTreeStep", 2);
+                Saving.saveNumber("aTreeStep", 2);
                 
-                // Saving.saveBool("mainMapDoneDesert", true);
-                // Saving.saveBool("mainMapDoneBridge", true);
-                // Saving.saveBool("mainMapDoneCaveEntrance", true);
-                // Saving.saveBool("mainMapDonePier", true);
-                // Saving.saveBool("mainMapDoneForest", true);
-                // Saving.saveBool("mainMapDoneCastleEntrance", true);
+                Saving.saveBool("mainMapDoneDesert", true);
+                Saving.saveBool("mainMapDoneBridge", true);
+                Saving.saveBool("mainMapDoneCaveEntrance", true);
+                Saving.saveBool("mainMapDonePier", true);
+                Saving.saveBool("mainMapDoneForest", true);
+                Saving.saveBool("mainMapDoneCastleEntrance", true);
                 
-                // Saving.saveBool("gridItemPossessedMainMap", true);
-                // //Saving.saveBool("gridItemPossessedTimeRing", true);
-                // Saving.saveBool("gridItemPossessedThirdHouseKey", true);
-                // Saving.saveBool("gridItemPossessedBeginnersGrimoire", true);
+                Saving.saveBool("gridItemPossessedMainMap", true);
+                //Saving.saveBool("gridItemPossessedTimeRing", true);
+                Saving.saveBool("gridItemPossessedThirdHouseKey", true);
+                Saving.saveBool("gridItemPossessedBeginnersGrimoire", true);
                 
-                // Saving.saveBool("gridItemPossessedFeather", true);
-                // Saving.saveBool("gridItemPossessedPogoStick", true);
-                // Saving.saveBool("gridItemPossessedHeartPlug", true);
-                // Saving.saveBool("gridItemPossessedAdvancedGrimoire", true);
+                Saving.saveBool("gridItemPossessedFeather", true);
+                Saving.saveBool("gridItemPossessedPogoStick", true);
+                Saving.saveBool("gridItemPossessedHeartPlug", true);
+                Saving.saveBool("gridItemPossessedAdvancedGrimoire", true);
                 
-                // Saving.saveBool("gridItemPossessedSponge", true);
-                // Saving.saveBool("gridItemPossessedShellPowder", true);
-                // Saving.saveBool("gridItemPossessedHeartPendant", true);
-                // Saving.saveBool("gridItemPossessedBlackMagicGrimoire", true);
+                Saving.saveBool("gridItemPossessedSponge", true);
+                Saving.saveBool("gridItemPossessedShellPowder", true);
+                Saving.saveBool("gridItemPossessedHeartPendant", true);
+                Saving.saveBool("gridItemPossessedBlackMagicGrimoire", true);
                 
-                // Saving.saveBool("gridItemPossessedFortressKey", true);
-                // Saving.saveBool("gridItemPossessedUnicornHorn", true);
-                // Saving.saveBool("gridItemPossessedXinopherydonClaw", true);
-                // //Saving.saveBool("gridItemPossessedPitchfork", true);
+                Saving.saveBool("gridItemPossessedFortressKey", true);
+                Saving.saveBool("gridItemPossessedUnicornHorn", true);
+                Saving.saveBool("gridItemPossessedXinopherydonClaw", true);
+                //Saving.saveBool("gridItemPossessedPitchfork", true);
                 
-                // Saving.saveBool("gridItemPossessedRedSharkFin", true);
-                // Saving.saveBool("gridItemPossessedGreenSharkFin", true);
-                // Saving.saveBool("gridItemPossessedPurpleSharkFin", true);
+                Saving.saveBool("gridItemPossessedRedSharkFin", true);
+                Saving.saveBool("gridItemPossessedGreenSharkFin", true);
+                Saving.saveBool("gridItemPossessedPurpleSharkFin", true);
                 
-                // Saving.saveBool("gridItemPossessedTalkingCandy", true);
+                Saving.saveBool("gridItemPossessedTalkingCandy", true);
                 
-                // Saving.saveBool("gridItemPossessedP", true);
-                // Saving.saveBool("gridItemPossessedL", true);
-                // Saving.saveBool("gridItemPossessedA", true);
-                // Saving.saveBool("gridItemPossessedY", true);
+                Saving.saveBool("gridItemPossessedP", true);
+                Saving.saveBool("gridItemPossessedL", true);
+                Saving.saveBool("gridItemPossessedA", true);
+                Saving.saveBool("gridItemPossessedY", true);
                 
-                // Saving.saveBool("eqItemGlovesRedEnchantedGloves", true);
-                // Saving.saveBool("eqItemGlovesPinkEnchantedGloves", true);
-                // //Saving.saveBool("eqItemWeaponWoodenSword", true);
-                // Saving.saveBool("eqItemWeaponTrollBludgeon", true);
+                Saving.saveBool("eqItemGlovesRedEnchantedGloves", true);
+                Saving.saveBool("eqItemGlovesPinkEnchantedGloves", true);
+                //Saving.saveBool("eqItemWeaponWoodenSword", true);
+                Saving.saveBool("eqItemWeaponTrollBludgeon", true);
                 Saving.saveBool("eqItemWeaponTribalSpear", true);
-                // Saving.saveBool("eqItemWeaponSummoningTribalSpear", true);
-                // Saving.saveBool("eqItemWeaponMonkeyWizardStaff", true);
-                // Saving.saveBool("eqItemWeaponGiantSpoon", true);
-                // Saving.saveBool("eqItemHatOctopusKingCrown", true);
+                Saving.saveBool("eqItemWeaponSummoningTribalSpear", true);
+                Saving.saveBool("eqItemWeaponMonkeyWizardStaff", true);
+                Saving.saveBool("eqItemWeaponGiantSpoon", true);
+                Saving.saveBool("eqItemHatOctopusKingCrown", true);
                 
-                // Saving.saveBool("eqItemBootsBootsOfIntrospection", true);
+                Saving.saveBool("eqItemBootsBootsOfIntrospection", true);
                 
-                // Saving.saveBool("eqItemBootsRocketBoots", true);
+                Saving.saveBool("eqItemBootsRocketBoots", true);
                 
-                // Saving.saveBool("eqItemWeaponGiantSpoonOfDoom", true);
+                Saving.saveBool("eqItemWeaponGiantSpoonOfDoom", true);
                 
-                // Saving.saveBool("eqItemBodyArmoursEnchantedKnightBodyArmour", true);
+                Saving.saveBool("eqItemBodyArmoursEnchantedKnightBodyArmour", true);
                 
                 Saving.saveNumber("gameCandiesEatenCurrent", 500000000);
                 Saving.saveNumber("gameCandiesEatenMax", 500000000);
                 
                 Saving.saveNumber("playerHp", 1000);
                 
-                // Saving.saveBool("questPlayerSpellHealthPotionHasSpell", true);
-                // Saving.saveBool("questPlayerSpellTurtlePotionHasSpell", true);
-                // Saving.saveBool("questPlayerSpellAntiGravityPotionHasSpell", true);
-                // Saving.saveBool("questPlayerSpellBerserkPotionHasSpell", true);
-                // Saving.saveBool("questPlayerSpellCloningPotionHasSpell", true);
-                // Saving.saveBool("questPlayerSpellPPotionHasSpell", true);
-                // Saving.saveBool("questPlayerSpellXPotionHasSpell", true);
+                Saving.saveBool("questPlayerSpellHealthPotionHasSpell", true);
+                Saving.saveBool("questPlayerSpellTurtlePotionHasSpell", true);
+                Saving.saveBool("questPlayerSpellAntiGravityPotionHasSpell", true);
+                Saving.saveBool("questPlayerSpellBerserkPotionHasSpell", true);
+                Saving.saveBool("questPlayerSpellCloningPotionHasSpell", true);
+                Saving.saveBool("questPlayerSpellPPotionHasSpell", true);
+                Saving.saveBool("questPlayerSpellXPotionHasSpell", true);
                 
-                // Saving.saveNumber("questPlayerSpellHealthPotionQuantity", 0);
-                // Saving.saveNumber("questPlayerSpellTurtlePotionQuantity", 64084);
-                // Saving.saveNumber("questPlayerSpellAntiGravityPotionQuantity", 47542);
-                // Saving.saveNumber("questPlayerSpellBerserkPotionQuantity", 99549);
-                // Saving.saveNumber("questPlayerSpellCloningPotionQuantity", 10050);
-                // Saving.saveNumber("questPlayerSpellPPotionQuantity", 10085250);
-                // Saving.saveNumber("questPlayerSpellXPotionQuantity", 10050999);
+                Saving.saveNumber("questPlayerSpellHealthPotionQuantity", 0);
+                Saving.saveNumber("questPlayerSpellTurtlePotionQuantity", 64084);
+                Saving.saveNumber("questPlayerSpellAntiGravityPotionQuantity", 47542);
+                Saving.saveNumber("questPlayerSpellBerserkPotionQuantity", 99549);
+                Saving.saveNumber("questPlayerSpellCloningPotionQuantity", 10050);
+                Saving.saveNumber("questPlayerSpellPPotionQuantity", 10085250);
+                Saving.saveNumber("questPlayerSpellXPotionQuantity", 10050999);
                 
-                // //Saving.saveBool("gameDebug", true);
+                //Saving.saveBool("gameDebug", true);
                 
                 Saving.saveNumber("gameCandiesCurrent", 5000000);
                 Saving.saveNumber("gameCandiesMax", 5000000);
@@ -278,9 +321,9 @@ module Saving{
                 Saving.saveNumber("gamePainsAuChocolatCurrent", 7);
                 Saving.saveNumber("gamePainsAuChocolatMax", 7);
                 
-                // Saving.saveBool("lonelyHouseTakeTheBoxDone", true);
+                Saving.saveBool("lonelyHouseTakeTheBoxDone", true);
                 
-                // Saving.saveNumber("lollipopFarmPondHowManyLolligators", 0);
+                Saving.saveNumber("lollipopFarmPondHowManyLolligators", 0);
                 
                 Saving.saveBool("statusBarUnlocked", true);
                 Saving.saveBool("statusBarUnlockedCfg", true);
@@ -294,12 +337,12 @@ module Saving{
                 Saving.saveBool("statusBarUnlockedTheComputer", true);
                 Saving.saveBool("statusBarUnlockedTheArena", true);
                 
-                //Saving.saveBool("castleKilledNougatMonster", true);
+                Saving.saveBool("castleKilledNougatMonster", true);
                 
-                // Saving.saveBool("dragonDone", true);
-                // Saving.saveBool("dragonUnlockedCyclops", true);
+                Saving.saveBool("dragonDone", true);
+                //Saving.saveBool("dragonUnlockedCyclops", true);
                 
-                // Saving.saveBool("castleTowerFirstVisitDone", true);
+                Saving.saveBool("castleTowerFirstVisitDone", true);
                 
                 //Saving.saveString("gameLanguage", "fr");
                 

@@ -45,18 +45,46 @@ e.addLinkCall("."+c,d)};a.prototype.addBackToMainMapButton=function(d,b,c){if(c=
 };a.prototype.getGap=function(){return 0};a.prototype.getRenderArea=function(){return new RenderArea()
 };a.prototype.getScrolling=function(){return false};a.prototype.willBeClosed=function(){};
 a.prototype.willBeDisplayed=function(){};a.prototype.willStopBeingDisplayed=function(){};
-return a})();var Saving;(function(u){var s={};var i={};var g={};var v={castleKilledNougatMonster:"castleKilledNougatMonster",mainMapDoneDesert:"eqItemWeaponWoodenSword",mainMapDoneBridge:"mainMapDoneBridge",mainMapDoneCaveEntrance:"mainMapDoneCaveEntrance",mainMapDonePier:"mainMapDonePier",mainMapDoneForest:"mainMapDoneForest",mainMapDoneCastleEntrance:"mainMapDoneCastleEntrance",gridItemPossessedA:"gridItemPossessedA",gridItemPossessedAdvancedGrimoire:"gridItemPossessedAdvancedGrimoire",gridItemPossessedBeginnersGrimoire:"gridItemPossessedBeginnersGrimoire",gridItemPossessedBlackMagicGrimoire:"gridItemPossessedBlackMagicGrimoire",gridItemPossessedFeather:"gridItemPossessedFeather",gridItemPossessedFortressKey:"gridItemPossessedFortressKey",gridItemPossessedGreenSharkFin:"gridItemPossessedGreenSharkFin",gridItemPossessedHeartPendant:"gridItemPossessedHeartPendant",gridItemPossessedHeartPlug:"gridItemPossessedHeartPlug",gridItemPossessedL:"gridItemPossessedL",gridItemPossessedMainMap:"gridItemPossessedMainMap",gridItemPossessedP:"gridItemPossessedP",gridItemPossessedPitchfork:"gridItemPossessedPitchfork",gridItemPossessedPogoStick:"gridItemPossessedPogoStick",gridItemPossessedPurpleSharkFin:"gridItemPossessedPurpleSharkFin",gridItemPossessedRedSharkFin:"gridItemPossessedRedSharkFin",gridItemPossessedShellPowder:"gridItemPossessedShellPowder",gridItemPossessedSponge:"gridItemPossessedSponge",gridItemPossessedTalkingCandy:"gridItemPossessedTalkingCandy",gridItemPossessedThirdHouseKey:"gridItemPossessedThirdHouseKey",gridItemPossessedTimeRing:"gridItemPossessedTimeRing",gridItemPossessedUnicornHorn:"gridItemPossessedUnicornHorn",gridItemPossessedXinopherydonClaw:"gridItemPossessedXinopherydonClaw",gridItemPossessedY:"gridItemPossessedY",eqItemBodyArmoursEnchantedKnightBodyArmour:"eqItemBodyArmoursEnchantedKnightBodyArmour",eqItemBodyArmoursKnightBodyArmour:"eqItemBodyArmoursKnightBodyArmour",eqItemBodyArmoursLightweightBodyArmour:"eqItemBodyArmoursLightweightBodyArmour",eqItemBootsBootsOfIntrospection:"eqItemBootsBootsOfIntrospection",eqItemBootsLeatherBoots:"eqItemBootsLeatherBoots",eqItemBootsRocketBoots:"eqItemBootsRocketBoots",eqItemGlovesLeatherGloves:"eqItemGlovesLeatherGloves",eqItemGlovesPinkEnchantedGloves:"eqItemGlovesPinkEnchantedGloves",eqItemGlovesRedEnchantedGloves:"eqItemGlovesRedEnchantedGloves",eqItemHatMerchantHat:"eqItemHatMerchantHat",eqItemHatOctopusKingCrown:"eqItemHatOctopusKingCrown",eqItemHatOctopusKingCrownWithJaspers:"eqItemHatOctopusKingCrownWithJaspers",eqItemHatOctopusKingCrownWithObsidian:"eqItemHatOctopusKingCrownWithObsidian",eqItemHatSorceressHat:"eqItemHatSorceressHat",eqItemWeaponEnchantedMonkeyWizardStaff:"eqItemWeaponEnchantedMonkeyWizardStaff",eqItemWeaponGiantSpoon:"eqItemWeaponGiantSpoon",eqItemWeaponGiantSpoonOfDoom:"eqItemWeaponGiantSpoonOfDoom",eqItemWeaponIronAxe:"eqItemWeaponIronAxe",eqItemWeaponMonkeyWizardStaff:"eqItemWeaponMonkeyWizardStaff",eqItemWeaponPolishedSilverSword:"eqItemWeaponPolishedSilverSword",eqItemWeaponScythe:"eqItemWeaponScythe",eqItemWeaponSummoningTribalSpear:"eqItemWeaponSummoningTribalSpear",eqItemWeaponTribalSpear:"eqItemWeaponTribalSpear",eqItemWeaponTrollBludgeon:"eqItemWeaponTrollBludgeon",eqItemWeaponWoodenSword:"mainMapDoneDesert"};
-u.canRegister=true;function j(y,D,C){switch(D){case 0:u.saveBool("eqItemWeaponTribalSpear",true);
-u.saveNumber("gameCandiesEatenCurrent",500000000);u.saveNumber("gameCandiesEatenMax",500000000);
-u.saveNumber("playerHp",1000);u.saveNumber("gameCandiesCurrent",5000000);u.saveNumber("gameCandiesMax",5000000);
-u.saveNumber("gameLollipopsCurrent",5000000000);u.saveNumber("gameLollipopsMax",500000000000);
-u.saveNumber("gameChocolateBarsCurrent",7);u.saveNumber("gameChocolateBarsMax",7);
-u.saveNumber("gamePainsAuChocolatCurrent",7);u.saveNumber("gamePainsAuChocolatMax",7);
-u.saveBool("statusBarUnlocked",true);u.saveBool("statusBarUnlockedCfg",true);u.saveBool("statusBarUnlockedSave",true);
+return a})();var Saving;(function(u){var s={};var i={};var g={};var v={castleKilledNougatMonster:"castleKilledNougatMonster",mainMapDoneDesert:"mainMapDoneDesert",mainMapDoneBridge:"mainMapDoneBridge",mainMapDoneCaveEntrance:"mainMapDoneCaveEntrance",mainMapDonePier:"mainMapDonePier",mainMapDoneForest:"mainMapDoneForest",mainMapDoneCastleEntrance:"mainMapDoneCastleEntrance",TheCavePattern_TreasureMapSawMap:"TheCavePattern_TreasureMapSawMap",dragonUnlockedCyclops:"dragonUnlockedCyclops",gridItemPossessedA:"gridItemPossessedA",gridItemPossessedAdvancedGrimoire:"gridItemPossessedAdvancedGrimoire",gridItemPossessedBeginnersGrimoire:"gridItemPossessedBeginnersGrimoire",gridItemPossessedBlackMagicGrimoire:"gridItemPossessedBlackMagicGrimoire",gridItemPossessedFeather:"gridItemPossessedFeather",gridItemPossessedFortressKey:"gridItemPossessedFortressKey",gridItemPossessedGreenSharkFin:"gridItemPossessedGreenSharkFin",gridItemPossessedHeartPendant:"gridItemPossessedHeartPendant",gridItemPossessedHeartPlug:"gridItemPossessedHeartPlug",gridItemPossessedL:"gridItemPossessedL",gridItemPossessedMainMap:"gridItemPossessedMainMap",gridItemPossessedP:"gridItemPossessedP",gridItemPossessedPitchfork:"gridItemPossessedPitchfork",gridItemPossessedPogoStick:"gridItemPossessedPogoStick",gridItemPossessedPurpleSharkFin:"gridItemPossessedPurpleSharkFin",gridItemPossessedRedSharkFin:"gridItemPossessedRedSharkFin",gridItemPossessedShellPowder:"gridItemPossessedShellPowder",gridItemPossessedSponge:"gridItemPossessedSponge",gridItemPossessedTalkingCandy:"gridItemPossessedTalkingCandy",gridItemPossessedThirdHouseKey:"gridItemPossessedThirdHouseKey",gridItemPossessedTimeRing:"gridItemPossessedTimeRing",gridItemPossessedUnicornHorn:"gridItemPossessedUnicornHorn",gridItemPossessedXinopherydonClaw:"gridItemPossessedXinopherydonClaw",gridItemPossessedY:"gridItemPossessedY",eqItemBodyArmoursEnchantedKnightBodyArmour:"eqItemBodyArmoursEnchantedKnightBodyArmour",eqItemBodyArmoursKnightBodyArmour:"eqItemBodyArmoursKnightBodyArmour",eqItemBodyArmoursLightweightBodyArmour:"eqItemBodyArmoursLightweightBodyArmour",eqItemBootsBootsOfIntrospection:"eqItemBootsBootsOfIntrospection",eqItemBootsLeatherBoots:"eqItemBootsLeatherBoots",eqItemBootsRocketBoots:"eqItemBootsRocketBoots",eqItemGlovesLeatherGloves:"eqItemGlovesLeatherGloves",eqItemGlovesPinkEnchantedGloves:"eqItemGlovesPinkEnchantedGloves",eqItemGlovesRedEnchantedGloves:"eqItemGlovesRedEnchantedGloves",eqItemHatMerchantHat:"eqItemHatMerchantHat",eqItemHatOctopusKingCrown:"eqItemHatOctopusKingCrown",eqItemHatOctopusKingCrownWithJaspers:"eqItemHatOctopusKingCrownWithJaspers",eqItemHatOctopusKingCrownWithObsidian:"eqItemHatOctopusKingCrownWithObsidian",eqItemHatSorceressHat:"eqItemHatSorceressHat",eqItemWeaponEnchantedMonkeyWizardStaff:"eqItemWeaponEnchantedMonkeyWizardStaff",eqItemWeaponGiantSpoon:"eqItemWeaponGiantSpoon",eqItemWeaponGiantSpoonOfDoom:"eqItemWeaponGiantSpoonOfDoom",eqItemWeaponIronAxe:"eqItemWeaponIronAxe",eqItemWeaponMonkeyWizardStaff:"eqItemWeaponMonkeyWizardStaff",eqItemWeaponPolishedSilverSword:"eqItemWeaponPolishedSilverSword",eqItemWeaponScythe:"eqItemWeaponScythe",eqItemWeaponSummoningTribalSpear:"eqItemWeaponSummoningTribalSpear",eqItemWeaponTribalSpear:"eqItemWeaponTribalSpear",eqItemWeaponTrollBludgeon:"eqItemWeaponTrollBludgeon",eqItemWeaponWoodenSword:"eqItemWeaponWoodenSword",statusBarUnlockedCauldron:"statusBarUnlockedCauldron",statusBarUnlockedCfg:"statusBarUnlockedCfg",statusBarUnlockedHealthBar:"statusBarUnlockedHealthBar",statusBarUnlockedInsideYourBox:"statusBarUnlockedInsideYourBox",statusBarUnlockedInventory:"statusBarUnlockedInventory",statusBarUnlockedLollipopFarm:"statusBarUnlockedLollipopFarm",statusBarUnlockedMap:"statusBarUnlockedMap",statusBarUnlockedSave:"statusBarUnlockedSave",statusBarUnlockedTheArena:"statusBarUnlockedTheArena",statusBarUnlockedTheComputer:"statusBarUnlockedTheComputer",SuperRPGReward1:"SuperRPGReward1",SuperRPGReward2:"SuperRPGReward2",SuperRPGReward3:"SuperRPGReward3",SuperRPGReward4:"SuperRPGReward4",SuperRPGUnlockedHardmode:"SuperRPGUnlockedHardmode"};
+u.canRegister=true;function j(y,D,C){switch(D){case 0:u.saveNumber("aTreeStep",2);
+u.saveBool("mainMapDoneDesert",true);u.saveBool("mainMapDoneBridge",true);u.saveBool("mainMapDoneCaveEntrance",true);
+u.saveBool("mainMapDonePier",true);u.saveBool("mainMapDoneForest",true);u.saveBool("mainMapDoneCastleEntrance",true);
+u.saveBool("gridItemPossessedMainMap",true);u.saveBool("gridItemPossessedThirdHouseKey",true);
+u.saveBool("gridItemPossessedBeginnersGrimoire",true);u.saveBool("gridItemPossessedFeather",true);
+u.saveBool("gridItemPossessedPogoStick",true);u.saveBool("gridItemPossessedHeartPlug",true);
+u.saveBool("gridItemPossessedAdvancedGrimoire",true);u.saveBool("gridItemPossessedSponge",true);
+u.saveBool("gridItemPossessedShellPowder",true);u.saveBool("gridItemPossessedHeartPendant",true);
+u.saveBool("gridItemPossessedBlackMagicGrimoire",true);u.saveBool("gridItemPossessedFortressKey",true);
+u.saveBool("gridItemPossessedUnicornHorn",true);u.saveBool("gridItemPossessedXinopherydonClaw",true);
+u.saveBool("gridItemPossessedRedSharkFin",true);u.saveBool("gridItemPossessedGreenSharkFin",true);
+u.saveBool("gridItemPossessedPurpleSharkFin",true);u.saveBool("gridItemPossessedTalkingCandy",true);
+u.saveBool("gridItemPossessedP",true);u.saveBool("gridItemPossessedL",true);u.saveBool("gridItemPossessedA",true);
+u.saveBool("gridItemPossessedY",true);u.saveBool("eqItemGlovesRedEnchantedGloves",true);
+u.saveBool("eqItemGlovesPinkEnchantedGloves",true);u.saveBool("eqItemWeaponTrollBludgeon",true);
+u.saveBool("eqItemWeaponTribalSpear",true);u.saveBool("eqItemWeaponSummoningTribalSpear",true);
+u.saveBool("eqItemWeaponMonkeyWizardStaff",true);u.saveBool("eqItemWeaponGiantSpoon",true);
+u.saveBool("eqItemHatOctopusKingCrown",true);u.saveBool("eqItemBootsBootsOfIntrospection",true);
+u.saveBool("eqItemBootsRocketBoots",true);u.saveBool("eqItemWeaponGiantSpoonOfDoom",true);
+u.saveBool("eqItemBodyArmoursEnchantedKnightBodyArmour",true);u.saveNumber("gameCandiesEatenCurrent",500000000);
+u.saveNumber("gameCandiesEatenMax",500000000);u.saveNumber("playerHp",1000);u.saveBool("questPlayerSpellHealthPotionHasSpell",true);
+u.saveBool("questPlayerSpellTurtlePotionHasSpell",true);u.saveBool("questPlayerSpellAntiGravityPotionHasSpell",true);
+u.saveBool("questPlayerSpellBerserkPotionHasSpell",true);u.saveBool("questPlayerSpellCloningPotionHasSpell",true);
+u.saveBool("questPlayerSpellPPotionHasSpell",true);u.saveBool("questPlayerSpellXPotionHasSpell",true);
+u.saveNumber("questPlayerSpellHealthPotionQuantity",0);u.saveNumber("questPlayerSpellTurtlePotionQuantity",64084);
+u.saveNumber("questPlayerSpellAntiGravityPotionQuantity",47542);u.saveNumber("questPlayerSpellBerserkPotionQuantity",99549);
+u.saveNumber("questPlayerSpellCloningPotionQuantity",10050);u.saveNumber("questPlayerSpellPPotionQuantity",10085250);
+u.saveNumber("questPlayerSpellXPotionQuantity",10050999);u.saveNumber("gameCandiesCurrent",5000000);
+u.saveNumber("gameCandiesMax",5000000);u.saveNumber("gameLollipopsCurrent",5000000000);
+u.saveNumber("gameLollipopsMax",500000000000);u.saveNumber("gameChocolateBarsCurrent",7);
+u.saveNumber("gameChocolateBarsMax",7);u.saveNumber("gamePainsAuChocolatCurrent",7);
+u.saveNumber("gamePainsAuChocolatMax",7);u.saveBool("lonelyHouseTakeTheBoxDone",true);
+u.saveNumber("lollipopFarmPondHowManyLolligators",0);u.saveBool("statusBarUnlocked",true);
+u.saveBool("statusBarUnlockedCfg",true);u.saveBool("statusBarUnlockedSave",true);
 u.saveBool("statusBarUnlockedMap",true);u.saveBool("statusBarUnlockedInventory",true);
 u.saveBool("statusBarUnlockedLollipopFarm",true);u.saveBool("statusBarUnlockedCauldron",true);
 u.saveBool("statusBarUnlockedHealthBar",true);u.saveBool("statusBarUnlockedInsideYourBox",true);
 u.saveBool("statusBarUnlockedTheComputer",true);u.saveBool("statusBarUnlockedTheArena",true);
+u.saveBool("castleKilledNougatMonster",true);u.saveBool("dragonDone",true);u.saveBool("castleTowerFirstVisitDone",true);
 break;case 1:LocalSaving.load(C);break;case 2:var A=C.match(/bool +[a-zA-Z0-9_]+ *= *[a-zA-Z0-9_]+/g);
 var x=C.match(/number +[a-zA-Z0-9_]+ *= *[a-zA-Z0-9_]+/g);var z=C.match(/string +[a-zA-Z0-9_]+ *= *[a-zA-Z0-9_]+/g);
 if(A!=null){for(var B=0;B<A.length;B++){u.saveBool(A[B].match(/[a-zA-Z0-9_]+=/)[0].replace("=",""),u.stringToBool(A[B].match(/=[a-zA-Z0-9_]+/)[0].replace("=","")))
@@ -1462,8 +1490,7 @@ d.getCloseCombatDelay().setFixedDelay(0);return d};a.prototype.update=function(d
 }else{this.timer=0;var e=this.getRandomEnemy(d,c);if(e!=null){this.castPurpleBall(d,c,e)
 }}};return a})(MonkeyWizardStaffMotherClass);var Enchantment=(function(){function a(b,c){this.beforeItem=b;
 this.afterItem=c}a.prototype.enchant=function(){this.beforeItem.unequipIfEquipped();
-Saving.saveBool(this.beforeItem.getSavingName(),false);Saving.saveBool(this.afterItem.getSavingName(),true)
-};a.prototype.isPossible=function(){if(this.beforeItem.isPossessed()==true&&this.afterItem.isPossessed()==false){return true
+Saving.saveBool(this.afterItem.getSavingName(),true)};a.prototype.isPossible=function(){if(this.beforeItem.isPossessed()==true&&this.afterItem.isPossessed()==false){return true
 }return false};a.prototype.getAfterItem=function(){return this.afterItem};a.prototype.getBeforeItem=function(){return this.beforeItem
 };return a})();var EnchantmentItem=(function(){function a(b,d,c){this.game=b;this.savingName=d;
 this.type=c}a.prototype.getText=function(){var b=Database.getText(this.game.getEqItemFromEqItemType(this.savingName,this.type).getDatabaseName());
@@ -2212,9 +2239,9 @@ if(this.lighthouse.getPuzzle().getParts()[this.arrayPos.x-1][b]!=null){this.ligh
 }if(this.arrayPos.x>0&&this.lighthouse.getPuzzle().getParts()[this.arrayPos.x-1][this.arrayPos.y]!=null&&this.lighthouse.getPuzzle().getParts()[this.arrayPos.x-1][this.arrayPos.y].getShown()==true){this.lighthouse.getPuzzle().getParts()[this.arrayPos.x-1][this.arrayPos.y].addLives(1)
 }break;case 11:if(this.arrayPos.x<6&&this.lighthouse.getPuzzle().getParts()[this.arrayPos.x+1][this.arrayPos.y]!=null&&this.lighthouse.getPuzzle().getParts()[this.arrayPos.x+1][this.arrayPos.y].getShown()==false){this.lighthouse.getPuzzle().getParts()[this.arrayPos.x+1][this.arrayPos.y].setShown(true)
 }else{if(this.arrayPos.x>0&&this.lighthouse.getPuzzle().getParts()[this.arrayPos.x-1][this.arrayPos.y]!=null&&this.lighthouse.getPuzzle().getParts()[this.arrayPos.x-1][this.arrayPos.y].getShown()==false){this.lighthouse.getPuzzle().getParts()[this.arrayPos.x-1][this.arrayPos.y].setShown(true)
-}}break;case 10:this.type=12;if(Saving.loadBool("gridItemPossessedP")==false){this.lighthouse.getGame().gainItem("gridItemPossessedP");
-this.lighthouse.setSpeechId("lighthouseFoundStone")}else{this.lighthouse.setSpeechId("lighthouseFoundStoneAgain")
-}break}this.lives-=1;this.lighthouse.update();this.lighthouse.getGame().updatePlace()
+}}break;case 10:this.type=12;if(Saving.loadBool("gridItemPossessedP")==false){this.lighthouse.setSpeechId("lighthouseFoundStone")
+}else{this.lighthouse.setSpeechId("lighthouseFoundStoneAgain")}this.lighthouse.getGame().gainItem("gridItemPossessedP");
+break}this.lives-=1;this.lighthouse.update();this.lighthouse.getGame().updatePlace()
 };return a})();var LighthousePuzzlePartType;(function(a){a[a.BLANK=0]="BLANK";a[a.SHOW_AROUND=1]="SHOW_AROUND";
 a[a.SHOW_LEFT=2]="SHOW_LEFT";a[a.SHOW_BELOW=3]="SHOW_BELOW";a[a.SHOW_ABOVE=4]="SHOW_ABOVE";
 a[a.SHOW_RIGHT=5]="SHOW_RIGHT";a[a.MOVE_BELOW_LINE_TO_THE_RIGHT=6]="MOVE_BELOW_LINE_TO_THE_RIGHT";
@@ -3276,12 +3303,12 @@ a.prototype.setWeapon=function(c){this.weapon=c};a.prototype.drawGame=function()
 if(this.reward==0){this.getRenderArea().drawString("At floor "+this.floor+". And got no candies.",8,7)
 }else{this.getRenderArea().drawString("At floor "+this.floor+". And got "+this.reward+" candies.",8,7)
 }};a.prototype.drawSplashScreen=function(){this.getRenderArea().drawArray(Database.getAscii("places/village/thirdHouseGames/SuperRPG/splashScreen"),-67+this.splashScreenTimer*3,2)
-};a.prototype.getCandiesWeWillGain=function(){var c=0;if(Saving.loadBool("SuperRPGReward1")==false&&this.floor>5){c+=100;
-Saving.saveBool("SuperRPGReward1",true)}if(Saving.loadBool("SuperRPGReward2")==false&&this.floor>10){c+=1000;
-Saving.saveBool("SuperRPGReward2",true)}if(Saving.loadBool("SuperRPGReward3")==false&&this.floor>13){c+=10000;
-Saving.saveBool("SuperRPGReward3",true)}if(Saving.loadBool("SuperRPGReward4")==false&&this.floor>20){c+=30000;
-Saving.saveBool("SuperRPGReward4",true);Saving.saveBool("SuperRPGUnlockedHardmode",true)
-}return c};a.prototype.goToLose=function(){this.menu=null;this.step=2;this.reward=this.getCandiesWeWillGain();
+};a.prototype.getCandiesWeWillGain=function(){var c=0;if(this.floor>5){Saving.saveBool("SuperRPGReward1",true);
+if(Saving.loadBool("SuperRPGReward1")==true){c+=100}}if(this.floor>10){Saving.saveBool("SuperRPGReward2",true);
+if(Saving.loadBool("SuperRPGReward2")==false){c+=1000}}if(this.floor>13){Saving.saveBool("SuperRPGReward3",true);
+if(Saving.loadBool("SuperRPGReward3")==false){c+=10000}}if(this.floor>20){Saving.saveBool("SuperRPGReward4",true);
+Saving.saveBool("SuperRPGUnlockedHardmode",true);if(Saving.loadBool("SuperRPGReward4")==false){c+=30000
+}}return c};a.prototype.goToLose=function(){this.menu=null;this.step=2;this.reward=this.getCandiesWeWillGain();
 this.getThirdHouse().getGame().getCandies().add(this.reward)};a.prototype.goToMainMenu=function(){this.step=1;
 this.menu=new SuperRPGMenu_Main(this)};a.prototype.goToMonster=function(){var c=new SuperRPGMenu_Monster(this);
 c.addUsualEntries();switch(this.floor){case 0:if(Random.oneChanceOutOf(100)){c.setChest(20)

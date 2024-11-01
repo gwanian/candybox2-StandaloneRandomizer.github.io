@@ -15,7 +15,8 @@ class Enchantment{
         this.beforeItem.unequipIfEquipped();
         
         // We lose the before item and gain the after item
-        Saving.saveBool(this.beforeItem.getSavingName(), false);
+        // Randomizer modification: the before item is no longer lost upon enchanting
+        //Saving.saveBool(this.beforeItem.getSavingName(), false);
         Saving.saveBool(this.afterItem.getSavingName(), true);
     }
     
