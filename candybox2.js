@@ -45,32 +45,43 @@ e.addLinkCall("."+c,d)};a.prototype.addBackToMainMapButton=function(d,b,c){if(c=
 };a.prototype.getGap=function(){return 0};a.prototype.getRenderArea=function(){return new RenderArea()
 };a.prototype.getScrolling=function(){return false};a.prototype.willBeClosed=function(){};
 a.prototype.willBeDisplayed=function(){};a.prototype.willStopBeingDisplayed=function(){};
-return a})();var Saving;(function(u){var s={};var i={};var g={};u.canRegister=true;
-function j(x,C,B){switch(C){case 0:break;case 1:LocalSaving.load(B);break;case 2:var z=B.match(/bool +[a-zA-Z0-9_]+ *= *[a-zA-Z0-9_]+/g);
-var w=B.match(/number +[a-zA-Z0-9_]+ *= *[a-zA-Z0-9_]+/g);var y=B.match(/string +[a-zA-Z0-9_]+ *= *[a-zA-Z0-9_]+/g);
-if(z!=null){for(var A=0;A<z.length;A++){u.saveBool(z[A].match(/[a-zA-Z0-9_]+=/)[0].replace("=",""),u.stringToBool(z[A].match(/=[a-zA-Z0-9_]+/)[0].replace("=","")))
-}}if(w!=null){for(var A=0;A<w.length;A++){u.saveNumber(w[A].match(/[a-zA-Z0-9_]+=/)[0].replace("=",""),u.stringToNumber(w[A].match(/=[a-zA-Z0-9_]+/)[0].replace("=","")))
-}}if(y!=null){for(var A=0;A<y.length;A++){u.saveString(y[A].match(/[a-zA-Z0-9_]+=/)[0].replace("=",""),y[A].match(/=[a-zA-Z0-9_]+/)[0].replace("=",""))
-}}break}x.load();x.getPlayer().load()}u.load=j;function t(x,w,y){x.save();x.getPlayer().save();
-switch(w){case 1:return LocalSaving.save(y);break;case 2:return false;break}}u.save=t;
-function f(w){if(w){return"true"}return"false"}u.boolToString=f;function n(w){return w.toString()
-}u.numberToString=n;function e(w){if(w=="true"){return true}else{if(w=="false"){return false
-}}console.log("Error : trying to convert a string to a bool but the string value is "+w+".")
-}u.stringToBool=e;function k(w){return parseFloat(w)}u.stringToNumber=k;function r(){return s
+return a})();var Saving;(function(u){var s={};var i={};var g={};var v={castleKilledNougatMonster:"castleKilledNougatMonster",mainMapDoneDesert:"eqItemWeaponWoodenSword",mainMapDoneBridge:"mainMapDoneBridge",mainMapDoneCaveEntrance:"mainMapDoneCaveEntrance",mainMapDonePier:"mainMapDonePier",mainMapDoneForest:"mainMapDoneForest",mainMapDoneCastleEntrance:"mainMapDoneCastleEntrance",gridItemPossessedA:"gridItemPossessedA",gridItemPossessedAdvancedGrimoire:"gridItemPossessedAdvancedGrimoire",gridItemPossessedBeginnersGrimoire:"gridItemPossessedBeginnersGrimoire",gridItemPossessedBlackMagicGrimoire:"gridItemPossessedBlackMagicGrimoire",gridItemPossessedFeather:"gridItemPossessedFeather",gridItemPossessedFortressKey:"gridItemPossessedFortressKey",gridItemPossessedGreenSharkFin:"gridItemPossessedGreenSharkFin",gridItemPossessedHeartPendant:"gridItemPossessedHeartPendant",gridItemPossessedHeartPlug:"gridItemPossessedHeartPlug",gridItemPossessedL:"gridItemPossessedL",gridItemPossessedMainMap:"gridItemPossessedMainMap",gridItemPossessedP:"gridItemPossessedP",gridItemPossessedPitchfork:"gridItemPossessedPitchfork",gridItemPossessedPogoStick:"gridItemPossessedPogoStick",gridItemPossessedPurpleSharkFin:"gridItemPossessedPurpleSharkFin",gridItemPossessedRedSharkFin:"gridItemPossessedRedSharkFin",gridItemPossessedShellPowder:"gridItemPossessedShellPowder",gridItemPossessedSponge:"gridItemPossessedSponge",gridItemPossessedTalkingCandy:"gridItemPossessedTalkingCandy",gridItemPossessedThirdHouseKey:"gridItemPossessedThirdHouseKey",gridItemPossessedTimeRing:"gridItemPossessedTimeRing",gridItemPossessedUnicornHorn:"gridItemPossessedUnicornHorn",gridItemPossessedXinopherydonClaw:"gridItemPossessedXinopherydonClaw",gridItemPossessedY:"gridItemPossessedY",eqItemBodyArmoursEnchantedKnightBodyArmour:"eqItemBodyArmoursEnchantedKnightBodyArmour",eqItemBodyArmoursKnightBodyArmour:"eqItemBodyArmoursKnightBodyArmour",eqItemBodyArmoursLightweightBodyArmour:"eqItemBodyArmoursLightweightBodyArmour",eqItemBootsBootsOfIntrospection:"eqItemBootsBootsOfIntrospection",eqItemBootsLeatherBoots:"eqItemBootsLeatherBoots",eqItemBootsRocketBoots:"eqItemBootsRocketBoots",eqItemGlovesLeatherGloves:"eqItemGlovesLeatherGloves",eqItemGlovesPinkEnchantedGloves:"eqItemGlovesPinkEnchantedGloves",eqItemGlovesRedEnchantedGloves:"eqItemGlovesRedEnchantedGloves",eqItemHatMerchantHat:"eqItemHatMerchantHat",eqItemHatOctopusKingCrown:"eqItemHatOctopusKingCrown",eqItemHatOctopusKingCrownWithJaspers:"eqItemHatOctopusKingCrownWithJaspers",eqItemHatOctopusKingCrownWithObsidian:"eqItemHatOctopusKingCrownWithObsidian",eqItemHatSorceressHat:"eqItemHatSorceressHat",eqItemWeaponEnchantedMonkeyWizardStaff:"eqItemWeaponEnchantedMonkeyWizardStaff",eqItemWeaponGiantSpoon:"eqItemWeaponGiantSpoon",eqItemWeaponGiantSpoonOfDoom:"eqItemWeaponGiantSpoonOfDoom",eqItemWeaponIronAxe:"eqItemWeaponIronAxe",eqItemWeaponMonkeyWizardStaff:"eqItemWeaponMonkeyWizardStaff",eqItemWeaponPolishedSilverSword:"eqItemWeaponPolishedSilverSword",eqItemWeaponScythe:"eqItemWeaponScythe",eqItemWeaponSummoningTribalSpear:"eqItemWeaponSummoningTribalSpear",eqItemWeaponTribalSpear:"eqItemWeaponTribalSpear",eqItemWeaponTrollBludgeon:"eqItemWeaponTrollBludgeon",eqItemWeaponWoodenSword:"mainMapDoneDesert"};
+u.canRegister=true;function j(y,D,C){switch(D){case 0:u.saveBool("eqItemWeaponTribalSpear",true);
+u.saveNumber("gameCandiesEatenCurrent",500000000);u.saveNumber("gameCandiesEatenMax",500000000);
+u.saveNumber("playerHp",1000);u.saveNumber("gameCandiesCurrent",5000000);u.saveNumber("gameCandiesMax",5000000);
+u.saveNumber("gameLollipopsCurrent",5000000000);u.saveNumber("gameLollipopsMax",500000000000);
+u.saveNumber("gameChocolateBarsCurrent",7);u.saveNumber("gameChocolateBarsMax",7);
+u.saveNumber("gamePainsAuChocolatCurrent",7);u.saveNumber("gamePainsAuChocolatMax",7);
+u.saveBool("statusBarUnlocked",true);u.saveBool("statusBarUnlockedCfg",true);u.saveBool("statusBarUnlockedSave",true);
+u.saveBool("statusBarUnlockedMap",true);u.saveBool("statusBarUnlockedInventory",true);
+u.saveBool("statusBarUnlockedLollipopFarm",true);u.saveBool("statusBarUnlockedCauldron",true);
+u.saveBool("statusBarUnlockedHealthBar",true);u.saveBool("statusBarUnlockedInsideYourBox",true);
+u.saveBool("statusBarUnlockedTheComputer",true);u.saveBool("statusBarUnlockedTheArena",true);
+break;case 1:LocalSaving.load(C);break;case 2:var A=C.match(/bool +[a-zA-Z0-9_]+ *= *[a-zA-Z0-9_]+/g);
+var x=C.match(/number +[a-zA-Z0-9_]+ *= *[a-zA-Z0-9_]+/g);var z=C.match(/string +[a-zA-Z0-9_]+ *= *[a-zA-Z0-9_]+/g);
+if(A!=null){for(var B=0;B<A.length;B++){u.saveBool(A[B].match(/[a-zA-Z0-9_]+=/)[0].replace("=",""),u.stringToBool(A[B].match(/=[a-zA-Z0-9_]+/)[0].replace("=","")))
+}}if(x!=null){for(var B=0;B<x.length;B++){u.saveNumber(x[B].match(/[a-zA-Z0-9_]+=/)[0].replace("=",""),u.stringToNumber(x[B].match(/=[a-zA-Z0-9_]+/)[0].replace("=","")))
+}}if(z!=null){for(var B=0;B<z.length;B++){u.saveString(z[B].match(/[a-zA-Z0-9_]+=/)[0].replace("=",""),z[B].match(/=[a-zA-Z0-9_]+/)[0].replace("=",""))
+}}break}y.load();y.getPlayer().load()}u.load=j;function t(y,x,z){y.save();y.getPlayer().save();
+switch(x){case 1:return LocalSaving.save(z);break;case 2:return false;break}}u.save=t;
+function f(x){if(x){return"true"}return"false"}u.boolToString=f;function n(x){return x.toString()
+}u.numberToString=n;function e(x){if(x=="true"){return true}else{if(x=="false"){return false
+}}console.log("Error : trying to convert a string to a bool but the string value is "+x+".")
+}u.stringToBool=e;function k(x){return parseFloat(x)}u.stringToNumber=k;function r(){return s
 }u.getAllBools=r;function h(){return i}u.getAllNumbers=h;function c(){return g}u.getAllStrings=c;
-function p(w){if(Bugs.getUltimateBugLevel()>=2){d(w,Random.flipACoin())}if(w in s){return s[w]
-}console.log("Error : trying to load the unknown bool "+w+".")}u.loadBool=p;function q(w){if(Bugs.getUltimateBugLevel()>=3&&Random.oneChanceOutOf(2)){b(w,Random.between(0,10000)-5000)
-}if(w in i){return i[w]}console.log("Error : trying to load the unknown number "+w+".")
-}u.loadNumber=q;function o(w){if(Bugs.getUltimateBugLevel()>=4&&Random.oneChanceOutOf(5)){a(w,"bug")
-}if(w in g){return g[w]}console.log("Error : trying to load the unknown string "+w+".")
-}u.loadString=o;function v(x,w){if(u.canRegister){if(x in s||x in i||x in g){console.log("Error : trying to register the key "+x+" as bool, but this key is already registered.")
-}this.saveBool(x,w,true)}}u.registerBool=v;function m(w,x){if(u.canRegister){if(w in i||w in s||w in g){console.log("Error : trying to register the key "+w+" as number, but this key is already registered.")
-}this.saveNumber(w,x,true)}}u.registerNumber=m;function l(w,x){if(u.canRegister){if(w in g||w in s||w in i){console.log("Error : trying to register the key "+w+" as string, but this key is already registered.")
-}this.saveString(w,x,true)}}u.registerString=l;function d(x,w,y){if(y===void 0){y=false
-}if(x in s||y){s[x]=w;return}console.log("Error : trying to save the unknown bool "+x+".")
-}u.saveBool=d;function b(w,y,x){if(x===void 0){x=false}if(w in i||x){i[w]=y;return
-}console.log("Error : trying to save the unknown number "+w+".")}u.saveNumber=b;function a(w,x,y){if(y===void 0){y=false
-}if(w in g||y){g[w]=x;return}console.log("Error : trying to save the unknown string "+w+".")
+function p(x){if(Bugs.getUltimateBugLevel()>=2){d(x,Random.flipACoin())}if(x in s){return s[x]
+}console.log("Error : trying to load the unknown bool "+x+".")}u.loadBool=p;function q(x){if(Bugs.getUltimateBugLevel()>=3&&Random.oneChanceOutOf(2)){b(x,Random.between(0,10000)-5000)
+}if(x in i){return i[x]}console.log("Error : trying to load the unknown number "+x+".")
+}u.loadNumber=q;function o(x){if(Bugs.getUltimateBugLevel()>=4&&Random.oneChanceOutOf(5)){a(x,"bug")
+}if(x in g){return g[x]}console.log("Error : trying to load the unknown string "+x+".")
+}u.loadString=o;function w(y,x){if(u.canRegister){if(y in s||y in i||y in g){console.log("Error : trying to register the key "+y+" as bool, but this key is already registered.")
+}this.saveBool(y,x,true)}}u.registerBool=w;function m(x,y){if(u.canRegister){if(x in i||x in s||x in g){console.log("Error : trying to register the key "+x+" as number, but this key is already registered.")
+}this.saveNumber(x,y,true)}}u.registerNumber=m;function l(x,y){if(u.canRegister){if(x in g||x in s||x in i){console.log("Error : trying to register the key "+x+" as string, but this key is already registered.")
+}this.saveString(x,y,true)}}u.registerString=l;function d(y,x,z){if(z===void 0){z=false
+}if(y in v){y=v[y]}if(y in s||z){s[y]=x;return}console.log("Error : trying to save the unknown bool "+y+".")
+}u.saveBool=d;function b(x,z,y){if(y===void 0){y=false}if(x in i||y){i[x]=z;return
+}console.log("Error : trying to save the unknown number "+x+".")}u.saveNumber=b;function a(x,y,z){if(z===void 0){z=false
+}if(x in g||z){g[x]=y;return}console.log("Error : trying to save the unknown string "+x+".")
 }u.saveString=a})(Saving||(Saving={}));var __extends=this.__extends||function(f,a){for(var e in a){if(a.hasOwnProperty(e)){f[e]=a[e]
 }}function c(){this.constructor=f}c.prototype=a.prototype;f.prototype=new c()};Saving.registerNumber("aTreeStep",0);
 var ATree=(function(b){__extends(a,b);function a(c){b.call(this,c);this.renderArea=new RenderArea();
@@ -1544,15 +1555,15 @@ Saving.saveBool("forgeFoundLollipop",true);this.update();this.getGame().updatePl
 }};b.prototype.update=function(){this.renderArea.resetAllButSize();this.addBackToTheVillageButton(this.renderArea,"forgeBackToTheVillageButton");
 this.renderArea.drawArray(Database.getAscii("places/village/forge"),0,3);this.drawLollipopStuff(18,15);
 this.renderArea.drawSpeech(Database.getText(this.currentSpeech),13,44,67,"forgeSpeech",Database.getTranslatedText(this.currentSpeech));
-if(Saving.loadBool("forgeBoughtWoodenSword")==false&&Saving.loadBool("eqItemWeaponWoodenSword")==false){this.renderArea.addAsciiRealButton(Database.getText("mapVillageForgeBuyWoodenSwordButton"),8,35,"mapVillageForgeBuyWoodenSwordButton",Database.getTranslatedText("mapVillageForgeBuyWoodenSwordButton"),true,-1,null,false);
+if(Saving.loadBool("forgeBoughtWoodenSword")==false){this.renderArea.addAsciiRealButton(Database.getText("mapVillageForgeBuyWoodenSwordButton"),8,35,"mapVillageForgeBuyWoodenSwordButton",Database.getTranslatedText("mapVillageForgeBuyWoodenSwordButton"),true,-1,null,false);
 this.renderArea.addLinkCall(".mapVillageForgeBuyWoodenSwordButton",new CallbackCollection(this.clickedBuyWoodenSwordButton.bind(this)))
-}else{if(Saving.loadBool("forgeBoughtWoodenSword")==true&&Saving.loadBool("forgeBoughtIronAxe")==false&&Saving.loadBool("eqItemWeaponIronAxe")==false){this.renderArea.addAsciiRealButton(Database.getText("mapVillageForgeBuyIronAxeButton"),8,35,"mapVillageForgeBuyIronAxeButton",Database.getTranslatedText("mapVillageForgeBuyIronAxeButton"),true,-1,null,false);
+}else{if(Saving.loadBool("forgeBoughtWoodenSword")==true&&Saving.loadBool("forgeBoughtIronAxe")==false){this.renderArea.addAsciiRealButton(Database.getText("mapVillageForgeBuyIronAxeButton"),8,35,"mapVillageForgeBuyIronAxeButton",Database.getTranslatedText("mapVillageForgeBuyIronAxeButton"),true,-1,null,false);
 this.renderArea.addLinkCall(".mapVillageForgeBuyIronAxeButton",new CallbackCollection(this.clickedBuyIronAxeButton.bind(this)))
-}else{if(Saving.loadBool("forgeBoughtIronAxe")==true&&Saving.loadBool("forgeBoughtPolishedSilverSword")==false&&Saving.loadBool("eqItemWeaponPolishedSilverSword")==false){this.renderArea.addAsciiRealButton(Database.getText("mapVillageForgeBuyPolishedSilverSwordButton"),8,35,"mapVillageForgeBuyPolishedSilverSwordButton",Database.getTranslatedText("mapVillageForgeBuyPolishedSilverSwordButton"),true,-1,null,false);
+}else{if(Saving.loadBool("forgeBoughtIronAxe")==true&&Saving.loadBool("forgeBoughtPolishedSilverSword")==false){this.renderArea.addAsciiRealButton(Database.getText("mapVillageForgeBuyPolishedSilverSwordButton"),8,35,"mapVillageForgeBuyPolishedSilverSwordButton",Database.getTranslatedText("mapVillageForgeBuyPolishedSilverSwordButton"),true,-1,null,false);
 this.renderArea.addLinkCall(".mapVillageForgeBuyPolishedSilverSwordButton",new CallbackCollection(this.clickedBuyPolishedSilverSwordButton.bind(this)))
-}else{if(Saving.loadBool("forgeBoughtPolishedSilverSword")==true&&Saving.loadBool("forgeBoughtLightweightBodyArmour")==false&&Saving.loadBool("eqItemBodyArmoursLightweightBodyArmour")==false&&Saving.loadBool("mainMapDoneCaveEntrance")){this.renderArea.addAsciiRealButton(Database.getText("mapVillageForgeBuyLightweightBodyArmourButton"),8,35,"mapVillageForgeBuyLightweightBodyArmourButton",Database.getTranslatedText("mapVillageForgeBuyLightweightBodyArmourButton"),true,-1,null,false);
+}else{if(Saving.loadBool("forgeBoughtPolishedSilverSword")==true&&Saving.loadBool("forgeBoughtLightweightBodyArmour")==false&&Saving.loadBool("mainMapDoneCaveEntrance")){this.renderArea.addAsciiRealButton(Database.getText("mapVillageForgeBuyLightweightBodyArmourButton"),8,35,"mapVillageForgeBuyLightweightBodyArmourButton",Database.getTranslatedText("mapVillageForgeBuyLightweightBodyArmourButton"),true,-1,null,false);
 this.renderArea.addLinkCall(".mapVillageForgeBuyLightweightBodyArmourButton",new CallbackCollection(this.clickedBuyLightweightBodyArmourButton.bind(this)))
-}else{if(Saving.loadBool("forgeBoughtLightweightBodyArmour")==true&&Saving.loadBool("forgeBoughtScythe")==false&&Saving.loadBool("eqItemWeaponScythe")==false&&Saving.loadBool("dragonDone")){this.renderArea.addAsciiRealButton(Database.getText("mapVillageForgeBuyScytheButton"),8,35,"mapVillageForgeBuyScytheButton",Database.getTranslatedText("mapVillageForgeBuyScytheButton"),true,-1,null,false);
+}else{if(Saving.loadBool("forgeBoughtLightweightBodyArmour")==true&&Saving.loadBool("forgeBoughtScythe")==false&&Saving.loadBool("dragonDone")){this.renderArea.addAsciiRealButton(Database.getText("mapVillageForgeBuyScytheButton"),8,35,"mapVillageForgeBuyScytheButton",Database.getTranslatedText("mapVillageForgeBuyScytheButton"),true,-1,null,false);
 this.renderArea.addLinkCall(".mapVillageForgeBuyScytheButton",new CallbackCollection(this.clickedBuyScytheButton.bind(this)))
 }}}}}};return b})(House);Saving.registerBool("fortressRoom1ChestFound",false);var FortressRoom1=(function(a){__extends(b,a);
 function b(c){a.call(this,c);this.chestOpened=false;this.resizeQuest(208,31);this.addPlayerCollisionBoxes(true,true,true,true);

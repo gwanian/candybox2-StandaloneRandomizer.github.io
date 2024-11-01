@@ -166,12 +166,201 @@ var Saving;
     var bools = {};
     var numbers = {};
     var strings = {};
+    /* List of items for the randomizer:
+
+    Example Item
+    Example Description
+    Example Name
+
+    Chocolate Bar
+    A chocolate bar (specifically, the one recived from throwing candies)
+    candiesThrowGotChocolateBar
+    
+    Castle Tower Unlock
+    Item that allows access to the castle tower after killing the NougatMonster
+    castleKilledNougatMonster
+
+
+
+    */
+    //For randomizer, list of locations and their corresponding items
+    var boolItemLocations = {
+        // //location check of the chocolate bar obtained by throwing candies
+        // //location name: Candies Thrown Chocolate Bar
+        // "candiesThrowGotChocolateBar"
+        // //location check for unlocking the puzzle at the lighthouse
+        // //location name: Ask Dragon for Candies
+        // "dragonUnlockedCyclops"
+        // //location check for the lollipop in the forge
+        // //location name: Forge Lollipop
+        // "forgeFoundLollipop"
+        // //location check for the lollipop on top of the cupboard in the fourth house
+        // //location name: Lollipop on Fourth House Cupboard
+        // "fourthHouseFoundLollipopOnCupboard"
+        //AREA COMPLETION CHECKS
+        //location check for completing the Nougat Monster quest and unlocking access to the castle tower
+        //location name: Killed Nougat Monster
+        "castleKilledNougatMonster": "castleKilledNougatMonster",
+        //location check for completing the Desert quest
+        //location name: Desert Completion
+        "mainMapDoneDesert": "eqItemWeaponWoodenSword",
+        //location check for completing the Bridge quest
+        //location name: Bridge Completion
+        "mainMapDoneBridge": "mainMapDoneBridge",
+        //location check for completing the Cave area
+        //location name: Cave Completion
+        "mainMapDoneCaveEntrance": "mainMapDoneCaveEntrance",
+        //location check for taking the boat from the Pier to the Lighthouse
+        //location name: Pier Boat Taken
+        "mainMapDonePier": "mainMapDonePier",
+        //location check for completing the Forest quest
+        //location name: Forest Completion
+        "mainMapDoneForest": "mainMapDoneForest",
+        //location check for completing the Castle's Entrance quest
+        //location name: Castle's Entrance Completion
+        "mainMapDoneCastleEntrance": "mainMapDoneCastleEntrance",
+        //GRID ITEM CHECKS
+        "gridItemPossessedA": "gridItemPossessedA",
+        "gridItemPossessedAdvancedGrimoire": "gridItemPossessedAdvancedGrimoire",
+        "gridItemPossessedBeginnersGrimoire": "gridItemPossessedBeginnersGrimoire",
+        "gridItemPossessedBlackMagicGrimoire": "gridItemPossessedBlackMagicGrimoire",
+        "gridItemPossessedFeather": "gridItemPossessedFeather",
+        "gridItemPossessedFortressKey": "gridItemPossessedFortressKey",
+        "gridItemPossessedGreenSharkFin": "gridItemPossessedGreenSharkFin",
+        "gridItemPossessedHeartPendant": "gridItemPossessedHeartPendant",
+        "gridItemPossessedHeartPlug": "gridItemPossessedHeartPlug",
+        "gridItemPossessedL": "gridItemPossessedL",
+        "gridItemPossessedMainMap": "gridItemPossessedMainMap",
+        "gridItemPossessedP": "gridItemPossessedP",
+        "gridItemPossessedPitchfork": "gridItemPossessedPitchfork",
+        "gridItemPossessedPogoStick": "gridItemPossessedPogoStick",
+        "gridItemPossessedPurpleSharkFin": "gridItemPossessedPurpleSharkFin",
+        "gridItemPossessedRedSharkFin": "gridItemPossessedRedSharkFin",
+        "gridItemPossessedShellPowder": "gridItemPossessedShellPowder",
+        "gridItemPossessedSponge": "gridItemPossessedSponge",
+        "gridItemPossessedTalkingCandy": "gridItemPossessedTalkingCandy",
+        "gridItemPossessedThirdHouseKey": "gridItemPossessedThirdHouseKey",
+        "gridItemPossessedTimeRing": "gridItemPossessedTimeRing",
+        "gridItemPossessedUnicornHorn": "gridItemPossessedUnicornHorn",
+        "gridItemPossessedXinopherydonClaw": "gridItemPossessedXinopherydonClaw",
+        "gridItemPossessedY": "gridItemPossessedY",
+        //EQUIPABLE ITEM CHECKS
+        "eqItemBodyArmoursEnchantedKnightBodyArmour": "eqItemBodyArmoursEnchantedKnightBodyArmour",
+        "eqItemBodyArmoursKnightBodyArmour": "eqItemBodyArmoursKnightBodyArmour",
+        "eqItemBodyArmoursLightweightBodyArmour": "eqItemBodyArmoursLightweightBodyArmour",
+        "eqItemBootsBootsOfIntrospection": "eqItemBootsBootsOfIntrospection",
+        "eqItemBootsLeatherBoots": "eqItemBootsLeatherBoots",
+        "eqItemBootsRocketBoots": "eqItemBootsRocketBoots",
+        "eqItemGlovesLeatherGloves": "eqItemGlovesLeatherGloves",
+        "eqItemGlovesPinkEnchantedGloves": "eqItemGlovesPinkEnchantedGloves",
+        "eqItemGlovesRedEnchantedGloves": "eqItemGlovesRedEnchantedGloves",
+        "eqItemHatMerchantHat": "eqItemHatMerchantHat",
+        "eqItemHatOctopusKingCrown": "eqItemHatOctopusKingCrown",
+        "eqItemHatOctopusKingCrownWithJaspers": "eqItemHatOctopusKingCrownWithJaspers",
+        "eqItemHatOctopusKingCrownWithObsidian": "eqItemHatOctopusKingCrownWithObsidian",
+        "eqItemHatSorceressHat": "eqItemHatSorceressHat",
+        "eqItemWeaponEnchantedMonkeyWizardStaff": "eqItemWeaponEnchantedMonkeyWizardStaff",
+        "eqItemWeaponGiantSpoon": "eqItemWeaponGiantSpoon",
+        "eqItemWeaponGiantSpoonOfDoom": "eqItemWeaponGiantSpoonOfDoom",
+        "eqItemWeaponIronAxe": "eqItemWeaponIronAxe",
+        "eqItemWeaponMonkeyWizardStaff": "eqItemWeaponMonkeyWizardStaff",
+        "eqItemWeaponPolishedSilverSword": "eqItemWeaponPolishedSilverSword",
+        "eqItemWeaponScythe": "eqItemWeaponScythe",
+        "eqItemWeaponSummoningTribalSpear": "eqItemWeaponSummoningTribalSpear",
+        "eqItemWeaponTribalSpear": "eqItemWeaponTribalSpear",
+        "eqItemWeaponTrollBludgeon": "eqItemWeaponTrollBludgeon",
+        "eqItemWeaponWoodenSword": "mainMapDoneDesert" //x
+    };
     // Can we register?
     Saving.canRegister = true;
     // Special public functions : used to load or the actual save
     function load(game, loadingType, loadingString) {
         switch (loadingType) {
             case 0 /* NONE */:
+                // You can uncomment the lines below to start your game with everything unlocked (useful for testing purposes)
+                // Saving.saveNumber("aTreeStep", 2);
+                // Saving.saveBool("mainMapDoneDesert", true);
+                // Saving.saveBool("mainMapDoneBridge", true);
+                // Saving.saveBool("mainMapDoneCaveEntrance", true);
+                // Saving.saveBool("mainMapDonePier", true);
+                // Saving.saveBool("mainMapDoneForest", true);
+                // Saving.saveBool("mainMapDoneCastleEntrance", true);
+                // Saving.saveBool("gridItemPossessedMainMap", true);
+                // //Saving.saveBool("gridItemPossessedTimeRing", true);
+                // Saving.saveBool("gridItemPossessedThirdHouseKey", true);
+                // Saving.saveBool("gridItemPossessedBeginnersGrimoire", true);
+                // Saving.saveBool("gridItemPossessedFeather", true);
+                // Saving.saveBool("gridItemPossessedPogoStick", true);
+                // Saving.saveBool("gridItemPossessedHeartPlug", true);
+                // Saving.saveBool("gridItemPossessedAdvancedGrimoire", true);
+                // Saving.saveBool("gridItemPossessedSponge", true);
+                // Saving.saveBool("gridItemPossessedShellPowder", true);
+                // Saving.saveBool("gridItemPossessedHeartPendant", true);
+                // Saving.saveBool("gridItemPossessedBlackMagicGrimoire", true);
+                // Saving.saveBool("gridItemPossessedFortressKey", true);
+                // Saving.saveBool("gridItemPossessedUnicornHorn", true);
+                // Saving.saveBool("gridItemPossessedXinopherydonClaw", true);
+                // //Saving.saveBool("gridItemPossessedPitchfork", true);
+                // Saving.saveBool("gridItemPossessedRedSharkFin", true);
+                // Saving.saveBool("gridItemPossessedGreenSharkFin", true);
+                // Saving.saveBool("gridItemPossessedPurpleSharkFin", true);
+                // Saving.saveBool("gridItemPossessedTalkingCandy", true);
+                // Saving.saveBool("gridItemPossessedP", true);
+                // Saving.saveBool("gridItemPossessedL", true);
+                // Saving.saveBool("gridItemPossessedA", true);
+                // Saving.saveBool("gridItemPossessedY", true);
+                // Saving.saveBool("eqItemGlovesRedEnchantedGloves", true);
+                // Saving.saveBool("eqItemGlovesPinkEnchantedGloves", true);
+                // //Saving.saveBool("eqItemWeaponWoodenSword", true);
+                // Saving.saveBool("eqItemWeaponTrollBludgeon", true);
+                Saving.saveBool("eqItemWeaponTribalSpear", true);
+                // Saving.saveBool("eqItemWeaponSummoningTribalSpear", true);
+                // Saving.saveBool("eqItemWeaponMonkeyWizardStaff", true);
+                // Saving.saveBool("eqItemWeaponGiantSpoon", true);
+                // Saving.saveBool("eqItemHatOctopusKingCrown", true);
+                // Saving.saveBool("eqItemBootsBootsOfIntrospection", true);
+                // Saving.saveBool("eqItemBootsRocketBoots", true);
+                // Saving.saveBool("eqItemWeaponGiantSpoonOfDoom", true);
+                // Saving.saveBool("eqItemBodyArmoursEnchantedKnightBodyArmour", true);
+                Saving.saveNumber("gameCandiesEatenCurrent", 500000000);
+                Saving.saveNumber("gameCandiesEatenMax", 500000000);
+                Saving.saveNumber("playerHp", 1000);
+                // Saving.saveBool("questPlayerSpellHealthPotionHasSpell", true);
+                // Saving.saveBool("questPlayerSpellTurtlePotionHasSpell", true);
+                // Saving.saveBool("questPlayerSpellAntiGravityPotionHasSpell", true);
+                // Saving.saveBool("questPlayerSpellBerserkPotionHasSpell", true);
+                // Saving.saveBool("questPlayerSpellCloningPotionHasSpell", true);
+                // Saving.saveBool("questPlayerSpellPPotionHasSpell", true);
+                // Saving.saveBool("questPlayerSpellXPotionHasSpell", true);
+                // Saving.saveNumber("questPlayerSpellHealthPotionQuantity", 0);
+                // Saving.saveNumber("questPlayerSpellTurtlePotionQuantity", 64084);
+                // Saving.saveNumber("questPlayerSpellAntiGravityPotionQuantity", 47542);
+                // Saving.saveNumber("questPlayerSpellBerserkPotionQuantity", 99549);
+                // Saving.saveNumber("questPlayerSpellCloningPotionQuantity", 10050);
+                // Saving.saveNumber("questPlayerSpellPPotionQuantity", 10085250);
+                // Saving.saveNumber("questPlayerSpellXPotionQuantity", 10050999);
+                // //Saving.saveBool("gameDebug", true);
+                Saving.saveNumber("gameCandiesCurrent", 5000000);
+                Saving.saveNumber("gameCandiesMax", 5000000);
+                Saving.saveNumber("gameLollipopsCurrent", 5000000000);
+                Saving.saveNumber("gameLollipopsMax", 500000000000);
+                Saving.saveNumber("gameChocolateBarsCurrent", 7);
+                Saving.saveNumber("gameChocolateBarsMax", 7);
+                Saving.saveNumber("gamePainsAuChocolatCurrent", 7);
+                Saving.saveNumber("gamePainsAuChocolatMax", 7);
+                // Saving.saveBool("lonelyHouseTakeTheBoxDone", true);
+                // Saving.saveNumber("lollipopFarmPondHowManyLolligators", 0);
+                Saving.saveBool("statusBarUnlocked", true);
+                Saving.saveBool("statusBarUnlockedCfg", true);
+                Saving.saveBool("statusBarUnlockedSave", true);
+                Saving.saveBool("statusBarUnlockedMap", true);
+                Saving.saveBool("statusBarUnlockedInventory", true);
+                Saving.saveBool("statusBarUnlockedLollipopFarm", true);
+                Saving.saveBool("statusBarUnlockedCauldron", true);
+                Saving.saveBool("statusBarUnlockedHealthBar", true);
+                Saving.saveBool("statusBarUnlockedInsideYourBox", true);
+                Saving.saveBool("statusBarUnlockedTheComputer", true);
+                Saving.saveBool("statusBarUnlockedTheArena", true);
                 break;
             case 1 /* LOCAL */:
                 LocalSaving.load(loadingString);
@@ -308,6 +497,9 @@ var Saving;
     Saving.registerString = registerString;
     function saveBool(key, b, registering) {
         if (registering === void 0) { registering = false; }
+        if (key in boolItemLocations) {
+            key = boolItemLocations[key];
+        }
         if (key in bools || registering) {
             bools[key] = b;
             return;
@@ -7827,23 +8019,23 @@ var Forge = (function (_super) {
         this.renderArea.drawSpeech(Database.getText(this.currentSpeech), 13, 44, 67, "forgeSpeech", Database.getTranslatedText(this.currentSpeech));
         // Draw the buttons
         // If we never bought the wooden sword and we don't have one
-        if (Saving.loadBool("forgeBoughtWoodenSword") == false && Saving.loadBool("eqItemWeaponWoodenSword") == false) {
+        if (Saving.loadBool("forgeBoughtWoodenSword") == false) {
             this.renderArea.addAsciiRealButton(Database.getText("mapVillageForgeBuyWoodenSwordButton"), 8, 35, "mapVillageForgeBuyWoodenSwordButton", Database.getTranslatedText("mapVillageForgeBuyWoodenSwordButton"), true, -1, null, false);
             this.renderArea.addLinkCall(".mapVillageForgeBuyWoodenSwordButton", new CallbackCollection(this.clickedBuyWoodenSwordButton.bind(this)));
         }
-        else if (Saving.loadBool("forgeBoughtWoodenSword") == true && Saving.loadBool("forgeBoughtIronAxe") == false && Saving.loadBool("eqItemWeaponIronAxe") == false) {
+        else if (Saving.loadBool("forgeBoughtWoodenSword") == true && Saving.loadBool("forgeBoughtIronAxe") == false) {
             this.renderArea.addAsciiRealButton(Database.getText("mapVillageForgeBuyIronAxeButton"), 8, 35, "mapVillageForgeBuyIronAxeButton", Database.getTranslatedText("mapVillageForgeBuyIronAxeButton"), true, -1, null, false);
             this.renderArea.addLinkCall(".mapVillageForgeBuyIronAxeButton", new CallbackCollection(this.clickedBuyIronAxeButton.bind(this)));
         }
-        else if (Saving.loadBool("forgeBoughtIronAxe") == true && Saving.loadBool("forgeBoughtPolishedSilverSword") == false && Saving.loadBool("eqItemWeaponPolishedSilverSword") == false) {
+        else if (Saving.loadBool("forgeBoughtIronAxe") == true && Saving.loadBool("forgeBoughtPolishedSilverSword") == false) {
             this.renderArea.addAsciiRealButton(Database.getText("mapVillageForgeBuyPolishedSilverSwordButton"), 8, 35, "mapVillageForgeBuyPolishedSilverSwordButton", Database.getTranslatedText("mapVillageForgeBuyPolishedSilverSwordButton"), true, -1, null, false);
             this.renderArea.addLinkCall(".mapVillageForgeBuyPolishedSilverSwordButton", new CallbackCollection(this.clickedBuyPolishedSilverSwordButton.bind(this)));
         }
-        else if (Saving.loadBool("forgeBoughtPolishedSilverSword") == true && Saving.loadBool("forgeBoughtLightweightBodyArmour") == false && Saving.loadBool("eqItemBodyArmoursLightweightBodyArmour") == false && Saving.loadBool("mainMapDoneCaveEntrance")) {
+        else if (Saving.loadBool("forgeBoughtPolishedSilverSword") == true && Saving.loadBool("forgeBoughtLightweightBodyArmour") == false && Saving.loadBool("mainMapDoneCaveEntrance")) {
             this.renderArea.addAsciiRealButton(Database.getText("mapVillageForgeBuyLightweightBodyArmourButton"), 8, 35, "mapVillageForgeBuyLightweightBodyArmourButton", Database.getTranslatedText("mapVillageForgeBuyLightweightBodyArmourButton"), true, -1, null, false);
             this.renderArea.addLinkCall(".mapVillageForgeBuyLightweightBodyArmourButton", new CallbackCollection(this.clickedBuyLightweightBodyArmourButton.bind(this)));
         }
-        else if (Saving.loadBool("forgeBoughtLightweightBodyArmour") == true && Saving.loadBool("forgeBoughtScythe") == false && Saving.loadBool("eqItemWeaponScythe") == false && Saving.loadBool("dragonDone")) {
+        else if (Saving.loadBool("forgeBoughtLightweightBodyArmour") == true && Saving.loadBool("forgeBoughtScythe") == false && Saving.loadBool("dragonDone")) {
             this.renderArea.addAsciiRealButton(Database.getText("mapVillageForgeBuyScytheButton"), 8, 35, "mapVillageForgeBuyScytheButton", Database.getTranslatedText("mapVillageForgeBuyScytheButton"), true, -1, null, false);
             this.renderArea.addLinkCall(".mapVillageForgeBuyScytheButton", new CallbackCollection(this.clickedBuyScytheButton.bind(this)));
         }

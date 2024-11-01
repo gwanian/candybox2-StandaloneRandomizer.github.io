@@ -159,27 +159,27 @@ class Forge extends House{
         
         // Draw the buttons
             // If we never bought the wooden sword and we don't have one
-            if(Saving.loadBool("forgeBoughtWoodenSword") == false && Saving.loadBool("eqItemWeaponWoodenSword") == false){
+            if(Saving.loadBool("forgeBoughtWoodenSword") == false /*&& Saving.loadBool("eqItemWeaponWoodenSword") == false*/){
                 this.renderArea.addAsciiRealButton(Database.getText("mapVillageForgeBuyWoodenSwordButton"), 8, 35, "mapVillageForgeBuyWoodenSwordButton", Database.getTranslatedText("mapVillageForgeBuyWoodenSwordButton"), true, -1, null, false);
                 this.renderArea.addLinkCall(".mapVillageForgeBuyWoodenSwordButton", new CallbackCollection(this.clickedBuyWoodenSwordButton.bind(this)));
             }
             // If we bought the wooden sword, never bought the iron axe and we don't have one
-            else if(Saving.loadBool("forgeBoughtWoodenSword") == true && Saving.loadBool("forgeBoughtIronAxe") == false && Saving.loadBool("eqItemWeaponIronAxe") == false){
+            else if(Saving.loadBool("forgeBoughtWoodenSword") == true && Saving.loadBool("forgeBoughtIronAxe") == false /*&& Saving.loadBool("eqItemWeaponIronAxe") == false*/){
                 this.renderArea.addAsciiRealButton(Database.getText("mapVillageForgeBuyIronAxeButton"), 8, 35, "mapVillageForgeBuyIronAxeButton", Database.getTranslatedText("mapVillageForgeBuyIronAxeButton"), true, -1, null, false);
                 this.renderArea.addLinkCall(".mapVillageForgeBuyIronAxeButton", new CallbackCollection(this.clickedBuyIronAxeButton.bind(this)));
             }
             // If we bought the iron axe, never bought the polished silver sword and we don't have one
-            else if(Saving.loadBool("forgeBoughtIronAxe") == true && Saving.loadBool("forgeBoughtPolishedSilverSword") == false && Saving.loadBool("eqItemWeaponPolishedSilverSword") == false){
+            else if(Saving.loadBool("forgeBoughtIronAxe") == true && Saving.loadBool("forgeBoughtPolishedSilverSword") == false /*&& Saving.loadBool("eqItemWeaponPolishedSilverSword") == false*/){
                 this.renderArea.addAsciiRealButton(Database.getText("mapVillageForgeBuyPolishedSilverSwordButton"), 8, 35, "mapVillageForgeBuyPolishedSilverSwordButton", Database.getTranslatedText("mapVillageForgeBuyPolishedSilverSwordButton"), true, -1, null, false);
                 this.renderArea.addLinkCall(".mapVillageForgeBuyPolishedSilverSwordButton", new CallbackCollection(this.clickedBuyPolishedSilverSwordButton.bind(this)));
             }
             // If we bought the polished silver sword, never bought the lightweight body armour and we don't have one and we made the cave entrance
-            else if(Saving.loadBool("forgeBoughtPolishedSilverSword") == true && Saving.loadBool("forgeBoughtLightweightBodyArmour") == false && Saving.loadBool("eqItemBodyArmoursLightweightBodyArmour") == false && Saving.loadBool("mainMapDoneCaveEntrance")){
+            else if(Saving.loadBool("forgeBoughtPolishedSilverSword") == true && Saving.loadBool("forgeBoughtLightweightBodyArmour") == false /*&& Saving.loadBool("eqItemBodyArmoursLightweightBodyArmour") == false*/ && Saving.loadBool("mainMapDoneCaveEntrance")){
                 this.renderArea.addAsciiRealButton(Database.getText("mapVillageForgeBuyLightweightBodyArmourButton"), 8, 35, "mapVillageForgeBuyLightweightBodyArmourButton", Database.getTranslatedText("mapVillageForgeBuyLightweightBodyArmourButton"), true, -1, null, false);
                 this.renderArea.addLinkCall(".mapVillageForgeBuyLightweightBodyArmourButton", new CallbackCollection(this.clickedBuyLightweightBodyArmourButton.bind(this)));
             }
             // If we bought the lightweight body armour, never bought the scythe and we don't have one and the dragon is done
-            else if(Saving.loadBool("forgeBoughtLightweightBodyArmour") == true && Saving.loadBool("forgeBoughtScythe") == false && Saving.loadBool("eqItemWeaponScythe") == false && Saving.loadBool("dragonDone")){
+            else if(Saving.loadBool("forgeBoughtLightweightBodyArmour") == true && Saving.loadBool("forgeBoughtScythe") == false && /*Saving.loadBool("eqItemWeaponScythe") == false &&*/ Saving.loadBool("dragonDone")){
                 this.renderArea.addAsciiRealButton(Database.getText("mapVillageForgeBuyScytheButton"), 8, 35, "mapVillageForgeBuyScytheButton", Database.getTranslatedText("mapVillageForgeBuyScytheButton"), true, -1, null, false);
                 this.renderArea.addLinkCall(".mapVillageForgeBuyScytheButton", new CallbackCollection(this.clickedBuyScytheButton.bind(this)));
             }
