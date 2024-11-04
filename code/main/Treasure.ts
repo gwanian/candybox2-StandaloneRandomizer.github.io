@@ -23,7 +23,8 @@ class Treasure extends Place{
         Saving.saveBool("TheCavePattern_TreasureMapFoundTreasure", true);
         
         // Get it
-        this.getGame().getChocolateBars().add(3);
+        //this.getGame().getChocolateBars().add(3); //Randomizer: using a bool so this can be a check
+        Saving.saveBool("ObtainTreasureChocolateBars", true);
         
         // Update
         this.update();

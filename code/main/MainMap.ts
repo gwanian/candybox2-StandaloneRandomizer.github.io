@@ -40,6 +40,7 @@ class MainMap extends Place{
     
     // Private methods
     private load(): void{
+
         // We erase the map
         this.renderArea.resetAllButSize();
         
@@ -59,7 +60,7 @@ class MainMap extends Place{
             this.loadBridge(99, 61);
             this.loadCaveEntrance(52, 57);
             this.loadWishingWell(55, 66);
-            if(Saving.loadBool("gridItemPossessedPogoStick") == false) this.loadMoutains(71, 52);
+            if(Saving.loadBool(Saving.getItemFromLocation("gridItemPossessedPogoStick")/*additional randomizer functionality*/) == false) this.loadMoutains(71, 52);
         }
         if(Saving.loadBool("mainMapDoneBridge")) this.loadSorceressHut(95, 68);
         if(Saving.loadBool("mainMapDoneCaveEntrance")){

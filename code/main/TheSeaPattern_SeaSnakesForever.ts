@@ -38,16 +38,17 @@ class TheSeaPattern_SeaSnakesForever extends TheSeaPattern{
             var shark: BigShark = this.getTheSea().addBigShark(new Pos(x2, Random.between(0, this.getTheSea().getRealQuestSize().y - this.getTheSea().getFloorMaxHeight() - 10)));
             
             // If a shark was added
+            // Randomizer: added getItemFromLocation calls to the check so that the game now checks if you've obtained the item that is in the fin's location rather than the fin itself before spawning special sharks
             if(shark != null){
-                if(Saving.loadBool("gridItemPossessedRedSharkFin") == false && this.addedRedSharkFin == false && this.getTheSea().getDistance() - this.getInitialDistance() > 150){
+                if(Saving.loadBool(Saving.getItemFromLocation("gridItemPossessedRedSharkFin")) == false && this.addedRedSharkFin == false && this.getTheSea().getDistance() - this.getInitialDistance() > 150){
                     shark.hasFin(BigSharkFinType.RED);
                     this.addedRedSharkFin = true;
                 }
-                else if(Saving.loadBool("gridItemPossessedGreenSharkFin") == false && this.addedGreenSharkFin == false && this.getTheSea().getDistance() - this.getInitialDistance() > 700){
+                else if(Saving.loadBool(Saving.getItemFromLocation("gridItemPossessedGreenSharkFin")) == false && this.addedGreenSharkFin == false && this.getTheSea().getDistance() - this.getInitialDistance() > 700){
                     shark.hasFin(BigSharkFinType.GREEN);
                     this.addedGreenSharkFin = true;
                 }
-                else if(Saving.loadBool("gridItemPossessedPurpleSharkFin") == false && this.addedPurpleSharkFin == false && this.getTheSea().getDistance() - this.getInitialDistance() > 2500){
+                else if(Saving.loadBool(Saving.getItemFromLocation("gridItemPossessedPurpleSharkFin")) == false && this.addedPurpleSharkFin == false && this.getTheSea().getDistance() - this.getInitialDistance() > 2500){
                     shark.hasFin(BigSharkFinType.PURPLE);
                     this.addedPurpleSharkFin = true;
                 }

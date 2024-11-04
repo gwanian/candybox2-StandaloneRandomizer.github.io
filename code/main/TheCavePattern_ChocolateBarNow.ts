@@ -41,11 +41,13 @@ class TheCavePattern_ChocolateBarNow extends TheCavePattern{
     // Private methods
     private getTheBar(): void{
         // Get the bar
-        this.getTheCave().getGame().getChocolateBars().add(1);
+        //commented out as it is handled in the Game class in the randomizer
+        //this.getTheCave().getGame().getChocolateBars().add(1);
         this.gotTheBar = true;
         
         // We can't get the bar anymore (we can't start this pattern)
         Saving.saveBool("TheCavePattern_ChocolateBarNowGotTheBar", true);
+        Saving.saveBool("ObtainCaveChocolateBar", true);
         
         // Ask the cave for an update
         this.getTheCave().aPatternNeedsUpdating();

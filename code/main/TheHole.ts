@@ -120,7 +120,11 @@ class TheHole extends Quest{
             if(this.firstChestOpened) Saving.saveBool("theHoleFirstChestFound", true);
             if(this.secondChestOpened) Saving.saveBool("theHoleSecondChestFound", true);
             if(this.thirdChestOpened) Saving.saveBool("theHoleThirdChestFound", true);
-            if(this.fourthChestOpened) Saving.saveBool("theHoleFourthChestFound", true);
+            if(this.fourthChestOpened){
+                Saving.saveBool("theHoleFourthChestFound", true);
+                //Randomizer: Added reference to this bool for the rando
+                Saving.saveBool("ObtainHole4thChestChocolateBars", true);
+            } 
         }
     }
     
@@ -408,7 +412,7 @@ class TheHole extends Quest{
     
     private openFourthChest(): void{
         this.fourthChestOpened = true;
-        this.foundChocolateBars(4);
+        //this.foundChocolateBars(4); //Randomizer: will be handled by a bool so it can be treated as a check
         this.getGame().getQuestLog().addMessage(new QuestLogMessage("You opened a chest and found four chocolate bars!", null, true));
     }
     

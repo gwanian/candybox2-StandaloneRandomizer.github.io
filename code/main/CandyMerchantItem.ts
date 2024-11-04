@@ -34,9 +34,25 @@ class CandyMerchantItem{
     }
     
     // Public methods
+
+    //Randomizer: added saveBool functions to this method so that the checks are marked as completed in the randomizer
     public buy(): void{
         // We tell the saving system that this item is bought
         Saving.saveBool(this.savingBool, true);
+        switch(this.savingBool){
+            case "secondHouseLollipop1Bought":
+                Saving.saveBool("ObtainMerchantLollipop1", true)
+                break;
+            case "secondHouseLollipop2Bought":
+                Saving.saveBool("ObtainMerchantLollipop2", true)
+                break;
+            case "secondHouseLollipop3Bought":
+                Saving.saveBool("ObtainMerchantLollipop3", true)
+                break;
+            
+            default:
+                break;
+        }
     }
     
     public canBeBought(): boolean{ // Return true if we can buy the item, else return false

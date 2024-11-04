@@ -365,24 +365,30 @@ class ATree extends Place{
         this.getGame().updatePlace();
     }
     
+    // Randomizer: changed this to use the bool system to add the tree rewards as checks
     private reward1(): void{
-        this.getGame().getCandies().add(20);
+        //this.getGame().getCandies().add(20);
+        Saving.saveBool("ObtainTreeReward1Candies", true);
     }
     
     private reward2(): void{
-        this.getGame().getCandies().add(100);
+        //this.getGame().getCandies().add(100);
+        Saving.saveBool("ObtainTreeReward2Candies", true);
     }
     
     private reward3(): void{
-        this.getGame().getCandies().add(500);
+        //this.getGame().getCandies().add(500);
+        Saving.saveBool("ObtainTreeReward3Candies", true);
     }
     
     private reward4(): void{
-        this.getGame().getLollipops().add(3);
+        //this.getGame().getLollipops().add(3);
+        Saving.saveBool("ObtainTreeReward4Lollipops", true);
     }
     
     private reward5(): void{
-        this.getGame().getChocolateBars().add(3);
+        //this.getGame().getChocolateBars().add(3);
+        Saving.saveBool("ObtainTreeReward5ChocolateBars", true);
     }
     
     private startTicTacToe(): void{

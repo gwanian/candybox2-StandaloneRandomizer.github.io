@@ -132,9 +132,11 @@ class Forge extends House{
         // If we didn't get the lollipop yet
         if(Saving.loadBool("forgeFoundLollipop") == false){
             // Add one lollipop
-            this.getGame().getLollipops().add(1);
+            //commented out as it is handled in the Game class in the randomizer
+            //this.getGame().getLollipops().add(1);
             // Set the bool
             Saving.saveBool("forgeFoundLollipop", true);
+            Saving.saveBool("ObtainForgeLollipop", true);
             // Update
             this.update();
             this.getGame().updatePlace();

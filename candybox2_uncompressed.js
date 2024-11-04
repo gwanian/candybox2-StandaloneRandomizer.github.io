@@ -166,6 +166,7 @@ var Saving;
     var bools = {};
     var numbers = {};
     var strings = {};
+    var game;
     /* List of items for the randomizer:
 
     Example Item
@@ -185,46 +186,19 @@ var Saving;
     */
     //For randomizer, list of locations and their corresponding items
     var boolItemLocations = {
-        // //location check of the chocolate bar obtained by throwing candies
-        // //location name: Candies Thrown Chocolate Bar
-        // "candiesThrowGotChocolateBar"
-        // //location check for the lollipop in the forge
-        // //location name: Forge Lollipop
-        // "forgeFoundLollipop"
-        // //location check for the lollipop on top of the cupboard in the fourth house
-        // //location name: Lollipop on Fourth House Cupboard
-        // "fourthHouseFoundLollipopOnCupboard"
         /*
         ---------------------------
         MAP/QUEST COMPLETION CHECKS
         ---------------------------
         */
-        //location check for completing the Nougat Monster quest and unlocking access to the castle tower
-        //location name: Killed Nougat Monster
         "castleKilledNougatMonster": "castleKilledNougatMonster",
-        //location check for completing the Desert quest
-        //location name: Desert Completion
         "mainMapDoneDesert": "mainMapDoneDesert",
-        //location check for completing the Bridge quest
-        //location name: Bridge Completion
         "mainMapDoneBridge": "mainMapDoneBridge",
-        //location check for completing the Cave area
-        //location name: Cave Completion
         "mainMapDoneCaveEntrance": "mainMapDoneCaveEntrance",
-        //location check for taking the boat from the Pier to the Lighthouse
-        //location name: Pier Boat Taken
         "mainMapDonePier": "mainMapDonePier",
-        //location check for completing the Forest quest
-        //location name: Forest Completion
         "mainMapDoneForest": "mainMapDoneForest",
-        //location check for completing the Castle's Entrance quest
-        //location name: Castle's Entrance Completion
         "mainMapDoneCastleEntrance": "mainMapDoneCastleEntrance",
-        //location check for finding the treasure map in the cave (normally unlocks the dig spot above the village for a chocolate bar)
-        //location name: Find Cave Treasure Map
         "TheCavePattern_TreasureMapSawMap": "TheCavePattern_TreasureMapSawMap",
-        //location check for unlocking the puzzle at the lighthouse
-        //location name: Ask Dragon for Candies
         "dragonUnlockedCyclops": "dragonUnlockedCyclops",
         /*
         ----------------
@@ -284,14 +258,14 @@ var Saving;
         "eqItemWeaponSummoningTribalSpear": "eqItemWeaponSummoningTribalSpear",
         "eqItemWeaponTribalSpear": "eqItemWeaponTribalSpear",
         "eqItemWeaponTrollBludgeon": "eqItemWeaponTrollBludgeon",
-        "eqItemWeaponWoodenSword": "eqItemWeaponWoodenSword",
+        "eqItemWeaponWoodenSword": "statusBarUnlocked",
         /*
         -----------------
         STATUS BAR CHECKS
         -----------------
         */
         "statusBarUnlockedCauldron": "statusBarUnlockedCauldron",
-        "statusBarUnlockedCfg": "statusBarUnlockedCfg",
+        "statusBarUnlockedCfg": "eqItemWeaponWoodenSword",
         "statusBarUnlockedHealthBar": "statusBarUnlockedHealthBar",
         "statusBarUnlockedInsideYourBox": "statusBarUnlockedInsideYourBox",
         "statusBarUnlockedInventory": "statusBarUnlockedInventory",
@@ -300,6 +274,7 @@ var Saving;
         "statusBarUnlockedSave": "statusBarUnlockedSave",
         "statusBarUnlockedTheArena": "statusBarUnlockedTheArena",
         "statusBarUnlockedTheComputer": "statusBarUnlockedTheComputer",
+        "statusBarUnlocked": "statusBarUnlockedCfg",
         /*
         ---------------
         SUPERRPG CHECKS
@@ -310,7 +285,30 @@ var Saving;
         "SuperRPGReward3": "SuperRPGReward3",
         //both of these checks are unlocked if a completed run clears floor 20
         "SuperRPGReward4": "SuperRPGReward4",
-        "SuperRPGUnlockedHardmode": "SuperRPGUnlockedHardmode"
+        "SuperRPGUnlockedHardmode": "SuperRPGUnlockedHardmode",
+        /*
+        ---------------
+        RESOURCE CHEKCS
+        ---------------
+        */
+        "Obtain4thHouseLollipopInCupboard": "Obtain4thHouseLollipopInCupboard",
+        "Obtain4thHouseLollipopOnCupboard": "Obtain4thHouseLollipopOnCupboard",
+        "Obtain4thHouseLollipopUnderRug": "Obtain4thHouseLollipopUnderRug",
+        "ObtainCandiesThrownChocolateBar": "ObtainCandiesThrownChocolateBar",
+        "ObtainCaveChocolateBar": "ObtainCaveChocolateBar",
+        "ObtainForgeLollipop": "ObtainForgeLollipop",
+        "ObtainHole4thChestChocolateBars": "ObtainHole4thChestChocolateBars",
+        "ObtainMerchantChocolateBar": "ObtainMerchantChocolateBar",
+        "ObtainMerchantLollipop1": "ObtainMerchantLollipop1",
+        "ObtainMerchantLollipop2": "ObtainMerchantLollipop2",
+        "ObtainMerchantLollipop3": "ObtainMerchantLollipop3",
+        "ObtainSorceressHutLollipop": "ObtainSorceressHutLollipop",
+        "ObtainTreasureChocolateBars": "ObtainTreasureChocolateBars",
+        "ObtainTreeReward1Candies": "ObtainTreeReward1Candies",
+        "ObtainTreeReward2Candies": "ObtainTreeReward2Candies",
+        "ObtainTreeReward3Candies": "ObtainTreeReward3Candies",
+        "ObtainTreeReward4Lollipops": "ObtainTreeReward4Lollipops",
+        "ObtainTreeReward5ChocolateBars": "ObtainTreeReward5ChocolateBars"
     };
     // Can we register?
     Saving.canRegister = true;
@@ -319,67 +317,67 @@ var Saving;
         switch (loadingType) {
             case 0 /* NONE */:
                 // You can uncomment the lines below to start your game with everything unlocked (useful for testing purposes)
-                Saving.saveNumber("aTreeStep", 2);
-                Saving.saveBool("mainMapDoneDesert", true);
-                Saving.saveBool("mainMapDoneBridge", true);
-                Saving.saveBool("mainMapDoneCaveEntrance", true);
-                Saving.saveBool("mainMapDonePier", true);
-                Saving.saveBool("mainMapDoneForest", true);
-                Saving.saveBool("mainMapDoneCastleEntrance", true);
-                Saving.saveBool("gridItemPossessedMainMap", true);
+                // Saving.saveNumber("aTreeStep", 2);
+                // Saving.saveBool("mainMapDoneDesert", true);
+                // Saving.saveBool("mainMapDoneBridge", true);
+                // Saving.saveBool("mainMapDoneCaveEntrance", true);
+                // Saving.saveBool("mainMapDonePier", true);
+                //Saving.saveBool("mainMapDoneForest", true);
+                // Saving.saveBool("mainMapDoneCastleEntrance", true);
+                // Saving.saveBool("gridItemPossessedMainMap", true);
                 //Saving.saveBool("gridItemPossessedTimeRing", true);
                 Saving.saveBool("gridItemPossessedThirdHouseKey", true);
-                Saving.saveBool("gridItemPossessedBeginnersGrimoire", true);
-                Saving.saveBool("gridItemPossessedFeather", true);
-                Saving.saveBool("gridItemPossessedPogoStick", true);
-                Saving.saveBool("gridItemPossessedHeartPlug", true);
-                Saving.saveBool("gridItemPossessedAdvancedGrimoire", true);
-                Saving.saveBool("gridItemPossessedSponge", true);
-                Saving.saveBool("gridItemPossessedShellPowder", true);
-                Saving.saveBool("gridItemPossessedHeartPendant", true);
-                Saving.saveBool("gridItemPossessedBlackMagicGrimoire", true);
-                Saving.saveBool("gridItemPossessedFortressKey", true);
-                Saving.saveBool("gridItemPossessedUnicornHorn", true);
-                Saving.saveBool("gridItemPossessedXinopherydonClaw", true);
+                //Saving.saveBool("gridItemPossessedBeginnersGrimoire", true);
+                //Saving.saveBool("gridItemPossessedFeather", true);
+                //Saving.saveBool("gridItemPossessedPogoStick", true);
+                //Saving.saveBool("gridItemPossessedHeartPlug", true);
+                //Saving.saveBool("gridItemPossessedAdvancedGrimoire", true);
+                //Saving.saveBool("gridItemPossessedSponge", true);
+                //Saving.saveBool("gridItemPossessedShellPowder", true);
+                //Saving.saveBool("gridItemPossessedHeartPendant", true);
+                //Saving.saveBool("gridItemPossessedBlackMagicGrimoire", true);
+                //Saving.saveBool("gridItemPossessedFortressKey", true);
+                //Saving.saveBool("gridItemPossessedUnicornHorn", true);
+                //Saving.saveBool("gridItemPossessedXinopherydonClaw", true);
                 //Saving.saveBool("gridItemPossessedPitchfork", true);
-                Saving.saveBool("gridItemPossessedRedSharkFin", true);
-                Saving.saveBool("gridItemPossessedGreenSharkFin", true);
-                Saving.saveBool("gridItemPossessedPurpleSharkFin", true);
-                Saving.saveBool("gridItemPossessedTalkingCandy", true);
-                Saving.saveBool("gridItemPossessedP", true);
-                Saving.saveBool("gridItemPossessedL", true);
-                Saving.saveBool("gridItemPossessedA", true);
-                Saving.saveBool("gridItemPossessedY", true);
-                Saving.saveBool("eqItemGlovesRedEnchantedGloves", true);
-                Saving.saveBool("eqItemGlovesPinkEnchantedGloves", true);
+                //Saving.saveBool("gridItemPossessedRedSharkFin", true);
+                //Saving.saveBool("gridItemPossessedGreenSharkFin", true);
+                //Saving.saveBool("gridItemPossessedPurpleSharkFin", true);
+                //Saving.saveBool("gridItemPossessedTalkingCandy", true);
+                //Saving.saveBool("gridItemPossessedP", true);
+                //Saving.saveBool("gridItemPossessedL", true);
+                //Saving.saveBool("gridItemPossessedA", true);
+                //Saving.saveBool("gridItemPossessedY", true);
+                // Saving.saveBool("eqItemGlovesRedEnchantedGloves", true);
+                // Saving.saveBool("eqItemGlovesPinkEnchantedGloves", true);
                 //Saving.saveBool("eqItemWeaponWoodenSword", true);
-                Saving.saveBool("eqItemWeaponTrollBludgeon", true);
-                Saving.saveBool("eqItemWeaponTribalSpear", true);
-                Saving.saveBool("eqItemWeaponSummoningTribalSpear", true);
-                Saving.saveBool("eqItemWeaponMonkeyWizardStaff", true);
-                Saving.saveBool("eqItemWeaponGiantSpoon", true);
-                Saving.saveBool("eqItemHatOctopusKingCrown", true);
-                Saving.saveBool("eqItemBootsBootsOfIntrospection", true);
-                Saving.saveBool("eqItemBootsRocketBoots", true);
-                Saving.saveBool("eqItemWeaponGiantSpoonOfDoom", true);
-                Saving.saveBool("eqItemBodyArmoursEnchantedKnightBodyArmour", true);
-                Saving.saveNumber("gameCandiesEatenCurrent", 500000000);
-                Saving.saveNumber("gameCandiesEatenMax", 500000000);
-                Saving.saveNumber("playerHp", 1000);
-                Saving.saveBool("questPlayerSpellHealthPotionHasSpell", true);
-                Saving.saveBool("questPlayerSpellTurtlePotionHasSpell", true);
-                Saving.saveBool("questPlayerSpellAntiGravityPotionHasSpell", true);
-                Saving.saveBool("questPlayerSpellBerserkPotionHasSpell", true);
-                Saving.saveBool("questPlayerSpellCloningPotionHasSpell", true);
-                Saving.saveBool("questPlayerSpellPPotionHasSpell", true);
-                Saving.saveBool("questPlayerSpellXPotionHasSpell", true);
-                Saving.saveNumber("questPlayerSpellHealthPotionQuantity", 0);
-                Saving.saveNumber("questPlayerSpellTurtlePotionQuantity", 64084);
-                Saving.saveNumber("questPlayerSpellAntiGravityPotionQuantity", 47542);
-                Saving.saveNumber("questPlayerSpellBerserkPotionQuantity", 99549);
-                Saving.saveNumber("questPlayerSpellCloningPotionQuantity", 10050);
-                Saving.saveNumber("questPlayerSpellPPotionQuantity", 10085250);
-                Saving.saveNumber("questPlayerSpellXPotionQuantity", 10050999);
+                // Saving.saveBool("eqItemWeaponTrollBludgeon", true);
+                // Saving.saveBool("eqItemWeaponTribalSpear", true);
+                // Saving.saveBool("eqItemWeaponSummoningTribalSpear", true);
+                // Saving.saveBool("eqItemWeaponMonkeyWizardStaff", true);
+                // Saving.saveBool("eqItemWeaponGiantSpoon", true);
+                // Saving.saveBool("eqItemHatOctopusKingCrown", true);
+                // Saving.saveBool("eqItemBootsBootsOfIntrospection", true);
+                // Saving.saveBool("eqItemBootsRocketBoots", true);
+                // Saving.saveBool("eqItemWeaponGiantSpoonOfDoom", true);
+                // Saving.saveBool("eqItemBodyArmoursEnchantedKnightBodyArmour", true);
+                // Saving.saveNumber("gameCandiesEatenCurrent", 500000000);
+                // Saving.saveNumber("gameCandiesEatenMax", 500000000);
+                // Saving.saveNumber("playerHp", 1000);
+                // Saving.saveBool("questPlayerSpellHealthPotionHasSpell", true);
+                // Saving.saveBool("questPlayerSpellTurtlePotionHasSpell", true);
+                // Saving.saveBool("questPlayerSpellAntiGravityPotionHasSpell", true);
+                // Saving.saveBool("questPlayerSpellBerserkPotionHasSpell", true);
+                // Saving.saveBool("questPlayerSpellCloningPotionHasSpell", true);
+                // Saving.saveBool("questPlayerSpellPPotionHasSpell", true);
+                // Saving.saveBool("questPlayerSpellXPotionHasSpell", true);
+                // Saving.saveNumber("questPlayerSpellHealthPotionQuantity", 0);
+                // Saving.saveNumber("questPlayerSpellTurtlePotionQuantity", 64084);
+                // Saving.saveNumber("questPlayerSpellAntiGravityPotionQuantity", 47542);
+                // Saving.saveNumber("questPlayerSpellBerserkPotionQuantity", 99549);
+                // Saving.saveNumber("questPlayerSpellCloningPotionQuantity", 10050);
+                // Saving.saveNumber("questPlayerSpellPPotionQuantity", 10085250);
+                // Saving.saveNumber("questPlayerSpellXPotionQuantity", 10050999);
                 //Saving.saveBool("gameDebug", true);
                 Saving.saveNumber("gameCandiesCurrent", 5000000);
                 Saving.saveNumber("gameCandiesMax", 5000000);
@@ -389,23 +387,6 @@ var Saving;
                 Saving.saveNumber("gameChocolateBarsMax", 7);
                 Saving.saveNumber("gamePainsAuChocolatCurrent", 7);
                 Saving.saveNumber("gamePainsAuChocolatMax", 7);
-                Saving.saveBool("lonelyHouseTakeTheBoxDone", true);
-                Saving.saveNumber("lollipopFarmPondHowManyLolligators", 0);
-                Saving.saveBool("statusBarUnlocked", true);
-                Saving.saveBool("statusBarUnlockedCfg", true);
-                Saving.saveBool("statusBarUnlockedSave", true);
-                Saving.saveBool("statusBarUnlockedMap", true);
-                Saving.saveBool("statusBarUnlockedInventory", true);
-                Saving.saveBool("statusBarUnlockedLollipopFarm", true);
-                Saving.saveBool("statusBarUnlockedCauldron", true);
-                Saving.saveBool("statusBarUnlockedHealthBar", true);
-                Saving.saveBool("statusBarUnlockedInsideYourBox", true);
-                Saving.saveBool("statusBarUnlockedTheComputer", true);
-                Saving.saveBool("statusBarUnlockedTheArena", true);
-                Saving.saveBool("castleKilledNougatMonster", true);
-                Saving.saveBool("dragonDone", true);
-                //Saving.saveBool("dragonUnlockedCyclops", true);
-                Saving.saveBool("castleTowerFirstVisitDone", true);
                 break;
             case 1 /* LOCAL */:
                 LocalSaving.load(loadingString);
@@ -540,13 +521,19 @@ var Saving;
         }
     }
     Saving.registerString = registerString;
-    function saveBool(key, b, registering) {
+    /* Randomizer modification: added the saveOriginal parameter to allow skipping the swapping of the location
+        bool to the item bool*/
+    function saveBool(key, b, registering, saveOriginal) {
         if (registering === void 0) { registering = false; }
+        if (saveOriginal === void 0) { saveOriginal = false; }
+        var temp = key;
+        var boolArray = [loadBool(key), b];
         /*Checks if the bool name passed is a location in the randomizer.  If so, replaces the key parameter with
-            the item in that location*/
-        if (key in boolItemLocations) {
+            the item in that location (only for obtaining the item, not losing it)*/
+        if (key in boolItemLocations && b && !saveOriginal) {
             key = boolItemLocations[key];
         }
+        console.log(key);
         if (key in bools || registering) {
             bools[key] = b;
             return;
@@ -572,6 +559,15 @@ var Saving;
         console.log("Error : trying to save the unknown string " + key + ".");
     }
     Saving.saveString = saveString;
+    // Randomizer functionality; allows for the passing of a location bool to find the item bool (ie what item is in the location)
+    function getItemFromLocation(key) {
+        if (key in boolItemLocations) {
+            return boolItemLocations[key];
+        }
+        console.log("Location " + key + " does not exist in the randomizer.  " + key + "will be returned");
+        return key;
+    }
+    Saving.getItemFromLocation = getItemFromLocation;
 })(Saving || (Saving = {}));
 ///<reference path="Place.ts"/>
 ///<reference path="Saving.ts"/>
@@ -908,20 +904,26 @@ var ATree = (function (_super) {
         this.update();
         this.getGame().updatePlace();
     };
+    // Randomizer: changed this to use the bool system to add the tree rewards as checks
     ATree.prototype.reward1 = function () {
-        this.getGame().getCandies().add(20);
+        //this.getGame().getCandies().add(20);
+        Saving.saveBool("ObtainTreeReward1Candies", true);
     };
     ATree.prototype.reward2 = function () {
-        this.getGame().getCandies().add(100);
+        //this.getGame().getCandies().add(100);
+        Saving.saveBool("ObtainTreeReward2Candies", true);
     };
     ATree.prototype.reward3 = function () {
-        this.getGame().getCandies().add(500);
+        //this.getGame().getCandies().add(500);
+        Saving.saveBool("ObtainTreeReward3Candies", true);
     };
     ATree.prototype.reward4 = function () {
-        this.getGame().getLollipops().add(3);
+        //this.getGame().getLollipops().add(3);
+        Saving.saveBool("ObtainTreeReward4Lollipops", true);
     };
     ATree.prototype.reward5 = function () {
-        this.getGame().getChocolateBars().add(3);
+        //this.getGame().getChocolateBars().add(3);
+        Saving.saveBool("ObtainTreeReward5ChocolateBars", true);
     };
     ATree.prototype.startTicTacToe = function () {
         // Reset the array
@@ -3325,9 +3327,10 @@ var Quest = (function (_super) {
         // We return the number of chocolate bars found
         return howMany;
     };
+    // Randomizer modifications: Added getItemFromLocation
     Quest.prototype.foundGridOrEqItem = function (itemFound) {
         // If we already have this item, we return false
-        if (Saving.loadBool(itemFound.getSavingName()) == true)
+        if (Saving.loadBool(Saving.getItemFromLocation(itemFound.getSavingName())) == true)
             return false;
         for (var i = 0; i < this.itemsFound.length; i++) {
             if (itemFound.getSavingName() == this.itemsFound[i].getSavingName())
@@ -3971,8 +3974,10 @@ var CandiesThrown = (function (_super) {
         var returnValue = _super.prototype.add.call(this, n);
         // If it's time to get this chocolate bar, we get it
         if (Saving.loadBool("candiesThrownGotChocolateBar") == false && Math.floor(this.getCurrent() / 10) - 1 == 162) {
-            this.game.getChocolateBars().add(1);
+            //commented out as it is handled in the Game class in the randomizer
+            //this.game.getChocolateBars().add(1);
             Saving.saveBool("candiesThrownGotChocolateBar", true);
+            Saving.saveBool("ObtainCandiesThrownChocolateBar", true);
         }
         // We choose a random *nom* *nom* smiley index in case we're at this step of the animation
         this.nomNomSmileyIndex = Random.between(0, this.nomNomSmileys.length - 1);
@@ -4366,6 +4371,19 @@ var CandyMerchantItem = (function () {
     CandyMerchantItem.prototype.buy = function () {
         // We tell the saving system that this item is bought
         Saving.saveBool(this.savingBool, true);
+        switch (this.savingBool) {
+            case "secondHouseLollipop1Bought":
+                Saving.saveBool("ObtainMerchantLollipop1", true);
+                break;
+            case "secondHouseLollipop2Bought":
+                Saving.saveBool("ObtainMerchantLollipop2", true);
+                break;
+            case "secondHouseLollipop3Bought":
+                Saving.saveBool("ObtainMerchantLollipop3", true);
+                break;
+            default:
+                break;
+        }
     };
     CandyMerchantItem.prototype.canBeBought = function () {
         // If it's already bought, we return false
@@ -4421,7 +4439,9 @@ var CandyMerchantItem_ChocolateBar = (function (_super) {
     // When we buy, we get one chocolate bar
     CandyMerchantItem_ChocolateBar.prototype.buy = function () {
         _super.prototype.buy.call(this);
-        this.getGame().getChocolateBars().add(1);
+        //commented out as it is handled in the Game class in the randomizer
+        //this.getGame().getChocolateBars().add(1);
+        Saving.saveBool("ObtainMerchantChocolateBar", true);
     };
     return CandyMerchantItem_ChocolateBar;
 })(CandyMerchantItem);
@@ -4466,7 +4486,8 @@ var CandyMerchantItem_Lollipop = (function (_super) {
     // When we buy, we get one lollipop
     CandyMerchantItem_Lollipop.prototype.buy = function () {
         _super.prototype.buy.call(this);
-        this.getGame().getLollipops().add(1);
+        //commented out as it is handled in the Game class in the randomizer
+        //this.getGame().getLollipops().add(1);
     };
     return CandyMerchantItem_Lollipop;
 })(CandyMerchantItem);
@@ -8046,9 +8067,11 @@ var Forge = (function (_super) {
         // If we didn't get the lollipop yet
         if (Saving.loadBool("forgeFoundLollipop") == false) {
             // Add one lollipop
-            this.getGame().getLollipops().add(1);
+            //commented out as it is handled in the Game class in the randomizer
+            //this.getGame().getLollipops().add(1);
             // Set the bool
             Saving.saveBool("forgeFoundLollipop", true);
+            Saving.saveBool("ObtainForgeLollipop", true);
             // Update
             this.update();
             this.getGame().updatePlace();
@@ -8476,13 +8499,15 @@ var FourthHouse = (function (_super) {
             this.getGame().updatePlace();
         }
     };
+    //Randomizer: changed lollipop under the carpet and in the cupboard to change bools rather than directly give the resource
     FourthHouse.prototype.pickCarpetLollipop = function () {
         // If the lollipop is outside the carpet
         if (Saving.loadNumber("fourthHouseCarpetStep") == 1) {
             // Set the step
             Saving.saveNumber("fourthHouseCarpetStep", 2);
             // Add one lollipop
-            this.getGame().getLollipops().add(1);
+            //this.getGame().getLollipops().add(1);
+            Saving.saveBool("Obtain4thHouseLollipopUnderRug", true);
             // Update
             this.update();
             this.getGame().updatePlace();
@@ -8494,7 +8519,8 @@ var FourthHouse = (function (_super) {
             // Set the step
             Saving.saveNumber("fourthHouseCupboardStep", 2);
             // Add one lollipop
-            this.getGame().getLollipops().add(1);
+            //this.getGame().getLollipops().add(1);
+            Saving.saveBool("Obtain4thHouseLollipopInCupboard", true);
             // Update
             this.update();
             this.getGame().updatePlace();
@@ -8504,9 +8530,11 @@ var FourthHouse = (function (_super) {
         // If we didn't get the lollipop yet
         if (Saving.loadBool("fourthHouseFoundLollipopOnCupboard") == false) {
             // Add one lollipop
-            this.getGame().getLollipops().add(1);
+            //commented out as it is handled in the Game class in the randomizer
+            //this.getGame().getLollipops().add(1);
             // Set the bool
             Saving.saveBool("fourthHouseFoundLollipopOnCupboard", true);
+            Saving.saveBool("Obtain4thHouseLollipopOnCupboard", true);
             // Update
             this.update();
             this.getGame().updatePlace();
@@ -8999,6 +9027,25 @@ var RenderLocation = (function () {
 Saving.registerBool("gameDebug", false);
 Saving.registerString("gameLanguage", "en");
 Saving.registerBool("gameInvertedColors", false);
+// Bools for resource items in the randomizer
+Saving.registerBool("ObtainTreeReward1Candies", false); //20 candies
+Saving.registerBool("ObtainTreeReward2Candies", false); //100 candies
+Saving.registerBool("ObtainTreeReward3Candies", false); //500 candies
+Saving.registerBool("ObtainForgeLollipop", false);
+Saving.registerBool("ObtainMerchantLollipop1", false);
+Saving.registerBool("ObtainMerchantLollipop2", false);
+Saving.registerBool("ObtainMerchantLollipop3", false);
+Saving.registerBool("Obtain4thHouseLollipopOnCupboard", false);
+Saving.registerBool("Obtain4thHouseLollipopInCupboard", false);
+Saving.registerBool("Obtain4thHouseLollipopUnderRug", false);
+Saving.registerBool("ObtainSorceressHutLollipop", false);
+Saving.registerBool("ObtainTreeReward4Lollipops", false); //3 lollipops
+Saving.registerBool("ObtainCandiesThrownChocolateBar", false);
+Saving.registerBool("ObtainMerchantChocolateBar", false);
+Saving.registerBool("ObtainCaveChocolateBar", false);
+Saving.registerBool("ObtainTreeReward5ChocolateBars", false); //3 chocolate bars
+Saving.registerBool("ObtainTreasureChocolateBars", false); //3 chocolate bars
+Saving.registerBool("ObtainHole4thChestChocolateBars", false); //4 chocolate bars
 // EqItems
 Saving.registerString("gameWeaponSelected", "inventorySpecialNothingWeapon");
 Saving.registerString("gameHatSelected", "inventorySpecialNothingHat");
@@ -9085,6 +9132,33 @@ var Game = (function () {
         this.isStatusBarAllowedToUseTheNKey = true;
         // Speedrun timer.
         this.speedrunTimer = NaN;
+        //list of the previous value for resource bools in the randomizer
+        this.lastResourceBoolValueList = [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+        ];
+        //list of the parameters to be passed to updateRandomizerResource
+        this.resourceBoolPramList = [
+            ["ObtainTreeReward1Candies", "ObtainTreeReward2Candies", "ObtainTreeReward3Candies", "ObtainForgeLollipop", "Obtain4thHouseLollipopOnCupboard", "Obtain4thHouseLollipopInCupboard", "Obtain4thHouseLollipopUnderRug", "ObtainMerchantLollipop1", "ObtainMerchantLollipop2", "ObtainMerchantLollipop3", "ObtainSorceressHutLollipop", "ObtainTreeReward4Lollipops", "ObtainCandiesThrownChocolateBar", "ObtainCaveChocolateBar", "ObtainMerchantChocolateBar", "ObtainTreeReward5ChocolateBars", "ObtainTreasureChocolateBars", "ObtainHole4thChestChocolateBars"],
+            ["Candies", "Candies", "Candies", "Lollipops", "Lollipops", "Lollipops", "Lollipops", "Lollipops", "Lollipops", "Lollipops", "Lollipops", "Lollipops", "ChocolateBars", "ChocolateBars", "ChocolateBars", "ChocolateBars", "ChocolateBars", "ChocolateBars"],
+            ["20", "100", "500", "1", "1", "1", "1", "1", "1", "1", "1", "3", "1", "1", "1", "3", "3", "4"]
+        ];
         // We save the game mode given in parameter
         if (gameMode != null)
             Saving.saveString("gameGameMode", gameMode);
@@ -9368,6 +9442,8 @@ var Game = (function () {
         this.emptyAndFillSelectedEqItemsArray();
     };
     Game.prototype.updatePlace = function () {
+        // Randomizer: every time a place is updated, the constructor will check to see if any of the resource booleans need to be updated and update them if so
+        this.checkAllRandomizerResourceBools();
         this.displayPlace();
     };
     Game.prototype.updateStatusBar = function (reAdd) {
@@ -9747,6 +9823,35 @@ var Game = (function () {
     Game.prototype.endSpeedrun = function () {
         if (this.speedrunTimer && isNaN(Saving.loadNumber("gameCompletedTime")))
             Saving.saveNumber("gameCompletedTime", this.speedrunTimer);
+    };
+    //updates the resource based on the randomizer resource bool
+    Game.prototype.updateRandomizerResource = function (boolName, resourceType, resourceAmount) {
+        switch (resourceType) {
+            case "Candies":
+                this.getCandies().add(resourceAmount);
+                break;
+            case "Lollipops":
+                this.getLollipops().add(resourceAmount);
+                break;
+            case "ChocolateBars":
+                this.getChocolateBars().add(resourceAmount);
+                break;
+            case "PainsAuChocolat":
+                this.getPainsAuChocolat().add(resourceAmount);
+                break;
+            default:
+                console.log("Invalid Resource Type");
+                return;
+        }
+    };
+    //checks every bool related to randomizer resources to see if they need to be updated
+    Game.prototype.checkAllRandomizerResourceBools = function () {
+        for (var i = 0; i < this.lastResourceBoolValueList.length; i++) {
+            if (!this.lastResourceBoolValueList[i] && Saving.loadBool(this.resourceBoolPramList[0][i])) {
+                this.updateRandomizerResource(this.resourceBoolPramList[0][i], this.resourceBoolPramList[1][i], parseInt(this.resourceBoolPramList[2][i]));
+            }
+            this.lastResourceBoolValueList[i] = Saving.loadBool(this.resourceBoolPramList[0][i]);
+        }
     };
     return Game;
 })();
@@ -11128,9 +11233,9 @@ var LighthousePuzzlePart = (function () {
                 // Change the type
                 this.type = 12 /* STONE */;
                 // If we didn't have the stone before
-                if (Saving.loadBool("gridItemPossessedP") == false) {
+                if (Saving.loadBool(Saving.getItemFromLocation("gridItemPossessedP")) == false) {
                     // Get the stone
-                    // this.lighthouse.getGame().gainItem("gridItemPossessedP");
+                    this.lighthouse.getGame().gainItem("gridItemPossessedP");
                     // Change the speech
                     this.lighthouse.setSpeechId("lighthouseFoundStone");
                 }
@@ -11138,8 +11243,6 @@ var LighthousePuzzlePart = (function () {
                     // Change the speech
                     this.lighthouse.setSpeechId("lighthouseFoundStoneAgain");
                 }
-                // Randomizer modification: moved the gainItem() for the P stone outside of the if statement to prevent softlocking
-                this.lighthouse.getGame().gainItem("gridItemPossessedP");
                 break;
         }
         // Decrease our lives
@@ -12017,7 +12120,7 @@ var MainMap = (function (_super) {
             this.loadBridge(99, 61);
             this.loadCaveEntrance(52, 57);
             this.loadWishingWell(55, 66);
-            if (Saving.loadBool("gridItemPossessedPogoStick") == false)
+            if (Saving.loadBool(Saving.getItemFromLocation("gridItemPossessedPogoStick")) == false)
                 this.loadMoutains(71, 52);
         }
         if (Saving.loadBool("mainMapDoneBridge"))
@@ -12692,7 +12795,7 @@ var Moutains = (function (_super) {
         // Draw the moutains
         this.renderArea.drawArray(Database.getAscii("places/mountains"), 0, 3);
         // If we didn't get the pogo stick yet
-        if (Saving.loadBool("gridItemPossessedPogoStick") == false) {
+        if (Saving.loadBool(Saving.getItemFromLocation("gridItemPossessedPogoStick")) == false) {
             // Add the "*" showing that there's a pogo stick here
             this.renderArea.drawString("*", 52, 11);
             // Draw the text
@@ -15778,8 +15881,10 @@ var SorceressHut = (function (_super) {
     SorceressHut.prototype.takeLollipop = function () {
         // We took the lollipop
         Saving.saveBool("sorceressHutTookLollipop", true);
+        Saving.saveBool("ObtainSorceressHutLollipop", true);
         // Add 1 lollipop
-        this.getGame().getLollipops().add(1);
+        //commented out as it is handled in the Game class in the randomizer
+        //this.getGame().getLollipops().add(1);
         // Update
         this.update();
         this.getGame().updatePlace();
@@ -17589,10 +17694,12 @@ var TheCavePattern_ChocolateBarNow = (function (_super) {
     // Private methods
     TheCavePattern_ChocolateBarNow.prototype.getTheBar = function () {
         // Get the bar
-        this.getTheCave().getGame().getChocolateBars().add(1);
+        //commented out as it is handled in the Game class in the randomizer
+        //this.getTheCave().getGame().getChocolateBars().add(1);
         this.gotTheBar = true;
         // We can't get the bar anymore (we can't start this pattern)
         Saving.saveBool("TheCavePattern_ChocolateBarNowGotTheBar", true);
+        Saving.saveBool("ObtainCaveChocolateBar", true);
         // Ask the cave for an update
         this.getTheCave().aPatternNeedsUpdating();
     };
@@ -18251,8 +18358,11 @@ var TheHole = (function (_super) {
                 Saving.saveBool("theHoleSecondChestFound", true);
             if (this.thirdChestOpened)
                 Saving.saveBool("theHoleThirdChestFound", true);
-            if (this.fourthChestOpened)
+            if (this.fourthChestOpened) {
                 Saving.saveBool("theHoleFourthChestFound", true);
+                //Randomizer: Added reference to this bool for the rando
+                Saving.saveBool("ObtainHole4thChestChocolateBars", true);
+            }
         }
     };
     TheHole.prototype.update = function () {
@@ -18334,7 +18444,7 @@ var TheHole = (function (_super) {
     };
     TheHole.prototype.openFourthChest = function () {
         this.fourthChestOpened = true;
-        this.foundChocolateBars(4);
+        //this.foundChocolateBars(4); //Randomizer: will be handled by a bool so it can be treated as a check
         this.getGame().getQuestLog().addMessage(new QuestLogMessage("You opened a chest and found four chocolate bars!", null, true));
     };
     TheHole.prototype.openSecondChest = function () {
@@ -18682,9 +18792,10 @@ var TheSea = (function (_super) {
             }
         }
     };
+    //Randomizer: changed the check for having to shellpowder to use the getItemFromLocation function
     TheSea.prototype.generateShellPowder = function (x1, x2) {
         // If we don't already have shell powder and no shell powder have been generated in this quest so far and the distance is at least 500
-        if (Saving.loadBool("gridItemPossessedShellPowder") == false && this.shellPowderGenerated == false && this.distance >= 500) {
+        if (Saving.loadBool(Saving.getItemFromLocation("gridItemPossessedShellPowder")) == false && this.shellPowderGenerated == false && this.distance >= 500) {
             for (var i = x1; i <= x2; i++) {
                 if (i >= 6 && this.floors[i].getType() == 0 /* NORMAL */ && this.floors[i].getHowManyFloorsOfTheSameTypeBefore() >= 6) {
                     for (var j = i - 6; j <= i; j++) {
@@ -18703,9 +18814,10 @@ var TheSea = (function (_super) {
             }
         }
     };
+    //Randomizer: changed the check for having to sponge to use the getItemFromLocation function
     TheSea.prototype.generateSponge = function (x1, x2) {
         // If we don't already have a sponge and no sponge have been generated in this quest so far and the distance is at least 793
-        if (Saving.loadBool("gridItemPossessedSponge") == false && this.spongeGenerated == false && this.distance >= 793) {
+        if (Saving.loadBool(Saving.getItemFromLocation("gridItemPossessedSponge")) == false && this.spongeGenerated == false && this.distance >= 793) {
             for (var i = x1; i <= x2; i++) {
                 if (i >= 6 && this.floors[i].getType() == 0 /* NORMAL */ && this.floors[i].getHowManyFloorsOfTheSameTypeBefore() >= 6) {
                     for (var j = i - 6; j <= i; j++) {
@@ -19404,15 +19516,15 @@ var TheSeaPattern_SeaSnakesForever = (function (_super) {
             var shark = this.getTheSea().addBigShark(new Pos(x2, Random.between(0, this.getTheSea().getRealQuestSize().y - this.getTheSea().getFloorMaxHeight() - 10)));
             // If a shark was added
             if (shark != null) {
-                if (Saving.loadBool("gridItemPossessedRedSharkFin") == false && this.addedRedSharkFin == false && this.getTheSea().getDistance() - this.getInitialDistance() > 150) {
+                if (Saving.loadBool(Saving.getItemFromLocation("gridItemPossessedRedSharkFin")) == false && this.addedRedSharkFin == false && this.getTheSea().getDistance() - this.getInitialDistance() > 150) {
                     shark.hasFin(0 /* RED */);
                     this.addedRedSharkFin = true;
                 }
-                else if (Saving.loadBool("gridItemPossessedGreenSharkFin") == false && this.addedGreenSharkFin == false && this.getTheSea().getDistance() - this.getInitialDistance() > 700) {
+                else if (Saving.loadBool(Saving.getItemFromLocation("gridItemPossessedGreenSharkFin")) == false && this.addedGreenSharkFin == false && this.getTheSea().getDistance() - this.getInitialDistance() > 700) {
                     shark.hasFin(1 /* GREEN */);
                     this.addedGreenSharkFin = true;
                 }
-                else if (Saving.loadBool("gridItemPossessedPurpleSharkFin") == false && this.addedPurpleSharkFin == false && this.getTheSea().getDistance() - this.getInitialDistance() > 2500) {
+                else if (Saving.loadBool(Saving.getItemFromLocation("gridItemPossessedPurpleSharkFin")) == false && this.addedPurpleSharkFin == false && this.getTheSea().getDistance() - this.getInitialDistance() > 2500) {
                     shark.hasFin(2 /* PURPLE */);
                     this.addedPurpleSharkFin = true;
                 }
@@ -19555,7 +19667,8 @@ var Treasure = (function (_super) {
         // We found the treasure
         Saving.saveBool("TheCavePattern_TreasureMapFoundTreasure", true);
         // Get it
-        this.getGame().getChocolateBars().add(3);
+        //this.getGame().getChocolateBars().add(3); //Randomizer: using a bool so this can be a check
+        Saving.saveBool("ObtainTreasureChocolateBars", true);
         // Update
         this.update();
         this.getGame().updatePlace();

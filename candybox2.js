@@ -45,72 +45,40 @@ e.addLinkCall("."+c,d)};a.prototype.addBackToMainMapButton=function(d,b,c){if(c=
 };a.prototype.getGap=function(){return 0};a.prototype.getRenderArea=function(){return new RenderArea()
 };a.prototype.getScrolling=function(){return false};a.prototype.willBeClosed=function(){};
 a.prototype.willBeDisplayed=function(){};a.prototype.willStopBeingDisplayed=function(){};
-return a})();var Saving;(function(u){var s={};var i={};var g={};var v={castleKilledNougatMonster:"castleKilledNougatMonster",mainMapDoneDesert:"mainMapDoneDesert",mainMapDoneBridge:"mainMapDoneBridge",mainMapDoneCaveEntrance:"mainMapDoneCaveEntrance",mainMapDonePier:"mainMapDonePier",mainMapDoneForest:"mainMapDoneForest",mainMapDoneCastleEntrance:"mainMapDoneCastleEntrance",TheCavePattern_TreasureMapSawMap:"TheCavePattern_TreasureMapSawMap",dragonUnlockedCyclops:"dragonUnlockedCyclops",gridItemPossessedA:"gridItemPossessedA",gridItemPossessedAdvancedGrimoire:"gridItemPossessedAdvancedGrimoire",gridItemPossessedBeginnersGrimoire:"gridItemPossessedBeginnersGrimoire",gridItemPossessedBlackMagicGrimoire:"gridItemPossessedBlackMagicGrimoire",gridItemPossessedFeather:"gridItemPossessedFeather",gridItemPossessedFortressKey:"gridItemPossessedFortressKey",gridItemPossessedGreenSharkFin:"gridItemPossessedGreenSharkFin",gridItemPossessedHeartPendant:"gridItemPossessedHeartPendant",gridItemPossessedHeartPlug:"gridItemPossessedHeartPlug",gridItemPossessedL:"gridItemPossessedL",gridItemPossessedMainMap:"gridItemPossessedMainMap",gridItemPossessedP:"gridItemPossessedP",gridItemPossessedPitchfork:"gridItemPossessedPitchfork",gridItemPossessedPogoStick:"gridItemPossessedPogoStick",gridItemPossessedPurpleSharkFin:"gridItemPossessedPurpleSharkFin",gridItemPossessedRedSharkFin:"gridItemPossessedRedSharkFin",gridItemPossessedShellPowder:"gridItemPossessedShellPowder",gridItemPossessedSponge:"gridItemPossessedSponge",gridItemPossessedTalkingCandy:"gridItemPossessedTalkingCandy",gridItemPossessedThirdHouseKey:"gridItemPossessedThirdHouseKey",gridItemPossessedTimeRing:"gridItemPossessedTimeRing",gridItemPossessedUnicornHorn:"gridItemPossessedUnicornHorn",gridItemPossessedXinopherydonClaw:"gridItemPossessedXinopherydonClaw",gridItemPossessedY:"gridItemPossessedY",eqItemBodyArmoursEnchantedKnightBodyArmour:"eqItemBodyArmoursEnchantedKnightBodyArmour",eqItemBodyArmoursKnightBodyArmour:"eqItemBodyArmoursKnightBodyArmour",eqItemBodyArmoursLightweightBodyArmour:"eqItemBodyArmoursLightweightBodyArmour",eqItemBootsBootsOfIntrospection:"eqItemBootsBootsOfIntrospection",eqItemBootsLeatherBoots:"eqItemBootsLeatherBoots",eqItemBootsRocketBoots:"eqItemBootsRocketBoots",eqItemGlovesLeatherGloves:"eqItemGlovesLeatherGloves",eqItemGlovesPinkEnchantedGloves:"eqItemGlovesPinkEnchantedGloves",eqItemGlovesRedEnchantedGloves:"eqItemGlovesRedEnchantedGloves",eqItemHatMerchantHat:"eqItemHatMerchantHat",eqItemHatOctopusKingCrown:"eqItemHatOctopusKingCrown",eqItemHatOctopusKingCrownWithJaspers:"eqItemHatOctopusKingCrownWithJaspers",eqItemHatOctopusKingCrownWithObsidian:"eqItemHatOctopusKingCrownWithObsidian",eqItemHatSorceressHat:"eqItemHatSorceressHat",eqItemWeaponEnchantedMonkeyWizardStaff:"eqItemWeaponEnchantedMonkeyWizardStaff",eqItemWeaponGiantSpoon:"eqItemWeaponGiantSpoon",eqItemWeaponGiantSpoonOfDoom:"eqItemWeaponGiantSpoonOfDoom",eqItemWeaponIronAxe:"eqItemWeaponIronAxe",eqItemWeaponMonkeyWizardStaff:"eqItemWeaponMonkeyWizardStaff",eqItemWeaponPolishedSilverSword:"eqItemWeaponPolishedSilverSword",eqItemWeaponScythe:"eqItemWeaponScythe",eqItemWeaponSummoningTribalSpear:"eqItemWeaponSummoningTribalSpear",eqItemWeaponTribalSpear:"eqItemWeaponTribalSpear",eqItemWeaponTrollBludgeon:"eqItemWeaponTrollBludgeon",eqItemWeaponWoodenSword:"eqItemWeaponWoodenSword",statusBarUnlockedCauldron:"statusBarUnlockedCauldron",statusBarUnlockedCfg:"statusBarUnlockedCfg",statusBarUnlockedHealthBar:"statusBarUnlockedHealthBar",statusBarUnlockedInsideYourBox:"statusBarUnlockedInsideYourBox",statusBarUnlockedInventory:"statusBarUnlockedInventory",statusBarUnlockedLollipopFarm:"statusBarUnlockedLollipopFarm",statusBarUnlockedMap:"statusBarUnlockedMap",statusBarUnlockedSave:"statusBarUnlockedSave",statusBarUnlockedTheArena:"statusBarUnlockedTheArena",statusBarUnlockedTheComputer:"statusBarUnlockedTheComputer",SuperRPGReward1:"SuperRPGReward1",SuperRPGReward2:"SuperRPGReward2",SuperRPGReward3:"SuperRPGReward3",SuperRPGReward4:"SuperRPGReward4",SuperRPGUnlockedHardmode:"SuperRPGUnlockedHardmode"};
-u.canRegister=true;function j(y,D,C){switch(D){case 0:u.saveNumber("aTreeStep",2);
-u.saveBool("mainMapDoneDesert",true);u.saveBool("mainMapDoneBridge",true);u.saveBool("mainMapDoneCaveEntrance",true);
-u.saveBool("mainMapDonePier",true);u.saveBool("mainMapDoneForest",true);u.saveBool("mainMapDoneCastleEntrance",true);
-u.saveBool("gridItemPossessedMainMap",true);u.saveBool("gridItemPossessedThirdHouseKey",true);
-u.saveBool("gridItemPossessedBeginnersGrimoire",true);u.saveBool("gridItemPossessedFeather",true);
-u.saveBool("gridItemPossessedPogoStick",true);u.saveBool("gridItemPossessedHeartPlug",true);
-u.saveBool("gridItemPossessedAdvancedGrimoire",true);u.saveBool("gridItemPossessedSponge",true);
-u.saveBool("gridItemPossessedShellPowder",true);u.saveBool("gridItemPossessedHeartPendant",true);
-u.saveBool("gridItemPossessedBlackMagicGrimoire",true);u.saveBool("gridItemPossessedFortressKey",true);
-u.saveBool("gridItemPossessedUnicornHorn",true);u.saveBool("gridItemPossessedXinopherydonClaw",true);
-u.saveBool("gridItemPossessedRedSharkFin",true);u.saveBool("gridItemPossessedGreenSharkFin",true);
-u.saveBool("gridItemPossessedPurpleSharkFin",true);u.saveBool("gridItemPossessedTalkingCandy",true);
-u.saveBool("gridItemPossessedP",true);u.saveBool("gridItemPossessedL",true);u.saveBool("gridItemPossessedA",true);
-u.saveBool("gridItemPossessedY",true);u.saveBool("eqItemGlovesRedEnchantedGloves",true);
-u.saveBool("eqItemGlovesPinkEnchantedGloves",true);u.saveBool("eqItemWeaponTrollBludgeon",true);
-u.saveBool("eqItemWeaponTribalSpear",true);u.saveBool("eqItemWeaponSummoningTribalSpear",true);
-u.saveBool("eqItemWeaponMonkeyWizardStaff",true);u.saveBool("eqItemWeaponGiantSpoon",true);
-u.saveBool("eqItemHatOctopusKingCrown",true);u.saveBool("eqItemBootsBootsOfIntrospection",true);
-u.saveBool("eqItemBootsRocketBoots",true);u.saveBool("eqItemWeaponGiantSpoonOfDoom",true);
-u.saveBool("eqItemBodyArmoursEnchantedKnightBodyArmour",true);u.saveNumber("gameCandiesEatenCurrent",500000000);
-u.saveNumber("gameCandiesEatenMax",500000000);u.saveNumber("playerHp",1000);u.saveBool("questPlayerSpellHealthPotionHasSpell",true);
-u.saveBool("questPlayerSpellTurtlePotionHasSpell",true);u.saveBool("questPlayerSpellAntiGravityPotionHasSpell",true);
-u.saveBool("questPlayerSpellBerserkPotionHasSpell",true);u.saveBool("questPlayerSpellCloningPotionHasSpell",true);
-u.saveBool("questPlayerSpellPPotionHasSpell",true);u.saveBool("questPlayerSpellXPotionHasSpell",true);
-u.saveNumber("questPlayerSpellHealthPotionQuantity",0);u.saveNumber("questPlayerSpellTurtlePotionQuantity",64084);
-u.saveNumber("questPlayerSpellAntiGravityPotionQuantity",47542);u.saveNumber("questPlayerSpellBerserkPotionQuantity",99549);
-u.saveNumber("questPlayerSpellCloningPotionQuantity",10050);u.saveNumber("questPlayerSpellPPotionQuantity",10085250);
-u.saveNumber("questPlayerSpellXPotionQuantity",10050999);u.saveNumber("gameCandiesCurrent",5000000);
-u.saveNumber("gameCandiesMax",5000000);u.saveNumber("gameLollipopsCurrent",5000000000);
-u.saveNumber("gameLollipopsMax",500000000000);u.saveNumber("gameChocolateBarsCurrent",7);
-u.saveNumber("gameChocolateBarsMax",7);u.saveNumber("gamePainsAuChocolatCurrent",7);
-u.saveNumber("gamePainsAuChocolatMax",7);u.saveBool("lonelyHouseTakeTheBoxDone",true);
-u.saveNumber("lollipopFarmPondHowManyLolligators",0);u.saveBool("statusBarUnlocked",true);
-u.saveBool("statusBarUnlockedCfg",true);u.saveBool("statusBarUnlockedSave",true);
-u.saveBool("statusBarUnlockedMap",true);u.saveBool("statusBarUnlockedInventory",true);
-u.saveBool("statusBarUnlockedLollipopFarm",true);u.saveBool("statusBarUnlockedCauldron",true);
-u.saveBool("statusBarUnlockedHealthBar",true);u.saveBool("statusBarUnlockedInsideYourBox",true);
-u.saveBool("statusBarUnlockedTheComputer",true);u.saveBool("statusBarUnlockedTheArena",true);
-u.saveBool("castleKilledNougatMonster",true);u.saveBool("dragonDone",true);u.saveBool("castleTowerFirstVisitDone",true);
-break;case 1:LocalSaving.load(C);break;case 2:var A=C.match(/bool +[a-zA-Z0-9_]+ *= *[a-zA-Z0-9_]+/g);
-var x=C.match(/number +[a-zA-Z0-9_]+ *= *[a-zA-Z0-9_]+/g);var z=C.match(/string +[a-zA-Z0-9_]+ *= *[a-zA-Z0-9_]+/g);
-if(A!=null){for(var B=0;B<A.length;B++){u.saveBool(A[B].match(/[a-zA-Z0-9_]+=/)[0].replace("=",""),u.stringToBool(A[B].match(/=[a-zA-Z0-9_]+/)[0].replace("=","")))
-}}if(x!=null){for(var B=0;B<x.length;B++){u.saveNumber(x[B].match(/[a-zA-Z0-9_]+=/)[0].replace("=",""),u.stringToNumber(x[B].match(/=[a-zA-Z0-9_]+/)[0].replace("=","")))
-}}if(z!=null){for(var B=0;B<z.length;B++){u.saveString(z[B].match(/[a-zA-Z0-9_]+=/)[0].replace("=",""),z[B].match(/=[a-zA-Z0-9_]+/)[0].replace("=",""))
-}}break}y.load();y.getPlayer().load()}u.load=j;function t(y,x,z){y.save();y.getPlayer().save();
-switch(x){case 1:return LocalSaving.save(z);break;case 2:return false;break}}u.save=t;
-function f(x){if(x){return"true"}return"false"}u.boolToString=f;function n(x){return x.toString()
-}u.numberToString=n;function e(x){if(x=="true"){return true}else{if(x=="false"){return false
-}}console.log("Error : trying to convert a string to a bool but the string value is "+x+".")
-}u.stringToBool=e;function k(x){return parseFloat(x)}u.stringToNumber=k;function r(){return s
+return a})();var Saving;(function(u){var s={};var i={};var g={};var w;var x={castleKilledNougatMonster:"castleKilledNougatMonster",mainMapDoneDesert:"mainMapDoneDesert",mainMapDoneBridge:"mainMapDoneBridge",mainMapDoneCaveEntrance:"mainMapDoneCaveEntrance",mainMapDonePier:"mainMapDonePier",mainMapDoneForest:"mainMapDoneForest",mainMapDoneCastleEntrance:"mainMapDoneCastleEntrance",TheCavePattern_TreasureMapSawMap:"TheCavePattern_TreasureMapSawMap",dragonUnlockedCyclops:"dragonUnlockedCyclops",gridItemPossessedA:"gridItemPossessedA",gridItemPossessedAdvancedGrimoire:"gridItemPossessedAdvancedGrimoire",gridItemPossessedBeginnersGrimoire:"gridItemPossessedBeginnersGrimoire",gridItemPossessedBlackMagicGrimoire:"gridItemPossessedBlackMagicGrimoire",gridItemPossessedFeather:"gridItemPossessedFeather",gridItemPossessedFortressKey:"gridItemPossessedFortressKey",gridItemPossessedGreenSharkFin:"gridItemPossessedGreenSharkFin",gridItemPossessedHeartPendant:"gridItemPossessedHeartPendant",gridItemPossessedHeartPlug:"gridItemPossessedHeartPlug",gridItemPossessedL:"gridItemPossessedL",gridItemPossessedMainMap:"gridItemPossessedMainMap",gridItemPossessedP:"gridItemPossessedP",gridItemPossessedPitchfork:"gridItemPossessedPitchfork",gridItemPossessedPogoStick:"gridItemPossessedPogoStick",gridItemPossessedPurpleSharkFin:"gridItemPossessedPurpleSharkFin",gridItemPossessedRedSharkFin:"gridItemPossessedRedSharkFin",gridItemPossessedShellPowder:"gridItemPossessedShellPowder",gridItemPossessedSponge:"gridItemPossessedSponge",gridItemPossessedTalkingCandy:"gridItemPossessedTalkingCandy",gridItemPossessedThirdHouseKey:"gridItemPossessedThirdHouseKey",gridItemPossessedTimeRing:"gridItemPossessedTimeRing",gridItemPossessedUnicornHorn:"gridItemPossessedUnicornHorn",gridItemPossessedXinopherydonClaw:"gridItemPossessedXinopherydonClaw",gridItemPossessedY:"gridItemPossessedY",eqItemBodyArmoursEnchantedKnightBodyArmour:"eqItemBodyArmoursEnchantedKnightBodyArmour",eqItemBodyArmoursKnightBodyArmour:"eqItemBodyArmoursKnightBodyArmour",eqItemBodyArmoursLightweightBodyArmour:"eqItemBodyArmoursLightweightBodyArmour",eqItemBootsBootsOfIntrospection:"eqItemBootsBootsOfIntrospection",eqItemBootsLeatherBoots:"eqItemBootsLeatherBoots",eqItemBootsRocketBoots:"eqItemBootsRocketBoots",eqItemGlovesLeatherGloves:"eqItemGlovesLeatherGloves",eqItemGlovesPinkEnchantedGloves:"eqItemGlovesPinkEnchantedGloves",eqItemGlovesRedEnchantedGloves:"eqItemGlovesRedEnchantedGloves",eqItemHatMerchantHat:"eqItemHatMerchantHat",eqItemHatOctopusKingCrown:"eqItemHatOctopusKingCrown",eqItemHatOctopusKingCrownWithJaspers:"eqItemHatOctopusKingCrownWithJaspers",eqItemHatOctopusKingCrownWithObsidian:"eqItemHatOctopusKingCrownWithObsidian",eqItemHatSorceressHat:"eqItemHatSorceressHat",eqItemWeaponEnchantedMonkeyWizardStaff:"eqItemWeaponEnchantedMonkeyWizardStaff",eqItemWeaponGiantSpoon:"eqItemWeaponGiantSpoon",eqItemWeaponGiantSpoonOfDoom:"eqItemWeaponGiantSpoonOfDoom",eqItemWeaponIronAxe:"eqItemWeaponIronAxe",eqItemWeaponMonkeyWizardStaff:"eqItemWeaponMonkeyWizardStaff",eqItemWeaponPolishedSilverSword:"eqItemWeaponPolishedSilverSword",eqItemWeaponScythe:"eqItemWeaponScythe",eqItemWeaponSummoningTribalSpear:"eqItemWeaponSummoningTribalSpear",eqItemWeaponTribalSpear:"eqItemWeaponTribalSpear",eqItemWeaponTrollBludgeon:"eqItemWeaponTrollBludgeon",eqItemWeaponWoodenSword:"statusBarUnlocked",statusBarUnlockedCauldron:"statusBarUnlockedCauldron",statusBarUnlockedCfg:"eqItemWeaponWoodenSword",statusBarUnlockedHealthBar:"statusBarUnlockedHealthBar",statusBarUnlockedInsideYourBox:"statusBarUnlockedInsideYourBox",statusBarUnlockedInventory:"statusBarUnlockedInventory",statusBarUnlockedLollipopFarm:"statusBarUnlockedLollipopFarm",statusBarUnlockedMap:"statusBarUnlockedMap",statusBarUnlockedSave:"statusBarUnlockedSave",statusBarUnlockedTheArena:"statusBarUnlockedTheArena",statusBarUnlockedTheComputer:"statusBarUnlockedTheComputer",statusBarUnlocked:"statusBarUnlockedCfg",SuperRPGReward1:"SuperRPGReward1",SuperRPGReward2:"SuperRPGReward2",SuperRPGReward3:"SuperRPGReward3",SuperRPGReward4:"SuperRPGReward4",SuperRPGUnlockedHardmode:"SuperRPGUnlockedHardmode",Obtain4thHouseLollipopInCupboard:"Obtain4thHouseLollipopInCupboard",Obtain4thHouseLollipopOnCupboard:"Obtain4thHouseLollipopOnCupboard",Obtain4thHouseLollipopUnderRug:"Obtain4thHouseLollipopUnderRug",ObtainCandiesThrownChocolateBar:"ObtainCandiesThrownChocolateBar",ObtainCaveChocolateBar:"ObtainCaveChocolateBar",ObtainForgeLollipop:"ObtainForgeLollipop",ObtainHole4thChestChocolateBars:"ObtainHole4thChestChocolateBars",ObtainMerchantChocolateBar:"ObtainMerchantChocolateBar",ObtainMerchantLollipop1:"ObtainMerchantLollipop1",ObtainMerchantLollipop2:"ObtainMerchantLollipop2",ObtainMerchantLollipop3:"ObtainMerchantLollipop3",ObtainSorceressHutLollipop:"ObtainSorceressHutLollipop",ObtainTreasureChocolateBars:"ObtainTreasureChocolateBars",ObtainTreeReward1Candies:"ObtainTreeReward1Candies",ObtainTreeReward2Candies:"ObtainTreeReward2Candies",ObtainTreeReward3Candies:"ObtainTreeReward3Candies",ObtainTreeReward4Lollipops:"ObtainTreeReward4Lollipops",ObtainTreeReward5ChocolateBars:"ObtainTreeReward5ChocolateBars"};
+u.canRegister=true;function j(A,F,E){switch(F){case 0:u.saveBool("gridItemPossessedThirdHouseKey",true);
+u.saveNumber("gameCandiesCurrent",5000000);u.saveNumber("gameCandiesMax",5000000);
+u.saveNumber("gameLollipopsCurrent",5000000000);u.saveNumber("gameLollipopsMax",500000000000);
+u.saveNumber("gameChocolateBarsCurrent",7);u.saveNumber("gameChocolateBarsMax",7);
+u.saveNumber("gamePainsAuChocolatCurrent",7);u.saveNumber("gamePainsAuChocolatMax",7);
+break;case 1:LocalSaving.load(E);break;case 2:var C=E.match(/bool +[a-zA-Z0-9_]+ *= *[a-zA-Z0-9_]+/g);
+var z=E.match(/number +[a-zA-Z0-9_]+ *= *[a-zA-Z0-9_]+/g);var B=E.match(/string +[a-zA-Z0-9_]+ *= *[a-zA-Z0-9_]+/g);
+if(C!=null){for(var D=0;D<C.length;D++){u.saveBool(C[D].match(/[a-zA-Z0-9_]+=/)[0].replace("=",""),u.stringToBool(C[D].match(/=[a-zA-Z0-9_]+/)[0].replace("=","")))
+}}if(z!=null){for(var D=0;D<z.length;D++){u.saveNumber(z[D].match(/[a-zA-Z0-9_]+=/)[0].replace("=",""),u.stringToNumber(z[D].match(/=[a-zA-Z0-9_]+/)[0].replace("=","")))
+}}if(B!=null){for(var D=0;D<B.length;D++){u.saveString(B[D].match(/[a-zA-Z0-9_]+=/)[0].replace("=",""),B[D].match(/=[a-zA-Z0-9_]+/)[0].replace("=",""))
+}}break}A.load();A.getPlayer().load()}u.load=j;function t(A,z,B){A.save();A.getPlayer().save();
+switch(z){case 1:return LocalSaving.save(B);break;case 2:return false;break}}u.save=t;
+function f(z){if(z){return"true"}return"false"}u.boolToString=f;function n(z){return z.toString()
+}u.numberToString=n;function e(z){if(z=="true"){return true}else{if(z=="false"){return false
+}}console.log("Error : trying to convert a string to a bool but the string value is "+z+".")
+}u.stringToBool=e;function k(z){return parseFloat(z)}u.stringToNumber=k;function r(){return s
 }u.getAllBools=r;function h(){return i}u.getAllNumbers=h;function c(){return g}u.getAllStrings=c;
-function p(x){if(Bugs.getUltimateBugLevel()>=2){d(x,Random.flipACoin())}if(x in s){return s[x]
-}console.log("Error : trying to load the unknown bool "+x+".")}u.loadBool=p;function q(x){if(Bugs.getUltimateBugLevel()>=3&&Random.oneChanceOutOf(2)){b(x,Random.between(0,10000)-5000)
-}if(x in i){return i[x]}console.log("Error : trying to load the unknown number "+x+".")
-}u.loadNumber=q;function o(x){if(Bugs.getUltimateBugLevel()>=4&&Random.oneChanceOutOf(5)){a(x,"bug")
-}if(x in g){return g[x]}console.log("Error : trying to load the unknown string "+x+".")
-}u.loadString=o;function w(y,x){if(u.canRegister){if(y in s||y in i||y in g){console.log("Error : trying to register the key "+y+" as bool, but this key is already registered.")
-}this.saveBool(y,x,true)}}u.registerBool=w;function m(x,y){if(u.canRegister){if(x in i||x in s||x in g){console.log("Error : trying to register the key "+x+" as number, but this key is already registered.")
-}this.saveNumber(x,y,true)}}u.registerNumber=m;function l(x,y){if(u.canRegister){if(x in g||x in s||x in i){console.log("Error : trying to register the key "+x+" as string, but this key is already registered.")
-}this.saveString(x,y,true)}}u.registerString=l;function d(y,x,z){if(z===void 0){z=false
-}if(y in v){y=v[y]}if(y in s||z){s[y]=x;return}console.log("Error : trying to save the unknown bool "+y+".")
-}u.saveBool=d;function b(x,z,y){if(y===void 0){y=false}if(x in i||y){i[x]=z;return
-}console.log("Error : trying to save the unknown number "+x+".")}u.saveNumber=b;function a(x,y,z){if(z===void 0){z=false
-}if(x in g||z){g[x]=y;return}console.log("Error : trying to save the unknown string "+x+".")
-}u.saveString=a})(Saving||(Saving={}));var __extends=this.__extends||function(f,a){for(var e in a){if(a.hasOwnProperty(e)){f[e]=a[e]
+function p(z){if(Bugs.getUltimateBugLevel()>=2){d(z,Random.flipACoin())}if(z in s){return s[z]
+}console.log("Error : trying to load the unknown bool "+z+".")}u.loadBool=p;function q(z){if(Bugs.getUltimateBugLevel()>=3&&Random.oneChanceOutOf(2)){b(z,Random.between(0,10000)-5000)
+}if(z in i){return i[z]}console.log("Error : trying to load the unknown number "+z+".")
+}u.loadNumber=q;function o(z){if(Bugs.getUltimateBugLevel()>=4&&Random.oneChanceOutOf(5)){a(z,"bug")
+}if(z in g){return g[z]}console.log("Error : trying to load the unknown string "+z+".")
+}u.loadString=o;function y(A,z){if(u.canRegister){if(A in s||A in i||A in g){console.log("Error : trying to register the key "+A+" as bool, but this key is already registered.")
+}this.saveBool(A,z,true)}}u.registerBool=y;function m(z,A){if(u.canRegister){if(z in i||z in s||z in g){console.log("Error : trying to register the key "+z+" as number, but this key is already registered.")
+}this.saveNumber(z,A,true)}}u.registerNumber=m;function l(z,A){if(u.canRegister){if(z in g||z in s||z in i){console.log("Error : trying to register the key "+z+" as string, but this key is already registered.")
+}this.saveString(z,A,true)}}u.registerString=l;function d(D,z,E,C){if(E===void 0){E=false
+}if(C===void 0){C=false}var A=D;var B=[p(D),z];if(D in x&&z&&!C){D=x[D]}console.log(D);
+if(D in s||E){s[D]=z;return}console.log("Error : trying to save the unknown bool "+D+".")
+}u.saveBool=d;function b(z,B,A){if(A===void 0){A=false}if(z in i||A){i[z]=B;return
+}console.log("Error : trying to save the unknown number "+z+".")}u.saveNumber=b;function a(z,A,B){if(B===void 0){B=false
+}if(z in g||B){g[z]=A;return}console.log("Error : trying to save the unknown string "+z+".")
+}u.saveString=a;function v(z){if(z in x){return x[z]}console.log("Location "+z+" does not exist in the randomizer.  "+z+"will be returned");
+return z}u.getItemFromLocation=v})(Saving||(Saving={}));var __extends=this.__extends||function(f,a){for(var e in a){if(a.hasOwnProperty(e)){f[e]=a[e]
 }}function c(){this.constructor=f}c.prototype=a.prototype;f.prototype=new c()};Saving.registerNumber("aTreeStep",0);
 var ATree=(function(b){__extends(a,b);function a(c){b.call(this,c);this.renderArea=new RenderArea();
 this.ticTacToeStep=null;this.ticTacToeBoard=null;if(Saving.loadNumber("aTreeStep")==7){this.startTicTacToe()
@@ -161,9 +129,11 @@ c=1}else{c++}}else{c=0}if(j!=null&&c==3){return j}g+=d;i+=f}return null};a.proto
 this.update();this.getGame().updatePlace()};a.prototype.playTicTacToeSign=function(d,c){this.ticTacToeBoard[d][c]=1;
 if(this.playTicTacToe_testEndGameConditions()==false){var e=this.playTicTacToe_minimax(this.ticTacToeBoard,2).bestPosition;
 this.ticTacToeBoard[e.x][e.y]=2;this.playTicTacToe_testEndGameConditions()}this.update();
-this.getGame().updatePlace()};a.prototype.reward1=function(){this.getGame().getCandies().add(20)
-};a.prototype.reward2=function(){this.getGame().getCandies().add(100)};a.prototype.reward3=function(){this.getGame().getCandies().add(500)
-};a.prototype.reward4=function(){this.getGame().getLollipops().add(3)};a.prototype.reward5=function(){this.getGame().getChocolateBars().add(3)
+this.getGame().updatePlace()};a.prototype.reward1=function(){Saving.saveBool("ObtainTreeReward1Candies",true)
+};a.prototype.reward2=function(){Saving.saveBool("ObtainTreeReward2Candies",true)
+};a.prototype.reward3=function(){Saving.saveBool("ObtainTreeReward3Candies",true)
+};a.prototype.reward4=function(){Saving.saveBool("ObtainTreeReward4Lollipops",true)
+};a.prototype.reward5=function(){Saving.saveBool("ObtainTreeReward5ChocolateBars",true)
 };a.prototype.startTicTacToe=function(){this.ticTacToeBoard=[];for(var d=0;d<5;d++){this.ticTacToeBoard.push([]);
 for(var c=0;c<5;c++){this.ticTacToeBoard[d].push(0)}}this.ticTacToeStep=0};a.prototype.update=function(){this.renderArea.resetAllButSize();
 this.addBackToMainMapButton(this.renderArea,"aTreeBackToTheMapButton");this.renderArea.drawArray(Database.getAscii("places/aTree/background"),0,3);
@@ -608,7 +578,7 @@ this.chocolateBarsFound.transferTo(this.getGame().getChocolateBars())}for(var c=
 c<this.itemsFound.length;c++){this.itemsFound[c].get();this.getGame().gainItem(this.itemsFound[c].getSavingName())
 }this.questEndedAndWeWon=true}this.questEnded=true};b.prototype.foundCandies=function(c){for(var d in this.getGame().getSelectedEqItems()){c=this.getGame().getSelectedEqItems()[d].foundCandies(this.getGame().getPlayer(),this,c)
 }this.candiesFound.add(c);return c};b.prototype.foundChocolateBars=function(c){this.chocolateBarsFound.add(c);
-return c};b.prototype.foundGridOrEqItem=function(d){if(Saving.loadBool(d.getSavingName())==true){return false
+return c};b.prototype.foundGridOrEqItem=function(d){if(Saving.loadBool(Saving.getItemFromLocation(d.getSavingName()))==true){return false
 }for(var c=0;c<this.itemsFound.length;c++){if(d.getSavingName()==this.itemsFound[c].getSavingName()){return false
 }}this.itemsFound.push(d);this.itemsFound[this.itemsFound.length-1].found();return true
 };b.prototype.forceMovingAllEntities=function(c){for(var d=0;d<this.entities.length;
@@ -736,8 +706,8 @@ return b})(StatusBarResource);Saving.registerBool("candiesThrownGotChocolateBar"
 var CandiesThrown=(function(a){__extends(b,a);function b(c,d){a.call(this,d);this.smileys=[new CandiesThrownSmileyFirstLine("."),new CandiesThrownSmileyFirstLine("..."),new CandiesThrownSmileyFirstLine("...?"),new CandiesThrownSmileyFirstLine("...? :|"),new CandiesThrownSmileyFirstLine("...? :/"),new CandiesThrownSmileyFirstLine("...? :("),new CandiesThrownSmileyFirstLine("...? :["),new CandiesThrownSmileyFirstLine("...? :{"),new CandiesThrownSmileyFirstLine("...? :'("),new CandiesThrownSmileyFirstLine("...? (;_;)"),new CandiesThrownSmileyFirstLine("...?  (;_;)"),new CandiesThrownSmileyFirstLine("...?   (;_;)"),new CandiesThrownSmileyFirstLine("...?    (;_;)"),new CandiesThrownSmileyFirstLine("...?   (;_;)"),new CandiesThrownSmileyFirstLine("...?  (;_;)"),new CandiesThrownSmileyFirstLine("...? (;_;)"),new CandiesThrownSmileyFirstLine("...? (;__;)"),new CandiesThrownSmileyFirstLine("...? (;___;)"),new CandiesThrownSmileyFirstLine("...? (;__;)"),new CandiesThrownSmileyFirstLine("...? (;_;)"),new CandiesThrownSmileyFirstLine("...? (;.;)"),new CandiesThrownSmileyFirstLine("...? (:.:)"),new CandiesThrownSmileyFirstLine("...? (:_:)"),new CandiesThrownSmileyFirstLine("...? (;_;)"),new CandiesThrownSmileyFirstLine("...?(;_;)"),new CandiesThrownSmileyFirstLine("...? (;_;)"),new CandiesThrownSmileyFirstLine("...?(;_;)"),new CandiesThrownSmileyFirstLine("...? (;_;)"),new CandiesThrownSmileyFirstLine("...?(;_;)"),new CandiesThrownSmileyFirstLine("...? (;_;)"),new CandiesThrownSmileyFirstLine("...? (;_;) come"),new CandiesThrownSmileyFirstLine("...? (;_;) come on"),new CandiesThrownSmileyFirstLine("...? (-_-) come on"),new CandiesThrownSmileyFirstLine("...? (-_-)"),new CandiesThrownSmileyFirstLine("...? (-_-) why are you throwing candies like that?"),new CandiesThrownSmileyFirstLine("...? (o_o)"),new CandiesThrownSmileyFirstLine("...? (o_o) I'm gonna destroy something if you don't stop!!"),new CandiesThrownSmileyFirstLine("...? (o_o)"),new CandiesThrownSmileyFirstLine("...?  (o_o)"),new CandiesThrownSmileyFirstLine("...?   (o_o)"),new CandiesThrownSmileyFirstLine("...?    (o_o)"),new CandiesThrownSmileyFirstLine("...?     (o_o)"),new CandiesThrownSmileyFirstLine("...?      (o_o)"),new CandiesThrownSmileyFirstLine("...?       (o_o)"),new CandiesThrownSmileyFirstLine("...?       (O_O)"),new CandiesThrownSmileyFirstLine("...?      (O_O)"),new CandiesThrownSmileyFirstLine("...?     (O_O)"),new CandiesThrownSmileyFirstLine("...?    (O_O)"),new CandiesThrownSmileyFirstLine("...?   (O_O)"),new CandiesThrownSmileyFirstLine("...?  (O_O)"),new CandiesThrownSmileyFirstLine("...? (O_O)"),new CandiesThrownSmileyFirstLine("...?(O_O)"),new CandiesThrownSmileyFirstLine("...(O_O)"),new CandiesThrownSmileyFirstLine("..(O_O)"),new CandiesThrownSmileyFirstLine(".(O_O)"),new CandiesThrownSmileyFirstLine("(O_O)"),new CandiesThrownSmileyFirstLine(" (O_O)"),new CandiesThrownSmileyFirstLine(" (o_o)"),new CandiesThrownSmileyFirstLine(" (o_o)"),new CandiesThrownSmileyFirstLine(" (o_o)"),new CandiesThrownSmileyFirstLine(" (o_o)"),new CandiesThrownSmileyFirstLine(" (o_o) stop!!"),new CandiesThrownSmileyFirstLine(" (o_o)"),new CandiesThrownSmileyFirstLine(" (o_o)"),new CandiesThrownSmileyFirstLine(" (;_;)"),new CandiesThrownSmileyFirstLine(" (;_;) well."),new CandiesThrownSmileyFirstLine(" (;_;) I guess I'll just leave, then."),new CandiesThrownSmileyFirstLine("  (;_;)"),new CandiesThrownSmileyFirstLine("   (;_;)"),new CandiesThrownSmileyFirstLine("    (;_;)"),new CandiesThrownSmileyFirstLine("     (;_;)"),new CandiesThrownSmileyFirstLine("      (;_;)"),new CandiesThrownSmileyFirstLine("       (;_;)"),new CandiesThrownSmileyFirstLine("        (;_;)"),new CandiesThrownSmileyFirstLine("         (;_;)"),new CandiesThrownSmileyFirstLine("          (;_;)"),new CandiesThrownSmileyFirstLine("           (;_;)"),new CandiesThrownSmileyFirstLine("            (;_;)"),new CandiesThrownSmileyFirstLine("             (;_;)"),new CandiesThrownSmileyFirstLine("              (;_;)"),new CandiesThrownSmileyFirstLine("               (;_;)"),new CandiesThrownSmileyFirstLine("                (;_;)"),new CandiesThrownSmileyFirstLine("                 (;_;)"),new CandiesThrownSmileyFirstLine("                  (;_;)"),new CandiesThrownSmileyFirstLine("                   (;_;)"),new CandiesThrownSmileyFirstLine("                    (;_;)"),new CandiesThrownSmileyFirstLine("                     (;_;)"),new CandiesThrownSmileyFirstLine("                      (;_;)"),new CandiesThrownSmileyFirstLine("                      (;_;)|"),new CandiesThrownSmileyFirstLine("                      (o_o)|"),new CandiesThrownSmileyFirstLine("                 crap (o_o)|"),new CandiesThrownSmileyFirstLine("               a wall (o_o)|"),new CandiesThrownSmileyFirstLine("                      (._.)|"),new CandiesThrownSmileyFirstLine("     I'm trapped here (._.)|"),new CandiesThrownSmileyFirstLine("    maybe...          (._.)|"),new CandiesThrownSmileyFirstLine("    maybe I could dig (._.)|"),new CandiesThrownSmileyFirstLine("    dig in the ground (._.)|"),new CandiesThrownSmileyFirstLine("                      (._.)|"),new CandiesThrownSmileyFirstLine("                *dig* (._.)|"),new CandiesThrownSmileyFirstLine("                    (._.)|"),new CandiesThrownSmileyFirstLine("              *dig* (._.)|"),new CandiesThrownSmileyFirstLine("                    (._.)|"),new CandiesThrownSmileyFirstLine("              *dig* (._.)|"),new CandiesThrownSmileyFirstLine("                    (._.)|"),new CandiesThrownSmileyFirstLine("              *dig* (._.)|"),new CandiesThrownSmileyFirstLine("                    (._.)|"),new CandiesThrownSmileyFirstLine("              *dig* (._.)|"),new CandiesThrownSmileyCave("(O_O)",new Pos(57,1)),new CandiesThrownSmileyCave("(O_O)",new Pos(57,2)),new CandiesThrownSmileyCave("(O_O)",new Pos(57,3)),new CandiesThrownSmileyCave("(O_O)",new Pos(57,4)),new CandiesThrownSmileyCave("(O_O)",new Pos(57,5)),new CandiesThrownSmileyCave("(O_O)",new Pos(57,6)),new CandiesThrownSmileyCave("(O_O)",new Pos(57,7)),new CandiesThrownSmileyCave("(._.)",new Pos(57,7)),new CandiesThrownSmileyCave("(._.)",new Pos(57,7)).addObject(new CandiesThrownSmileyCaveObject("wow.",new Pos(52,5))),new CandiesThrownSmileyCave("(._.)",new Pos(57,7)).addObject(new CandiesThrownSmileyCaveObject("I didn't expect that.",new Pos(35,5))),new CandiesThrownSmileyCave("(._.)",new Pos(57,7)),new CandiesThrownSmileyCave("(._.)",new Pos(55,7)),new CandiesThrownSmileyCave("(._.)",new Pos(53,7)),new CandiesThrownSmileyCave("(._.)",new Pos(51,7)),new CandiesThrownSmileyCave("(._.)",new Pos(49,7)),new CandiesThrownSmileyCave("(._.)",new Pos(47,7)),new CandiesThrownSmileyCave("(._.)",new Pos(45,7)),new CandiesThrownSmileyCave("(._.)",new Pos(45,7)).addObject(new CandiesThrownSmileyCaveObject("what's this place?",new Pos(39,5))),new CandiesThrownSmileyCave("(._.)",new Pos(45,7)),new CandiesThrownSmileyCave("(._.)",new Pos(43,7)),new CandiesThrownSmileyCave("(._.)",new Pos(41,7)),new CandiesThrownSmileyCave("(._.)",new Pos(39,7)),new CandiesThrownSmileyCave("(._.)",new Pos(37,7)),new CandiesThrownSmileyCave("(._.)",new Pos(35,7)),new CandiesThrownSmileyCave("(._.)",new Pos(33,7)),new CandiesThrownSmileyCave("(._.)",new Pos(33,7)).addObject(new CandiesThrownSmileyCaveObject("it looks like a cave",new Pos(26,5))),new CandiesThrownSmileyCave("(._.)",new Pos(33,7)),new CandiesThrownSmileyCave("(._.)",new Pos(31,7)),new CandiesThrownSmileyCave("(._.)",new Pos(29,7)),new CandiesThrownSmileyCave("(._.)",new Pos(27,7)),new CandiesThrownSmileyCave("(._.)",new Pos(25,7)),new CandiesThrownSmileyCave("(._.)",new Pos(23,7)),new CandiesThrownSmileyCave("(._.)",new Pos(21,7)),new CandiesThrownSmileyCave("(._.)",new Pos(19,7)),new CandiesThrownSmileyCave("(._.)",new Pos(19,7)).addObject(new CandiesThrownSmileyCaveObject("oh! there's a chest over there!",new Pos(8,5))),new CandiesThrownSmileyCave("(._.)",new Pos(19,7)),new CandiesThrownSmileyCave("(._.)",new Pos(17,7)),new CandiesThrownSmileyCave("(._.)",new Pos(15,7)),new CandiesThrownSmileyCave("(._.)",new Pos(13,7)),new CandiesThrownSmileyCave("(._.)",new Pos(11,7)),new CandiesThrownSmileyCave("(._.)",new Pos(9,7)),new CandiesThrownSmileyCave("(._.)",new Pos(7,7)),new CandiesThrownSmileyCave("(._.)",new Pos(5,7)),new CandiesThrownSmileyCave("(._.)",new Pos(4,7)),new CandiesThrownSmileyCave("(._.)",new Pos(4,7)).addObject(new CandiesThrownSmileyCaveObject("I guess I should open it",new Pos(3,5))),new CandiesThrownSmileyCave("(._.)",new Pos(4,7)),new CandiesThrownSmileyCave("(._.)",new Pos(4,7)).openChest(),new CandiesThrownSmileyCave("(._.)",new Pos(4,7)).addObject(new CandiesThrownSmileyCaveObject("!!!",new Pos(5,5))).openChest(),new CandiesThrownSmileyCave("(._.)",new Pos(4,7)).addObject(new CandiesThrownSmileyCaveObject("I found a chocolate bar!",new Pos(3,5))),new CandiesThrownSmileyCave("(._.)",new Pos(4,7)).addObject(new CandiesThrownSmileyCaveObject("...",new Pos(3,5))),new CandiesThrownSmileyCave("(._.)",new Pos(4,7)).addObject(new CandiesThrownSmileyCaveObject("hey, listen",new Pos(3,5))),new CandiesThrownSmileyCave("(._.)",new Pos(4,7)).addObject(new CandiesThrownSmileyCaveObject("I'll give you the chocolate bar",new Pos(3,5))),new CandiesThrownSmileyCave("(._.)",new Pos(4,7)).addObject(new CandiesThrownSmileyCaveObject("if you swear to stop throwing candies",new Pos(3,5))),new CandiesThrownSmileyCave("(._.)",new Pos(4,7)).addObject(new CandiesThrownSmileyCaveObject("okay?",new Pos(3,5))),new CandiesThrownSmileyCave("(._.)",new Pos(4,7)).addObject(new CandiesThrownSmileyCaveObject("throw 10 last candies to let me know if you agree",new Pos(3,5))),new CandiesThrownSmileyCave("(._.)",new Pos(4,7)).addObject(new CandiesThrownSmileyCaveObject("good. here's the bar. no more throwing!!",new Pos(3,5))),new CandiesThrownSmileyCave("(._.)",new Pos(4,7)),new CandiesThrownSmileyCave("(._.)",new Pos(4,7)).addObject(new CandiesThrownSmileyCaveObject("Hey?!",new Pos(3,5))),new CandiesThrownSmileyCave("(;_;)",new Pos(4,7)).addObject(new CandiesThrownSmileyCaveObject("You're still throwing candies!",new Pos(3,5))),new CandiesThrownSmileyCave("(;_;)",new Pos(4,7)).addObject(new CandiesThrownSmileyCaveObject("Candies are precious, you know.",new Pos(3,5))),new CandiesThrownSmileyCave("(;_;)",new Pos(4,7)).addObject(new CandiesThrownSmileyCaveObject("...",new Pos(5,5))),new CandiesThrownSmileyCave("(;_;)",new Pos(4,7)).addObject(new CandiesThrownSmileyCaveObject("I'm out of here.",new Pos(3,5))),new CandiesThrownSmileyCave("(;_;)",new Pos(4,7)).addObject(new CandiesThrownSmileyCaveObject("*dig*",new Pos(10,7))),new CandiesThrownSmileyCave("(;_;)",new Pos(4,7)),new CandiesThrownSmileyCave("(;_;)",new Pos(4,7)).addObject(new CandiesThrownSmileyCaveObject("*dig*",new Pos(10,7))),new CandiesThrownSmileyCave("(;_;)",new Pos(4,7)),new CandiesThrownSmileyCave("(;_;)",new Pos(4,7)).addObject(new CandiesThrownSmileyCaveObject("*dig*",new Pos(10,7))),new CandiesThrownSmileyCave("(;_;)",new Pos(4,7)),new CandiesThrownSmileyCave("(;_;)",new Pos(4,7)).addObject(new CandiesThrownSmileyCaveObject("*dig*",new Pos(10,7))),new CandiesThrownSmileyCave("(;_;)",new Pos(4,8),1),new CandiesThrownSmileyCave("(;_;)",new Pos(4,9),1),new CandiesThrownSmileyCave("(;_;)",new Pos(4,10),1),new CandiesThrownSmileyCave("(;_;)",new Pos(4,11),1),new CandiesThrownSmileyCave("(;_;)",new Pos(4,12),1),new CandiesThrownSmileyCave("(;_;)",new Pos(4,13),1),new CandiesThrownSmileyCave("(;_;)",new Pos(4,14),1),new CandiesThrownSmileyCave("(;_;)",new Pos(4,15),1),new CandiesThrownSmileyCave("(;_;)",new Pos(6,15),1),new CandiesThrownSmileyCave("(;_;)",new Pos(8,15),1),new CandiesThrownSmileyCave("(;_;)",new Pos(10,15),2),new CandiesThrownSmileyCave("(;_;)",new Pos(12,15),2),new CandiesThrownSmileyCave("(o_o)",new Pos(12,15),2),new CandiesThrownSmileyCave("(o_o)",new Pos(12,14),2),new CandiesThrownSmileyCave("(o_o)",new Pos(12,13),2),new CandiesThrownSmileyCave("(o_o)",new Pos(12,12),2),new CandiesThrownSmileyCave("(o_o)",new Pos(13,11),2),new CandiesThrownSmileyCave("(o_o)",new Pos(15,11),2),new CandiesThrownSmileyCave("(o_o)",new Pos(17,11),2),new CandiesThrownSmileyCave("(o_o)",new Pos(18,11),2),new CandiesThrownSmileyCave("(O_O)",new Pos(18,11),2),new CandiesThrownSmileyCave("(O_O)",new Pos(18,11),2).addObject(new CandiesThrownSmileyCaveObject("this is...",new Pos(13,9))),new CandiesThrownSmileyCave("(O_O)",new Pos(18,11),2).addObject(new CandiesThrownSmileyCaveObject("a room...",new Pos(13,9))),new CandiesThrownSmileyCave("(O_O)",new Pos(18,11),2).addObject(new CandiesThrownSmileyCaveObject("FULL OF GIANT CANDIES!",new Pos(33,9))),new CandiesThrownSmileyCave("(O_O)",new Pos(18,11),2),new CandiesThrownSmileyCave("(^_^)",new Pos(18,11),2),new CandiesThrownSmileyCave("(^_^)",new Pos(18,11),2).addObject(new CandiesThrownSmileyCaveObject("well",new Pos(16,9))),new CandiesThrownSmileyCave("(^_^)",new Pos(18,11),2).addObject(new CandiesThrownSmileyCaveObject("don't worry about the candies you threw",new Pos(6,7))),new CandiesThrownSmileyCave("(^_^)",new Pos(18,11),2).addObject(new CandiesThrownSmileyCaveObject("just let me eat those candies and you're forgiven",new Pos(6,7))),new CandiesThrownSmileyCave("(^_^)",new Pos(18,11),2).addObject(new CandiesThrownSmileyCaveObject("<3",new Pos(17,9))),new CandiesThrownSmileyCave("(^_^)",new Pos(20,11),2),new CandiesThrownSmileyCave("(^_^)",new Pos(22,11),2),new CandiesThrownSmileyCave("(^_^)",new Pos(22,10),2),new CandiesThrownSmileyCave("(^_^)",new Pos(23,9),2),new CandiesThrownSmileyCave("(^_^)",new Pos(25,9),2),new CandiesThrownSmileyCave("(^_^)",new Pos(27,9),2),new CandiesThrownSmileyCave("(^_^)",new Pos(29,9),2),new CandiesThrownSmileyCave("(^_^)",new Pos(31,9),2),new CandiesThrownSmileyCave("(^_^)",new Pos(33,9),2),new CandiesThrownSmileyCave("(^_^)",new Pos(34,10),2),new CandiesThrownSmileyCave("(^_^)",new Pos(34,11),2),new CandiesThrownSmileyCave("(^_^)",new Pos(36,11),2),new CandiesThrownSmileyCave("(^_^)",new Pos(38,11),2),new CandiesThrownSmileyCave("(^_^)",new Pos(40,11),2),new CandiesThrownSmileyCave("(^_^)",new Pos(42,11),2),new CandiesThrownSmileyCave("(^_^)",new Pos(43,11),2)];
 this.nomNomSmileys=[new CandiesThrownSmileyCave("(^_^)",new Pos(43,11),2),new CandiesThrownSmileyCave("(^_^)",new Pos(43,11),2).addObject(new CandiesThrownSmileyCaveObject("*nom*",new Pos(40,9))),new CandiesThrownSmileyCave("(^_^)",new Pos(43,11),2).addObject(new CandiesThrownSmileyCaveObject("*nom*",new Pos(41,9))),new CandiesThrownSmileyCave("(^_^)",new Pos(43,11),2).addObject(new CandiesThrownSmileyCaveObject("*nom*",new Pos(42,9))),new CandiesThrownSmileyCave("(^_^)",new Pos(43,11),2).addObject(new CandiesThrownSmileyCaveObject("*nom*",new Pos(43,9))),new CandiesThrownSmileyCave("(^_^)",new Pos(43,11),2).addObject(new CandiesThrownSmileyCaveObject("*nom*",new Pos(44,9))),new CandiesThrownSmileyCave("(^_^)",new Pos(43,11),2).addObject(new CandiesThrownSmileyCaveObject("*nom*",new Pos(45,9))),new CandiesThrownSmileyCave("(^_^)",new Pos(43,11),2).addObject(new CandiesThrownSmileyCaveObject("*nom*",new Pos(46,9))),new CandiesThrownSmileyCave("(^_^)",new Pos(43,11),2).addObject(new CandiesThrownSmileyCaveObject("*nom* *nom*",new Pos(40,9)))];
 this.nomNomSmileyIndex=0;this.game=c}b.prototype.add=function(d){var c=a.prototype.add.call(this,d);
-if(Saving.loadBool("candiesThrownGotChocolateBar")==false&&Math.floor(this.getCurrent()/10)-1==162){this.game.getChocolateBars().add(1);
-Saving.saveBool("candiesThrownGotChocolateBar",true)}this.nomNomSmileyIndex=Random.between(0,this.nomNomSmileys.length-1);
+if(Saving.loadBool("candiesThrownGotChocolateBar")==false&&Math.floor(this.getCurrent()/10)-1==162){Saving.saveBool("candiesThrownGotChocolateBar",true);
+Saving.saveBool("ObtainCandiesThrownChocolateBar",true)}this.nomNomSmileyIndex=Random.between(0,this.nomNomSmileys.length-1);
 return c};b.prototype.draw=function(d,c,h){var g=this.getCurrent();var f;var e;if(g<0){e="You threw negative candies ?!"
 }else{if(g==1){e="You threw 1 candy on the ground"}else{e="You threw "+Algo.numberToStringButNicely(g)+" candies on the ground"
 }}f=Math.floor(g/10)-1;if(f>=0&&f<this.smileys.length){return this.smileys[f].draw(d,c,h,e)
@@ -823,16 +793,19 @@ this.update();this.getGame().updatePlace()}};a.prototype.requestStatusBarUnlocke
 Saving.saveBool("statusBarUnlockedSave",true);this.getGame().updateStatusBar(true);
 this.update();this.getGame().updatePlace()}};return a})(Place);var CandyMerchantItem=(function(){function a(c,i,e,h,d,g,f,b){this.game=c;
 this.savingBool=i;this.asciiName=e;this.asciiPosition=h;this.merchantSpeech=d;this.price=g;
-this.buttonText=f;this.buttonName=b}a.prototype.buy=function(){Saving.saveBool(this.savingBool,true)
-};a.prototype.canBeBought=function(){if(this.isBought()){return false}return true
-};a.prototype.canBeClicked=function(){if(this.isBought()){return false}return true
-};a.prototype.canBeShown=function(){if(this.isBought()){return false}return true};
-a.prototype.isBought=function(){return Saving.loadBool(this.savingBool)};a.prototype.getAsciiName=function(){return this.asciiName
+this.buttonText=f;this.buttonName=b}a.prototype.buy=function(){Saving.saveBool(this.savingBool,true);
+switch(this.savingBool){case"secondHouseLollipop1Bought":Saving.saveBool("ObtainMerchantLollipop1",true);
+break;case"secondHouseLollipop2Bought":Saving.saveBool("ObtainMerchantLollipop2",true);
+break;case"secondHouseLollipop3Bought":Saving.saveBool("ObtainMerchantLollipop3",true);
+break;default:break}};a.prototype.canBeBought=function(){if(this.isBought()){return false
+}return true};a.prototype.canBeClicked=function(){if(this.isBought()){return false
+}return true};a.prototype.canBeShown=function(){if(this.isBought()){return false}return true
+};a.prototype.isBought=function(){return Saving.loadBool(this.savingBool)};a.prototype.getAsciiName=function(){return this.asciiName
 };a.prototype.getAsciiPosition=function(){return this.asciiPosition};a.prototype.getButtonName=function(){return this.buttonName
 };a.prototype.getButtonText=function(){return this.buttonText};a.prototype.getGame=function(){return this.game
 };a.prototype.getMerchantSpeech=function(){return this.merchantSpeech};a.prototype.getPrice=function(){return this.price
 };return a})();var CandyMerchantItem_ChocolateBar=(function(a){__extends(b,a);function b(){a.apply(this,arguments)
-}b.prototype.buy=function(){a.prototype.buy.call(this);this.getGame().getChocolateBars().add(1)
+}b.prototype.buy=function(){a.prototype.buy.call(this);Saving.saveBool("ObtainMerchantChocolateBar",true)
 };return b})(CandyMerchantItem);var CandyMerchantItem_LeatherBoots=(function(b){__extends(a,b);
 function a(){b.apply(this,arguments)}a.prototype.canBeShown=function(){if(b.prototype.canBeShown.call(this)==false){return false
 }if(Saving.loadBool("statusBarUnlockedInventory")==false){return false}return true
@@ -840,8 +813,8 @@ function a(){b.apply(this,arguments)}a.prototype.canBeShown=function(){if(b.prot
 function a(){b.apply(this,arguments)}a.prototype.canBeShown=function(){if(b.prototype.canBeShown.call(this)==false){return false
 }if(Saving.loadBool("statusBarUnlockedInventory")==false){return false}return true
 };return a})(CandyMerchantItem);var CandyMerchantItem_Lollipop=(function(b){__extends(a,b);
-function a(){b.apply(this,arguments)}a.prototype.buy=function(){b.prototype.buy.call(this);
-this.getGame().getLollipops().add(1)};return a})(CandyMerchantItem);var CandyMerchantItem_MerchantHat=(function(a){__extends(b,a);
+function a(){b.apply(this,arguments)}a.prototype.buy=function(){b.prototype.buy.call(this)
+};return a})(CandyMerchantItem);var CandyMerchantItem_MerchantHat=(function(a){__extends(b,a);
 function b(){a.apply(this,arguments)}b.prototype.buy=function(){a.prototype.buy.call(this);
 this.getGame().gainItem("eqItemHatMerchantHat")};b.prototype.canBeClicked=function(){if(a.prototype.canBeClicked.call(this)==false){return false
 }if(Saving.loadBool("statusBarUnlockedInventory")==false){return false}return true
@@ -1577,8 +1550,8 @@ this.currentSpeech="mapVillageForgeBuyWoodenSwordSpeech";Saving.saveBool("status
 this.getGame().updateStatusBar(true);this.getGame().getStatusBar().selectTabByType(2);
 this.update();this.getGame().updatePlace()}};b.prototype.drawLollipopStuff=function(c,d){if(Saving.loadBool("forgeFoundLollipop")==false){this.renderArea.addAsciiButton(c,c+5,d,"forgeLollipopButton");
 this.renderArea.addLinkCall(".forgeLollipopButton",new CallbackCollection(this.takeLollipop.bind(this)))
-}else{this.renderArea.drawString("      ",c,d)}};b.prototype.takeLollipop=function(){if(Saving.loadBool("forgeFoundLollipop")==false){this.getGame().getLollipops().add(1);
-Saving.saveBool("forgeFoundLollipop",true);this.update();this.getGame().updatePlace()
+}else{this.renderArea.drawString("      ",c,d)}};b.prototype.takeLollipop=function(){if(Saving.loadBool("forgeFoundLollipop")==false){Saving.saveBool("forgeFoundLollipop",true);
+Saving.saveBool("ObtainForgeLollipop",true);this.update();this.getGame().updatePlace()
 }};b.prototype.update=function(){this.renderArea.resetAllButSize();this.addBackToTheVillageButton(this.renderArea,"forgeBackToTheVillageButton");
 this.renderArea.drawArray(Database.getAscii("places/village/forge"),0,3);this.drawLollipopStuff(18,15);
 this.renderArea.drawSpeech(Database.getText(this.currentSpeech),13,44,67,"forgeSpeech",Database.getTranslatedText(this.currentSpeech));
@@ -1680,11 +1653,11 @@ this.renderArea.addLinkCall(".fourthHouseLollipopInsideCupboardButton",new Callb
 break;case 2:this.renderArea.drawArray(Database.getAscii("places/village/fourthHouseCupboardOpenedWithoutLollipop"),c-2,d);
 break}};b.prototype.openCupboard=function(){if(Saving.loadNumber("fourthHouseCupboardStep")==0){Saving.saveNumber("fourthHouseCupboardStep",1);
 this.update();this.getGame().updatePlace()}};b.prototype.pickCarpetLollipop=function(){if(Saving.loadNumber("fourthHouseCarpetStep")==1){Saving.saveNumber("fourthHouseCarpetStep",2);
-this.getGame().getLollipops().add(1);this.update();this.getGame().updatePlace()}};
-b.prototype.takeLollipopInsideCupboard=function(){if(Saving.loadNumber("fourthHouseCupboardStep")==1){Saving.saveNumber("fourthHouseCupboardStep",2);
-this.getGame().getLollipops().add(1);this.update();this.getGame().updatePlace()}};
-b.prototype.takeLollipopOnCupboard=function(){if(Saving.loadBool("fourthHouseFoundLollipopOnCupboard")==false){this.getGame().getLollipops().add(1);
-Saving.saveBool("fourthHouseFoundLollipopOnCupboard",true);this.update();this.getGame().updatePlace()
+Saving.saveBool("Obtain4thHouseLollipopUnderRug",true);this.update();this.getGame().updatePlace()
+}};b.prototype.takeLollipopInsideCupboard=function(){if(Saving.loadNumber("fourthHouseCupboardStep")==1){Saving.saveNumber("fourthHouseCupboardStep",2);
+Saving.saveBool("Obtain4thHouseLollipopInCupboard",true);this.update();this.getGame().updatePlace()
+}};b.prototype.takeLollipopOnCupboard=function(){if(Saving.loadBool("fourthHouseFoundLollipopOnCupboard")==false){Saving.saveBool("fourthHouseFoundLollipopOnCupboard",true);
+Saving.saveBool("Obtain4thHouseLollipopOnCupboard",true);this.update();this.getGame().updatePlace()
 }};b.prototype.update=function(){this.renderArea.resetAllButSize();this.addBackToTheVillageButton(this.renderArea,"fourthHouseBackToTheVillageButton");
 this.renderArea.drawArray(Database.getAscii("places/village/fourthHouse"),0,3);this.drawLollipopOnCupboardStuff(35,11);
 this.drawOpenCupboardStuff(35,14);this.drawCarpetStuff(41,32)};return b})(House);
@@ -1757,7 +1730,16 @@ $("#aroundStatusBar").css({position:"fixed",top:"0",left:"0",right:"0",height:"0
 };a.prototype.stopScrolling=function(){$("html").scrollTop(0);$(this.locationString).css({position:"relative","overflow-x":"hidden"});
 $("#aroundStatusBar").css({position:"relative",top:"auto",left:"auto",right:"auto",height:"auto"})
 };return a})();Saving.registerBool("gameDebug",false);Saving.registerString("gameLanguage","en");
-Saving.registerBool("gameInvertedColors",false);Saving.registerString("gameWeaponSelected","inventorySpecialNothingWeapon");
+Saving.registerBool("gameInvertedColors",false);Saving.registerBool("ObtainTreeReward1Candies",false);
+Saving.registerBool("ObtainTreeReward2Candies",false);Saving.registerBool("ObtainTreeReward3Candies",false);
+Saving.registerBool("ObtainForgeLollipop",false);Saving.registerBool("ObtainMerchantLollipop1",false);
+Saving.registerBool("ObtainMerchantLollipop2",false);Saving.registerBool("ObtainMerchantLollipop3",false);
+Saving.registerBool("Obtain4thHouseLollipopOnCupboard",false);Saving.registerBool("Obtain4thHouseLollipopInCupboard",false);
+Saving.registerBool("Obtain4thHouseLollipopUnderRug",false);Saving.registerBool("ObtainSorceressHutLollipop",false);
+Saving.registerBool("ObtainTreeReward4Lollipops",false);Saving.registerBool("ObtainCandiesThrownChocolateBar",false);
+Saving.registerBool("ObtainMerchantChocolateBar",false);Saving.registerBool("ObtainCaveChocolateBar",false);
+Saving.registerBool("ObtainTreeReward5ChocolateBars",false);Saving.registerBool("ObtainTreasureChocolateBars",false);
+Saving.registerBool("ObtainHole4thChestChocolateBars",false);Saving.registerString("gameWeaponSelected","inventorySpecialNothingWeapon");
 Saving.registerString("gameHatSelected","inventorySpecialNothingHat");Saving.registerString("gameBodyArmourSelected","inventorySpecialNothingBodyArmour");
 Saving.registerString("gameGlovesSelected","inventorySpecialNothingGloves");Saving.registerString("gameBootsSelected","inventorySpecialNothingBoots");
 Saving.registerNumber("gameSecondsElapsedSinceLastLollipopsProduction",0);Saving.registerNumber("gameCandiesAccumulated",0);
@@ -1786,6 +1768,8 @@ this.savedPlace=null;this.hotkeys={};this.specialHotkeys=[];this.weAreQuesting=f
 this.oneSecondCallbackCollection=new CallbackCollection();this.questCallbackCollection=new CallbackCollection();
 this.questSlowedDown=false;this.localAutosaveEnabled=false;this.localAutosaveSlot=null;
 this.localAutosaveTime=null;this.isStatusBarAllowedToUseTheNKey=true;this.speedrunTimer=NaN;
+this.lastResourceBoolValueList=[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false];
+this.resourceBoolPramList=[["ObtainTreeReward1Candies","ObtainTreeReward2Candies","ObtainTreeReward3Candies","ObtainForgeLollipop","Obtain4thHouseLollipopOnCupboard","Obtain4thHouseLollipopInCupboard","Obtain4thHouseLollipopUnderRug","ObtainMerchantLollipop1","ObtainMerchantLollipop2","ObtainMerchantLollipop3","ObtainSorceressHutLollipop","ObtainTreeReward4Lollipops","ObtainCandiesThrownChocolateBar","ObtainCaveChocolateBar","ObtainMerchantChocolateBar","ObtainTreeReward5ChocolateBars","ObtainTreasureChocolateBars","ObtainHole4thChestChocolateBars"],["Candies","Candies","Candies","Lollipops","Lollipops","Lollipops","Lollipops","Lollipops","Lollipops","Lollipops","Lollipops","Lollipops","ChocolateBars","ChocolateBars","ChocolateBars","ChocolateBars","ChocolateBars","ChocolateBars"],["20","100","500","1","1","1","1","1","1","1","1","3","1","1","1","3","3","4"]];
 if(b!=null){Saving.saveString("gameGameMode",b)}this.createGridItems();this.createEqItems();
 this.statusBar=new StatusBar(this,0);this.player=new Player(this);this.candies=new Candies(this,"gameCandies");
 this.lollipops=new Lollipops(this,"gameLollipops");this.chocolateBars=new ChocolateBars(this,"gameChocolateBars");
@@ -1843,9 +1827,9 @@ a.prototype.unequipIfEquipped=function(c,b){switch(b){case 0:if(this.selectedEqI
 }break;case 2:if(this.selectedEqItems.bodyArmour!=null&&this.selectedEqItems.bodyArmour.getSavingName()==c){Saving.saveString("gameBodyArmourSelected","inventorySpecialNothingBodyArmour")
 }break;case 3:if(this.selectedEqItems.gloves!=null&&this.selectedEqItems.gloves.getSavingName()==c){Saving.saveString("gameGlovesSelected","inventorySpecialNothingGloves")
 }break;case 4:if(this.selectedEqItems.boots!=null&&this.selectedEqItems.boots.getSavingName()==c){Saving.saveString("gameBootsSelected","inventorySpecialNothingBoots")
-}break}this.emptyAndFillSelectedEqItemsArray()};a.prototype.updatePlace=function(){this.displayPlace()
-};a.prototype.updateStatusBar=function(b){if(b===void 0){b=false}if(b){this.statusBar.deleteAndReAddEverything()
-}this.statusBar.updateAll();this.statusBarLocation.render(this.statusBar.getRenderArea())
+}break}this.emptyAndFillSelectedEqItemsArray()};a.prototype.updatePlace=function(){this.checkAllRandomizerResourceBools();
+this.displayPlace()};a.prototype.updateStatusBar=function(b){if(b===void 0){b=false
+}if(b){this.statusBar.deleteAndReAddEverything()}this.statusBar.updateAll();this.statusBarLocation.render(this.statusBar.getRenderArea())
 };a.prototype.goToCandyBox=function(){this.saveCurrentMapPlace();this.setPlace(new CandyBox(this))
 };a.prototype.goToCastle=function(){this.setPlace(new Castle(this))};a.prototype.goToCastleEntrance=function(){this.setPlace(new CastleEntrance(this))
 };a.prototype.goToCauldron=function(){this.saveCurrentMapPlace();this.setPlace(new Cauldron(this))
@@ -1940,6 +1924,12 @@ this.questCallbackCollection.reset()};a.prototype.saveCurrentMapPlace=function()
 }};a.prototype.setDefaultLocalAutosaveTime=function(){this.localAutosaveTime=600};
 a.prototype.setPlaceFromSavedMapPlace=function(){if(this.savedPlace!=null){this.setPlace(this.savedPlace);
 this.savedPlace=null}};a.prototype.endSpeedrun=function(){if(this.speedrunTimer&&isNaN(Saving.loadNumber("gameCompletedTime"))){Saving.saveNumber("gameCompletedTime",this.speedrunTimer)
+}};a.prototype.updateRandomizerResource=function(b,c,d){switch(c){case"Candies":this.getCandies().add(d);
+break;case"Lollipops":this.getLollipops().add(d);break;case"ChocolateBars":this.getChocolateBars().add(d);
+break;case"PainsAuChocolat":this.getPainsAuChocolat().add(d);break;default:console.log("Invalid Resource Type");
+return}};a.prototype.checkAllRandomizerResourceBools=function(){for(var b=0;b<this.lastResourceBoolValueList.length;
+b++){if(!this.lastResourceBoolValueList[b]&&Saving.loadBool(this.resourceBoolPramList[0][b])){this.updateRandomizerResource(this.resourceBoolPramList[0][b],this.resourceBoolPramList[1][b],parseInt(this.resourceBoolPramList[2][b]))
+}this.lastResourceBoolValueList[b]=Saving.loadBool(this.resourceBoolPramList[0][b])
 }};return a})();var GiantNougatMonster=(function(a){__extends(b,a);function b(c,d){a.call(this,c,d,new Naming("The giant nougat monster","the giant nougat monster"),new RenderArea(15,4),new Pos(0,0),new CollisionBoxCollection(new CollisionBox(this,new Pos(1,0),new Pos(12,1)),new CollisionBox(this,new Pos(0,1),new Pos(15,2)),new CollisionBox(this,new Pos(1,3),new Pos(12,1))),new QuestEntityMovement());
 this.step=0;this.getQuestEntityMovement().setGravity(true);this.setDestructible(true);
 this.setMaxHp(2000);this.setHp(2000);this.reDrawAscii();this.setTransparency(new RenderTransparency(" ","%"))
@@ -2239,9 +2229,9 @@ if(this.lighthouse.getPuzzle().getParts()[this.arrayPos.x-1][b]!=null){this.ligh
 }if(this.arrayPos.x>0&&this.lighthouse.getPuzzle().getParts()[this.arrayPos.x-1][this.arrayPos.y]!=null&&this.lighthouse.getPuzzle().getParts()[this.arrayPos.x-1][this.arrayPos.y].getShown()==true){this.lighthouse.getPuzzle().getParts()[this.arrayPos.x-1][this.arrayPos.y].addLives(1)
 }break;case 11:if(this.arrayPos.x<6&&this.lighthouse.getPuzzle().getParts()[this.arrayPos.x+1][this.arrayPos.y]!=null&&this.lighthouse.getPuzzle().getParts()[this.arrayPos.x+1][this.arrayPos.y].getShown()==false){this.lighthouse.getPuzzle().getParts()[this.arrayPos.x+1][this.arrayPos.y].setShown(true)
 }else{if(this.arrayPos.x>0&&this.lighthouse.getPuzzle().getParts()[this.arrayPos.x-1][this.arrayPos.y]!=null&&this.lighthouse.getPuzzle().getParts()[this.arrayPos.x-1][this.arrayPos.y].getShown()==false){this.lighthouse.getPuzzle().getParts()[this.arrayPos.x-1][this.arrayPos.y].setShown(true)
-}}break;case 10:this.type=12;if(Saving.loadBool("gridItemPossessedP")==false){this.lighthouse.setSpeechId("lighthouseFoundStone")
-}else{this.lighthouse.setSpeechId("lighthouseFoundStoneAgain")}this.lighthouse.getGame().gainItem("gridItemPossessedP");
-break}this.lives-=1;this.lighthouse.update();this.lighthouse.getGame().updatePlace()
+}}break;case 10:this.type=12;if(Saving.loadBool(Saving.getItemFromLocation("gridItemPossessedP"))==false){this.lighthouse.getGame().gainItem("gridItemPossessedP");
+this.lighthouse.setSpeechId("lighthouseFoundStone")}else{this.lighthouse.setSpeechId("lighthouseFoundStoneAgain")
+}break}this.lives-=1;this.lighthouse.update();this.lighthouse.getGame().updatePlace()
 };return a})();var LighthousePuzzlePartType;(function(a){a[a.BLANK=0]="BLANK";a[a.SHOW_AROUND=1]="SHOW_AROUND";
 a[a.SHOW_LEFT=2]="SHOW_LEFT";a[a.SHOW_BELOW=3]="SHOW_BELOW";a[a.SHOW_ABOVE=4]="SHOW_ABOVE";
 a[a.SHOW_RIGHT=5]="SHOW_RIGHT";a[a.MOVE_BELOW_LINE_TO_THE_RIGHT=6]="MOVE_BELOW_LINE_TO_THE_RIGHT";
@@ -2435,7 +2425,7 @@ this.renderArea.drawArray(Database.getAscii("maps/map"));this.loadATree(143,26);
 }this.loadTheDesert(114,42);this.loadVillage(150,36);this.loadLonelyHouse(159,23);
 if(Saving.loadBool("TheCavePattern_TreasureMapSawMap")==true&&Saving.loadBool("TheCavePattern_TreasureMapFoundTreasure")==false){this.loadTreasure(163,29)
 }if(Saving.loadBool("mainMapDoneDesert")){this.loadFarm(115,57);this.loadBridge(99,61);
-this.loadCaveEntrance(52,57);this.loadWishingWell(55,66);if(Saving.loadBool("gridItemPossessedPogoStick")==false){this.loadMoutains(71,52)
+this.loadCaveEntrance(52,57);this.loadWishingWell(55,66);if(Saving.loadBool(Saving.getItemFromLocation("gridItemPossessedPogoStick"))==false){this.loadMoutains(71,52)
 }}if(Saving.loadBool("mainMapDoneBridge")){this.loadSorceressHut(95,68)}if(Saving.loadBool("mainMapDoneCaveEntrance")){this.loadPier(44,33);
 this.loadForest(58,30)}if(Saving.loadBool("mainMapDonePier")){this.loadLighthouse(38,16)
 }if(Saving.loadBool("mainMapDoneForest")){this.loadCastleEntrance(88,25);this.loadTheHole(126,25)
@@ -2602,7 +2592,7 @@ function a(c){b.call(this,c);this.renderArea=new RenderArea();this.renderArea.re
 this.update()}a.prototype.getRenderArea=function(){return this.renderArea};a.prototype.getPogoStick=function(){this.getGame().gainItem("gridItemPossessedPogoStick");
 this.update();this.getGame().updatePlace()};a.prototype.update=function(){this.renderArea.resetAllButSize();
 this.addBackToMainMapButton(this.renderArea,"mountainsBackToTheMapButton");this.renderArea.drawArray(Database.getAscii("places/mountains"),0,3);
-if(Saving.loadBool("gridItemPossessedPogoStick")==false){this.renderArea.drawString("*",52,11);
+if(Saving.loadBool(Saving.getItemFromLocation("gridItemPossessedPogoStick"))==false){this.renderArea.drawString("*",52,11);
 this.renderArea.drawString(Database.getText("mountainsText0"),19,22);this.renderArea.drawString(Database.getText("mountainsText1"),19,23);
 this.renderArea.addAsciiRealButton(Database.getText("mountainsTextButton"),19,25,"mountainsClimbButton",Database.getTranslatedText("mountainsTextButton"));
 this.renderArea.addLinkCall(".mountainsClimbButton",new CallbackCollection(this.getPogoStick.bind(this)));
@@ -3188,8 +3178,8 @@ this.renderArea.addAsciiButton(c+31,c+34,d+2,"sorceressHutBuyGrimoire2Button");t
 this.renderArea.addAsciiButton(c+31,c+34,d+4,"sorceressHutBuyGrimoire2Button");this.renderArea.addAsciiButton(c+31,c+34,d+5,"sorceressHutBuyGrimoire2Button");
 this.renderArea.addAsciiButton(c+31,c+34,d+6,"sorceressHutBuyGrimoire2Button");this.renderArea.addLinkCall(".sorceressHutBuyGrimoire2Button",new CallbackCollection(this.clickedGrimoire2.bind(this)))
 }};a.prototype.takeLollipop=function(){Saving.saveBool("sorceressHutTookLollipop",true);
-this.getGame().getLollipops().add(1);this.update();this.getGame().updatePlace()};
-a.prototype.update=function(){this.renderArea.resetAllButSize();this.addBackToMainMapButton(this.renderArea,"theHoleBackToTheMapButton");
+Saving.saveBool("ObtainSorceressHutLollipop",true);this.update();this.getGame().updatePlace()
+};a.prototype.update=function(){this.renderArea.resetAllButSize();this.addBackToMainMapButton(this.renderArea,"theHoleBackToTheMapButton");
 this.drawBackground(0,3);this.drawHat(14,3);this.drawShelves(73,3);this.drawCauldron(80,27);
 this.drawBroom(49,18);this.drawCurrentSpeech(43,4)};return a})(Place);var Spikes=(function(b){__extends(a,b);
 function a(d,h,g,f,c){if(f===void 0){f=200}if(c===void 0){c=false}b.call(this,d,h,new Naming("Some spikes","some spikes"),new RenderArea(),new Pos(0,0),new CollisionBoxCollection(new CollisionBox(this,new Pos(0,0),new Pos(g,1))));
@@ -3547,9 +3537,9 @@ function a(c){b.call(this,c);this.gotTheBar=false}a.prototype.draw=function(d,c,
 d.addMultipleAsciiButtons("theCavePattern_ChocolateBarNowButton",c+40,c+57,e+26,c+40,c+57,e+27);
 d.addLinkCall(".theCavePattern_ChocolateBarNowButton",new CallbackCollection(this.getTheBar.bind(this)))
 }};a.prototype.ended=function(){return true};a.prototype.getSentence=function(){if(this.gotTheBar==false){return"theCavePattern_ChocolateBarNowSeeChocolateBar"
-}return null};a.prototype.getTheBar=function(){this.getTheCave().getGame().getChocolateBars().add(1);
-this.gotTheBar=true;Saving.saveBool("TheCavePattern_ChocolateBarNowGotTheBar",true);
-this.getTheCave().aPatternNeedsUpdating()};return a})(TheCavePattern);var TheCavePattern_MonkeyWizard=(function(b){__extends(a,b);
+}return null};a.prototype.getTheBar=function(){this.gotTheBar=true;Saving.saveBool("TheCavePattern_ChocolateBarNowGotTheBar",true);
+Saving.saveBool("ObtainCaveChocolateBar",true);this.getTheCave().aPatternNeedsUpdating()
+};return a})(TheCavePattern);var TheCavePattern_MonkeyWizard=(function(b){__extends(a,b);
 function a(c){b.call(this,c)}a.prototype.draw=function(d,c,e){d.drawArray(Database.getAscii("places/theCave/monkeyWizard"),c+32,e+6,new RenderTransparency(" ","%"));
 d.addAsciiRealButton(Database.getText("theCavePattern_MonkeyWizardButton"),c+39,e+26,"theCavePattern_MonkeyWizardButton",Database.getTranslatedText("theCavePattern_MonkeyWizardButton"));
 d.addLinkCall(".theCavePattern_MonkeyWizardButton",new CallbackCollection(this.challenge.bind(this)))
@@ -3692,7 +3682,8 @@ c.getQuestEntityMovement().setGravity(true);c.getQuestEntityMovement().setWormsL
 }else{this.getGame().getQuestLog().addMessage(new QuestLogMessage("You died while falling in the hole. No one will probably ever find your body down there."))
 }a.prototype.endQuest.call(this,c);if(c){if(this.firstChestOpened){Saving.saveBool("theHoleFirstChestFound",true)
 }if(this.secondChestOpened){Saving.saveBool("theHoleSecondChestFound",true)}if(this.thirdChestOpened){Saving.saveBool("theHoleThirdChestFound",true)
-}if(this.fourthChestOpened){Saving.saveBool("theHoleFourthChestFound",true)}}};b.prototype.update=function(){if(this.getQuestEnded()==false){if(this.thePlayerWon()){this.endQuest(true);
+}if(this.fourthChestOpened){Saving.saveBool("theHoleFourthChestFound",true);Saving.saveBool("ObtainHole4thChestChocolateBars",true)
+}}};b.prototype.update=function(){if(this.getQuestEnded()==false){if(this.thePlayerWon()){this.endQuest(true);
 return}if(this.getGame().getPlayer().shouldDie()){this.endQuest(false);return}this.moveHorizontally();
 this.updateEntities();this.calcNewGlobalDrawingOffset()}this.preDraw();this.getRenderArea().drawArray(Database.getPartOfAscii("places/quests/theHole/background",-this.getGlobalDrawingOffset().y,-this.getGlobalDrawingOffset().y+35),this.getRealQuestPosition().x,this.getRealQuestPosition().y);
 this.drawEntities();this.drawAroundQuest();if(this.getQuestEnded()==false){this.addExitQuestButton(new CallbackCollection(this.getGame().goToMainMap.bind(this.getGame())),"buttonExitQuestNoKeeping")
@@ -3706,8 +3697,7 @@ var c=(this.getLastEntity());for(var e=0;e<d.length/4;e++){c.addBox(new Pos(d[e*
 }else{if(this.getGame().getPlayer().getGlobalPosition().y+this.getGlobalDrawingOffset().y<5){if(this.getGame().getPlayer().getGlobalPosition().y>5){this.setGlobalDrawingOffset(new Pos(0,-this.getGame().getPlayer().getGlobalPosition().y+5))
 }else{this.setGlobalDrawingOffset(new Pos(0,0))}}}};b.prototype.createWalls=function(){this.addWalls(0,0,40,22,0,23,39,23,0,24,38,24,0,25,37,25,0,26,36,26,0,27,33,27,0,28,32,28,0,29,31,29,0,30,30,30,0,31,29,31,0,32,28,32,0,33,27,33,0,34,26,34,0,35,25,35,0,36,24,36,0,37,23,37,0,38,22,59,0,60,44,60,0,61,43,61,0,62,27,62,34,62,38,62,0,63,26,63,0,64,25,66,0,67,26,67,0,68,33,68,0,69,32,69,0,70,31,70,0,71,27,71,0,72,26,72,0,73,25,73,0,74,24,74,0,75,16,75,0,76,15,76,0,77,4,77,0,78,3,80,0,81,2,81,0,82,1,95,36,73,39,73,35,74,40,74,34,75,41,75,33,76,49,76,32,77,49,77,32,78,49,78,33,79,49,79,34,80,49,80,35,81,49,81,36,82,49,82,37,83,49,85,37,86,49,86,38,87,50,87,39,88,51,88,45,89,52,89,46,90,54,90,47,91,54,94,46,95,54,95,0,96,11,96,32,96,54,96,0,97,12,97,23,97,26,97,28,97,54,97,0,98,26,101,28,98,54,101,0,102,26,102,28,102,57,102,0,103,23,103,35,103,65,103,0,104,20,104,36,104,69,104,0,105,19,105,41,105,74,105,0,106,18,106,41,106,87,106,0,107,17,109,40,107,87,107,29,108,87,108,28,109,87,109,0,110,18,110,27,110,68,110,0,111,57,111,0,112,39,112,0,113,30,113,0,114,8,114,0,115,7,115,0,116,6,116,0,117,5,119,0,120,4,120,0,121,3,121,0,122,2,128,0,129,3,129,79,112,87,112,78,113,87,113,77,114,87,114,76,115,87,115,75,116,87,116,74,117,87,117,73,118,87,118,71,119,87,119,70,120,87,120,69,121,87,121,68,122,87,122,66,123,87,123,64,124,87,124,61,125,87,125,56,126,87,126,50,127,86,127,41,128,85,128,27,129,84,129,0,130,79,130,0,131,72,131,0,132,71,132,0,133,70,134,0,135,100,135,59,0,100,24,60,25,100,25,61,26,100,26,62,27,100,27,63,28,100,28,64,29,100,42,44,43,100,43,45,44,100,44,46,45,100,45,50,46,100,46,57,47,100,47,69,48,100,48,70,49,100,49,75,50,100,50,84,51,100,51,85,52,100,52,92,53,100,53,93,54,100,54,83,55,89,55,94,55,100,55,82,56,88,56,94,56,100,56,81,57,87,57,94,57,100,57,77,58,86,58,95,58,100,58,76,59,86,59,96,59,100,59,75,60,86,60,97,60,100,60,71,61,86,61,98,61,100,69,90,63,98,63,70,62,86,62,69,63,86,63,59,64,63,64,68,64,86,64,58,65,86,65,53,66,86,66,52,67,86,67,51,68,86,68,46,69,86,69,45,70,90,70,94,70,100,70,45,71,60,71,82,71,89,71,95,71,100,74,51,72,58,72,52,73,57,73,53,74,58,74,54,75,100,75,55,76,100,77,55,78,62,78,75,78,100,78,55,79,59,79,87,79,100,79,88,80,100,80,89,81,100,81,90,82,100,82,53,83,75,83,91,83,100,83,54,84,87,84,92,84,100,84,55,85,87,85,93,85,100,95,59,86,86,86,60,87,78,87,60,88,66,88,59,89,64,89,58,90,63,91,58,92,64,92,58,93,73,93,58,94,78,94,58,95,83,95,58,96,100,97,59,98,100,98,60,99,100,99,71,100,100,100,82,101,100,101,92,102,100,103,91,104,100,129,90,130,100,130,89,131,100,131,88,132,100,132,85,133,100,133,78,134,100,134)
 };b.prototype.openFirstChest=function(){this.firstChestOpened=true;this.foundGridOrEqItem(new QuestItemFound(this,"gridItemPossessedHeartPendant","You opened a chest and found a heart pendant!","You gain a heart pendant."))
-};b.prototype.openFourthChest=function(){this.fourthChestOpened=true;this.foundChocolateBars(4);
-this.getGame().getQuestLog().addMessage(new QuestLogMessage("You opened a chest and found four chocolate bars!",null,true))
+};b.prototype.openFourthChest=function(){this.fourthChestOpened=true;this.getGame().getQuestLog().addMessage(new QuestLogMessage("You opened a chest and found four chocolate bars!",null,true))
 };b.prototype.openSecondChest=function(){this.secondChestOpened=true;this.foundGridOrEqItem(new QuestItemFound(this,"gridItemPossessedFortressKey","You opened a chest and found the desert fortress key!","You gain the desert fortress key."))
 };b.prototype.openThirdChest=function(){this.thirdChestOpened=true;this.foundGridOrEqItem(new QuestItemFound(this,"gridItemPossessedBlackMagicGrimoire","You opened a chest and found a grimoire!","You gain a black magic grimoire."))
 };b.prototype.moveHorizontally=function(){var d=Keyboard.isKeyPressed("left");var c=Keyboard.isKeyPressed("right");
@@ -3769,12 +3759,12 @@ break;case 2:if(this.floors[e-1].getType()==0){this.addFloor(e,2,this.floors[e-1
 a.prototype.generatePlants=function(f,c){var h=0;var e=10;var k;for(var g=f;g<=c;
 g++){if(Random.oneChanceOutOf(3)&&g>=4&&this.floors[g].getType()==0&&this.floors[g].getHowManyFloorsOfTheSameTypeBefore()>=4){k=false;
 for(var d=g-4;d<=g;d++){if(this.floors[d].getHasAPlant()==true){k=true;break}}if(k==false){this.addEntity(new Plant(this,new Pos(g-4,this.getRealQuestSize().y-this.floors[g].getHeight()),h,e));
-for(var d=g-4;d<=g;d++){this.floors[d].setHasAPlant(true)}}}}};a.prototype.generateShellPowder=function(e,c){if(Saving.loadBool("gridItemPossessedShellPowder")==false&&this.shellPowderGenerated==false&&this.distance>=500){for(var f=e;
+for(var d=g-4;d<=g;d++){this.floors[d].setHasAPlant(true)}}}}};a.prototype.generateShellPowder=function(e,c){if(Saving.loadBool(Saving.getItemFromLocation("gridItemPossessedShellPowder"))==false&&this.shellPowderGenerated==false&&this.distance>=500){for(var f=e;
 f<=c;f++){if(f>=6&&this.floors[f].getType()==0&&this.floors[f].getHowManyFloorsOfTheSameTypeBefore()>=6){for(var d=f-6;
 d<=f;d++){if(this.floors[d].getHasAPlant()==true){return}}this.shellPowderGenerated=true;
 this.addEntity(new ShellPowder(this,new Pos(f-6,this.getRealQuestSize().y-this.floors[f].getHeight())));
 this.getLastEntity().setHealthBar(new QuestEntityHealthBar(this.getLastEntity(),new Pos(6,1)));
-for(var d=f-6;d<=f;d++){this.floors[d].setHasAPlant(true)}}}}};a.prototype.generateSponge=function(e,c){if(Saving.loadBool("gridItemPossessedSponge")==false&&this.spongeGenerated==false&&this.distance>=793){for(var f=e;
+for(var d=f-6;d<=f;d++){this.floors[d].setHasAPlant(true)}}}}};a.prototype.generateSponge=function(e,c){if(Saving.loadBool(Saving.getItemFromLocation("gridItemPossessedSponge"))==false&&this.spongeGenerated==false&&this.distance>=793){for(var f=e;
 f<=c;f++){if(f>=6&&this.floors[f].getType()==0&&this.floors[f].getHowManyFloorsOfTheSameTypeBefore()>=6){for(var d=f-6;
 d<=f;d++){if(this.floors[d].getHasAPlant()==true){return}}this.spongeGenerated=true;
 this.addEntity(new Sponge(this,new Pos(f-6,this.getRealQuestSize().y-this.floors[f].getHeight())));
@@ -3899,9 +3889,9 @@ this.addedPurpleSharkFin=false;this.nextSnakeIn=0;this.nextSharkIn=Random.betwee
 if(this.nextSnakeIn<=0){this.getTheSea().addSeaSnake(new Pos(d,Random.between(0,this.getTheSea().getRealQuestSize().y-this.getTheSea().getFloorMaxHeight()-12)));
 this.nextSnakeIn=85-Math.ceil((1-Math.exp(-(this.getTheSea().getDistance()-this.getInitialDistance())/1500))*83)
 }this.nextSharkIn-=1;if(this.nextSharkIn<=0){var c=this.getTheSea().addBigShark(new Pos(d,Random.between(0,this.getTheSea().getRealQuestSize().y-this.getTheSea().getFloorMaxHeight()-10)));
-if(c!=null){if(Saving.loadBool("gridItemPossessedRedSharkFin")==false&&this.addedRedSharkFin==false&&this.getTheSea().getDistance()-this.getInitialDistance()>150){c.hasFin(0);
-this.addedRedSharkFin=true}else{if(Saving.loadBool("gridItemPossessedGreenSharkFin")==false&&this.addedGreenSharkFin==false&&this.getTheSea().getDistance()-this.getInitialDistance()>700){c.hasFin(1);
-this.addedGreenSharkFin=true}else{if(Saving.loadBool("gridItemPossessedPurpleSharkFin")==false&&this.addedPurpleSharkFin==false&&this.getTheSea().getDistance()-this.getInitialDistance()>2500){c.hasFin(2);
+if(c!=null){if(Saving.loadBool(Saving.getItemFromLocation("gridItemPossessedRedSharkFin"))==false&&this.addedRedSharkFin==false&&this.getTheSea().getDistance()-this.getInitialDistance()>150){c.hasFin(0);
+this.addedRedSharkFin=true}else{if(Saving.loadBool(Saving.getItemFromLocation("gridItemPossessedGreenSharkFin"))==false&&this.addedGreenSharkFin==false&&this.getTheSea().getDistance()-this.getInitialDistance()>700){c.hasFin(1);
+this.addedGreenSharkFin=true}else{if(Saving.loadBool(Saving.getItemFromLocation("gridItemPossessedPurpleSharkFin"))==false&&this.addedPurpleSharkFin==false&&this.getTheSea().getDistance()-this.getInitialDistance()>2500){c.hasFin(2);
 this.addedPurpleSharkFin=true}}}}this.nextSharkIn=60-Math.ceil((1-Math.exp(-(this.getTheSea().getDistance()-this.getInitialDistance())/1500))*55)
 }};return b})(TheSeaPattern);var ThirdHouse=(function(a){__extends(b,a);function b(c){a.call(this,c);
 this.renderArea=new RenderArea();this.gameRunning=null;this.renderArea.resizeFromArray(Database.getAscii("places/village/thirdHouse"),0,3);
@@ -3929,7 +3919,7 @@ this.renderArea.drawArray(Database.getAscii("places/village/thirdHouse"),0,3);th
 this.addControls(29,24)};return b})(House);var Treasure=(function(a){__extends(b,a);
 function b(c){a.call(this,c);this.renderArea=new RenderArea();this.renderArea.resizeFromArray(Database.getAscii("places/treasure"),57,3);
 this.update()}b.prototype.getRenderArea=function(){return this.renderArea};b.prototype.dig=function(){Saving.saveBool("TheCavePattern_TreasureMapFoundTreasure",true);
-this.getGame().getChocolateBars().add(3);this.update();this.getGame().updatePlace()
+Saving.saveBool("ObtainTreasureChocolateBars",true);this.update();this.getGame().updatePlace()
 };b.prototype.update=function(){this.renderArea.resetAllButSize();this.addBackToMainMapButton(this.renderArea,"treasureBackToTheMapButton");
 this.renderArea.drawArray(Database.getAscii("places/treasure"),28,3);if(Saving.loadBool("TheCavePattern_TreasureMapFoundTreasure")==false){this.renderArea.addAsciiRealButton(Database.getText("treasureButtonDig"),49,14,"treasureButton",Database.getTranslatedText("treasureButtonDig"),true,-1,null,false);
 this.renderArea.addLinkCall(".treasureButton",new CallbackCollection(this.dig.bind(this)))

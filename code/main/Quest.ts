@@ -574,9 +574,10 @@ class Quest extends Place{
         return howMany;
     }
     
+    // Randomizer modifications: Added getItemFromLocation
     public foundGridOrEqItem(itemFound: QuestItemFound): boolean{
         // If we already have this item, we return false
-        if(Saving.loadBool(itemFound.getSavingName()) == true)
+        if(Saving.loadBool(Saving.getItemFromLocation(itemFound.getSavingName())) == true)
             return false;
         
         // If we already found this item during this quest, we return false

@@ -182,9 +182,10 @@ class LighthousePuzzlePart{
                 this.type = LighthousePuzzlePartType.STONE;
                 
                 // If we didn't have the stone before
-                if(Saving.loadBool("gridItemPossessedP") == false){
+                //Randomizer: the if statement now checks for if the item possessed was the item at the P stone's location rather than the P stone itself
+                if(Saving.loadBool(Saving.getItemFromLocation("gridItemPossessedP")) == false){
                     // Get the stone
-                    // this.lighthouse.getGame().gainItem("gridItemPossessedP");
+                    this.lighthouse.getGame().gainItem("gridItemPossessedP");
                     
                     // Change the speech
                     this.lighthouse.setSpeechId("lighthouseFoundStone");
@@ -195,8 +196,6 @@ class LighthousePuzzlePart{
                     this.lighthouse.setSpeechId("lighthouseFoundStoneAgain");
                 }
 
-                // Randomizer modification: moved the gainItem() for the P stone outside of the if statement to prevent softlocking
-                this.lighthouse.getGame().gainItem("gridItemPossessedP");
             break;
         }
         

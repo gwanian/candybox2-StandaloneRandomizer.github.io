@@ -65,6 +65,8 @@ Saving.registerString("gameGameMode", "normal");
 Saving.registerNumber("gameSpeedrunTimer", NaN); //Default for backward compatibility.
 Saving.registerNumber("gameCompletedTime", NaN);
 
+
+
 class Game{
     // Render locations
     private statusBarLocation: RenderLocation = new RenderLocation("#statusBar");
@@ -139,6 +141,38 @@ class Game{
     
     // Speedrun timer.
     private speedrunTimer : number = NaN;
+
+    //list of the previous value for resource bools in the randomizer
+    private lastResourceBoolValueList: boolean[] = [
+        Saving.loadBool("ObtainTreeReward1Candies"),Saving.loadBool("ObtainTreeReward2Candies"),Saving.loadBool("ObtainTreeReward3Candies"),
+        Saving.loadBool("ObtainForgeLollipop"),Saving.loadBool("Obtain4thHouseLollipopOnCupboard"),Saving.loadBool("Obtain4thHouseLollipopInCupboard"),
+        Saving.loadBool("Obtain4thHouseLollipopUnderRug"),Saving.loadBool("ObtainMerchantLollipop1"),Saving.loadBool("ObtainMerchantLollipop2"),
+        Saving.loadBool("ObtainMerchantLollipop3"),Saving.loadBool("ObtainSorceressHutLollipop"),Saving.loadBool("ObtainTreeReward4Lollipops"),
+        Saving.loadBool("ObtainCandiesThrownChocolateBar"),Saving.loadBool("ObtainCaveChocolateBar"),Saving.loadBool("ObtainMerchantChocolateBar"),
+        Saving.loadBool("ObtainTreeReward5ChocolateBars"),Saving.loadBool("ObtainTreasureChocolateBars"),Saving.loadBool("ObtainHole4thChestChocolateBars")
+    ];
+
+    //list of the parameters to be passed to updateRandomizerResource
+    private resourceBoolPramList: string[][] = [
+        ["ObtainTreeReward1Candies","ObtainTreeReward2Candies","ObtainTreeReward3Candies", 
+            "ObtainForgeLollipop", "Obtain4thHouseLollipopOnCupboard","Obtain4thHouseLollipopInCupboard",
+            "Obtain4thHouseLollipopUnderRug","ObtainMerchantLollipop1","ObtainMerchantLollipop2",
+            "ObtainMerchantLollipop3", "ObtainSorceressHutLollipop","ObtainTreeReward4Lollipops",
+            "ObtainCandiesThrownChocolateBar","ObtainCaveChocolateBar","ObtainMerchantChocolateBar",
+            "ObtainTreeReward5ChocolateBars", "ObtainTreasureChocolateBars","ObtainHole4thChestChocolateBars"],
+        ["Candies","Candies","Candies",
+            "Lollipops","Lollipops", "Lollipops",
+            "Lollipops","Lollipops","Lollipops",
+            "Lollipops","Lollipops","Lollipops",
+            "ChocolateBars","ChocolateBars","ChocolateBars",
+            "ChocolateBars", "ChocolateBars","ChocolateBars"],
+        ["20", "100", "500", 
+            "1","1","1",
+            "1","1","1",
+            "1","1","3",
+            "1","1","1",
+            "3", "3", "4"]
+    ];
 
     // Constructor
     constructor(gameMode: string){
@@ -404,6 +438,8 @@ class Game{
     }
     
     public updatePlace(): void{
+        // Randomizer: every time a place is updated, the constructor will check to see if any of the resource booleans need to be updated and update them if so
+        this.checkAllRandomizerResourceBools();
         this.displayPlace();
     }
     
@@ -867,5 +903,41 @@ class Game{
     public endSpeedrun(): void{
         if(this.speedrunTimer && isNaN(Saving.loadNumber("gameCompletedTime")))
             Saving.saveNumber("gameCompletedTime", this.speedrunTimer);
+    }
+
+    //updates the resource based on the randomizer resource bool
+    private updateRandomizerResource(boolName: string, resourceType: string, resourceAmount: number){
+        
+            switch(resourceType){
+                case "Candies":
+                    this.getCandies().add(resourceAmount);
+                    break;
+                case "Lollipops":
+                    this.getLollipops().add(resourceAmount);
+                    break;
+                case "ChocolateBars":
+                    this.getChocolateBars().add(resourceAmount);
+                    break;
+                case "PainsAuChocolat":
+                    this.getPainsAuChocolat().add(resourceAmount);
+                    break;
+                default:
+                    console.log("Invalid Resource Type");
+                    return;
+            }
+        
+        
+    }
+
+    //checks every bool related to randomizer resources to see if they need to be updated
+    public checkAllRandomizerResourceBools(){
+
+        for(var i = 0; i < this.lastResourceBoolValueList.length; i++){
+            if(!this.lastResourceBoolValueList[i] && Saving.loadBool(this.resourceBoolPramList[0][i])){
+                this.updateRandomizerResource(this.resourceBoolPramList[0][i],this.resourceBoolPramList[1][i],parseInt(this.resourceBoolPramList[2][i]))
+            }
+            this.lastResourceBoolValueList[i] = Saving.loadBool(this.resourceBoolPramList[0][i]);
+        }
+
     }
 }

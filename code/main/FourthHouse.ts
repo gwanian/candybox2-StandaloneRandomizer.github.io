@@ -120,13 +120,15 @@ class FourthHouse extends House{
         }
     }
     
+    //Randomizer: changed lollipop under the carpet and in the cupboard to change bools rather than directly give the resource
     private pickCarpetLollipop(): void{
         // If the lollipop is outside the carpet
         if(Saving.loadNumber("fourthHouseCarpetStep") == 1){
             // Set the step
             Saving.saveNumber("fourthHouseCarpetStep", 2);
             // Add one lollipop
-            this.getGame().getLollipops().add(1);
+            //this.getGame().getLollipops().add(1);
+            Saving.saveBool("Obtain4thHouseLollipopUnderRug", true);
             // Update
             this.update();
             this.getGame().updatePlace();
@@ -139,7 +141,8 @@ class FourthHouse extends House{
             // Set the step
             Saving.saveNumber("fourthHouseCupboardStep", 2);
             // Add one lollipop
-            this.getGame().getLollipops().add(1);
+            //this.getGame().getLollipops().add(1);
+            Saving.saveBool("Obtain4thHouseLollipopInCupboard", true);
             // Update
             this.update();
             this.getGame().updatePlace();
@@ -150,9 +153,11 @@ class FourthHouse extends House{
         // If we didn't get the lollipop yet
         if(Saving.loadBool("fourthHouseFoundLollipopOnCupboard") == false){
             // Add one lollipop
-            this.getGame().getLollipops().add(1);
+            //commented out as it is handled in the Game class in the randomizer
+            //this.getGame().getLollipops().add(1);
             // Set the bool
             Saving.saveBool("fourthHouseFoundLollipopOnCupboard", true);
+            Saving.saveBool("Obtain4thHouseLollipopOnCupboard", true);
             // Update
             this.update();
             this.getGame().updatePlace();

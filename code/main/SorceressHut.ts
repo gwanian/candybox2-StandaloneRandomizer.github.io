@@ -229,9 +229,11 @@ class SorceressHut extends Place{
     private takeLollipop(): void{
         // We took the lollipop
         Saving.saveBool("sorceressHutTookLollipop", true);
+        Saving.saveBool("ObtainSorceressHutLollipop", true);
         
         // Add 1 lollipop
-        this.getGame().getLollipops().add(1);
+        //commented out as it is handled in the Game class in the randomizer
+        //this.getGame().getLollipops().add(1);
         
         // Update
         this.update();

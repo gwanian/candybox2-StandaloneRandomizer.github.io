@@ -258,8 +258,10 @@ class CandiesThrown extends Resource{
         var returnValue: boolean = super.add(n);
         // If it's time to get this chocolate bar, we get it
         if(Saving.loadBool("candiesThrownGotChocolateBar") == false && Math.floor(this.getCurrent()/10) - 1 == 162){
-            this.game.getChocolateBars().add(1);
+            //commented out as it is handled in the Game class in the randomizer
+            //this.game.getChocolateBars().add(1);
             Saving.saveBool("candiesThrownGotChocolateBar", true);
+            Saving.saveBool("ObtainCandiesThrownChocolateBar", true);
         }
         // We choose a random *nom* *nom* smiley index in case we're at this step of the animation
         this.nomNomSmileyIndex = Random.between(0, this.nomNomSmileys.length-1);

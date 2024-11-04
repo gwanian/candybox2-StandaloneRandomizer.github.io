@@ -38,7 +38,7 @@ class Moutains extends Place{
         this.renderArea.drawArray(Database.getAscii("places/mountains"), 0, 3);
         
         // If we didn't get the pogo stick yet
-        if(Saving.loadBool("gridItemPossessedPogoStick") == false){
+        if(Saving.loadBool(Saving.getItemFromLocation("gridItemPossessedPogoStick")/*additional randomizer functionality*/) == false){
             // Add the "*" showing that there's a pogo stick here
             this.renderArea.drawString("*", 52, 11);
             

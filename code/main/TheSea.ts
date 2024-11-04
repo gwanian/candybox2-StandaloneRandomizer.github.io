@@ -366,9 +366,10 @@ class TheSea extends Quest{
         }
     }
     
+    //Randomizer: changed the check for having to shellpowder to use the getItemFromLocation function
     private generateShellPowder(x1: number, x2: number): void{
         // If we don't already have shell powder and no shell powder have been generated in this quest so far and the distance is at least 500
-        if(Saving.loadBool("gridItemPossessedShellPowder") == false && this.shellPowderGenerated == false && this.distance >= 500){
+        if(Saving.loadBool(Saving.getItemFromLocation("gridItemPossessedShellPowder")) == false && this.shellPowderGenerated == false && this.distance >= 500){
             // Iterate over newly generated floors, searching for one which could receive the powder
             for(var i = x1; i <= x2; i++){
                 if(i >= 6 && // We're not too much on the left
@@ -395,9 +396,10 @@ class TheSea extends Quest{
         }
     }
     
+    //Randomizer: changed the check for having to sponge to use the getItemFromLocation function
     private generateSponge(x1: number, x2: number): void{
         // If we don't already have a sponge and no sponge have been generated in this quest so far and the distance is at least 793
-        if(Saving.loadBool("gridItemPossessedSponge") == false && this.spongeGenerated == false && this.distance >= 793){ // 793 because Robert Edmond Grant, a sponge expert, was born in 1793 (source : wikipedia)
+        if(Saving.loadBool(Saving.getItemFromLocation("gridItemPossessedSponge")) == false && this.spongeGenerated == false && this.distance >= 793){ // 793 because Robert Edmond Grant, a sponge expert, was born in 1793 (source : wikipedia)
             // Iterate over newly generated floors, searching for one which could receive a sponge
             for(var i = x1; i <= x2; i++){
                 if(i >= 6 && // We're not too much on the left
